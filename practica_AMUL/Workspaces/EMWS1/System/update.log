@@ -1,0 +1,35 @@
+NOTE: PROCEDURE PRINTTO ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Trasversal: trasversal invocado. El mandato MPCONNECT es sas. 
+Trasversal: iniciando trasversal del flujo 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 10NOV2020:21:56:43 
+* 
+*------------------------------------------------------------* 
+8774       %let _HPDMGRIDHOST=;
+8775       %let _HPDMGRIDINSTALLLOC=;
+8776       %let _HPDMGRIDDATASERVER=;
+8777       %hpdm_gridSetOPtions;
+
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 10NOV2020:21:56:43 
+* 
+*------------------------------------------------------------* 
+Trasversal: ejecución completa 
+8778       proc printto;
+8779       run;
+
