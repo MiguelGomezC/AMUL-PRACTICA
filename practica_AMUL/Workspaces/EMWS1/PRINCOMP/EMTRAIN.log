@@ -3,8 +3,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H53" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H08" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -13,11 +13,11 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de entrenamiento
-Fecha:                10/11/20
-Hora:                21H53
+Fecha:                11/11/20
+Hora:                21H08
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O1S3V5KE "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP\EMTRAIN.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O1S3V5KE new;
+MPRINT(EM_DIAGRAM):    filename O1AX445J "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O1AX445J new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    filename _LOG "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP\EMLOG.log" encoding="UTF-8" NOBOM;
 MPRINT(EM_DIAGRAM):    data _null_;
@@ -25,8 +25,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H53" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H08" );
 MPRINT(EM_DIAGRAM):   file _LOG;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -76,8 +76,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H53" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H08" );
 MPRINT(EM_DIAGRAM):   file _OUT;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -138,8 +138,8 @@ MPRINT(EM_DIAGRAM):   title9 ' ';
 MPRINT(EM_DIAGRAM):   title10 "Resumen de variables";
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   title10;
-MPRINT(EM_DIAGRAM):    data WORK.M2ECZ_M1;
-MPRINT(EM_DIAGRAM):   set WORK.M2ECZ_M1;
+MPRINT(EM_DIAGRAM):    data WORK.M2X92I2P;
+MPRINT(EM_DIAGRAM):   set WORK.M2X92I2P;
 MPRINT(EM_DIAGRAM):   if role = 'INPUT' and use in ('Y','D') then do;
 MPRINT(EM_DIAGRAM):   role = 'INPUT';
 MPRINT(EM_DIAGRAM):   output;
@@ -225,7 +225,7 @@ MPRINT(EM_DIAGRAM):   by EigenValue;
 MPRINT(EM_DIAGRAM):   data EMWS1.PRINCOMP_EIGEN;
 MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP_EIGEN;
 MPRINT(EM_DIAGRAM):   Difference=Eigenvalue-lag(Eigenvalue);
-MPRINT(EM_DIAGRAM):   ProportionalEigenvalue=EigenValue/240.000000000008;
+MPRINT(EM_DIAGRAM):   ProportionalEigenvalue=EigenValue/240;
 MPRINT(EM_DIAGRAM):   LagProportionalEigenvalue=lag(ProportionalEigenvalue);
 MPRINT(EM_DIAGRAM):   label EigenValue = "Autovalor";
 MPRINT(EM_DIAGRAM):   label Difference = "Diferencia";
@@ -290,7 +290,7 @@ MPRINT(EM_DIAGRAM):   put "Corte de número máximo de los componentes principal
 MPRINT(EM_DIAGRAM):   put "Corte de autovalor proporcional acumulado: 0.8";
 MPRINT(EM_DIAGRAM):   put "Corte de incremento de autovalor proporcional: 0.001";
 MPRINT(EM_DIAGRAM):   put "Número de los componentes principales seleccionados: 20";
-MPRINT(EM_DIAGRAM):   put "Variación total explicada por los componentes principales seleccionados: 0.2286157938";
+MPRINT(EM_DIAGRAM):   put "Variación total explicada por los componentes principales seleccionados: 0.2135825021";
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP_EMSCOREVAR;
 MPRINT(EM_DIAGRAM):   length Name $32 formula $70 file $200;

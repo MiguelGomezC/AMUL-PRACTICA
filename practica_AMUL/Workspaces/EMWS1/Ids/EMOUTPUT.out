@@ -1,7 +1,7 @@
 *------------------------------------------------------------*
 Usuario:                Admin
-Fecha:                10/11/20
-Hora:                21H53
+Fecha:                11/11/20
+Hora:                21H08
 *------------------------------------------------------------*
 * Salida de entrenamiento
 *------------------------------------------------------------*
@@ -14,8 +14,8 @@ Resumen de variables
          Nivel de     Número de
 Rol       medida     ocurrencias
  
-ID       NOMINAL           1
-INPUT    INTERVAL         48
+ID       NOMINAL           2
+INPUT    INTERVAL        240
  
  
  
@@ -36,16 +36,16 @@ Atributos de la tabla input
  
 Atributo                                              Valor
  
-Fuente de datos                                       transpuesto
+Fuente de datos                                       terminosdocumentos
  
 Nombre de la librería                                 AMUL
-Nombre del miembro de librería                        TRANSPUESTO
+Nombre del miembro de librería                        TERMINOS_DOCUMENTOS
 Etiqueta del conjunto de datos
 Conjunto de datos tipo especial (De TYPE=)
 Observaciones en conjunto de datos                    3000
 Nombre del motor                                      BASE
-Fecha de creación                                     10/11/2020 21:52:49
-Fecha de la última modificación                       10/11/2020 21:52:49
+Fecha de creación                                     11/11/2020 21:06:43
+Fecha de la última modificación                       11/11/2020 21:06:43
 Observaciones borradas en conjunto de datos           0
 Uso de variable en índices                            NONE
 Tipo de miembro de librería                           DATA

@@ -90,10 +90,21 @@ PROC SORT DATA = WORK.INTERSECCION;
   BY ID_DOCUMENTO;
 RUN;
 
-PROC TRANSPOSE DATA = WORK.INTERSECCION OUT = AMUL.TRANSPUESTO(DROP=_NAME_ _LABEL_);
+PROC TRANSPOSE DATA = WORK.INTERSECCION OUT = WORK.TRANSPUESTO(DROP=_NAME_ _LABEL_);
   VAR TFIDF;
   BY ID_DOCUMENTO;
   ID PALABRA;
 RUN;
 
-/* HAY QUE PENSAR SI USAR UN PERCENTIL MAYOR */
+/* FALTA CAMBIAR LOS DATOS MISSING POR CEROS */
+
+data AMUL.TERMINOS_DOCUMENTOS;
+ set WORK.TRANSPUESTO;
+ drop _i_;
+ array _c_(*) _numeric_;/* Se declara un array compuesto por todas las variables
+ numéricas que existen en la tabla (entre ellas, el propio
+id_documento) */
+ do _i_=2 to dim(_c_);/*La primera variable numérica es el id_documento.Se excluye */
+ if _c_(_i_)=. then _c_(_i_)=0;
+ end;
+ run;

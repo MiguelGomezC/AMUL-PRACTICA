@@ -8,5 +8,5 @@ libname EMWS1 "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Works
 data EMWS1.Ids_DATA (label="")
 / view=EMWS1.Ids_DATA
 ;
-set AMUL.TRANSPUESTO;
+set AMUL.TERMINOS_DOCUMENTOS;
 run;

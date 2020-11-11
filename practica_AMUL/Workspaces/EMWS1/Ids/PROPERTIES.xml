@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="transpuesto" Scope="LOCAL" Role="RAW" Library="AMUL" Table="TRANSPUESTO"
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="terminosdocumentos" Scope="LOCAL" Role="RAW" Library="AMUL" Table="TERMINOS_DOCUMENTOS"
  NCols="242" NObs="3000" NBytes="5915648" Segment="" DataSourceRole="RAW" OutputType="VIEW"
  ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC"
  ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y"
  MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y"
- VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="transpuesto"
- DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="Admin" DsCreateDate="1920663323.7"
- DsModifiedBy="Admin" DsModifyDate="1920663323.7" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
+ VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="terminosdocumentos"
+ DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="Admin" DsCreateDate="1920748085.1"
+ DsModifiedBy="Admin" DsModifyDate="1920748085.1" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
  SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train"
  Component="DataSource" RawCreateTime="1920663148.4" CreateTime="10NOV2020:21:32:28"
- Description="" Data="AMUL.TRANSPUESTO" CMeta="WORK.M05YPMLI" RunId="75a6353d-1932-44c3-ba59-5cc2e73d8d42"
+ Description="" Data="AMUL.TERMINOS_DOCUMENTOS" CMeta="WORK.M2X0597R" RunId="ca7e513d-5baa-4378-8a0c-29ca64125440"
 >
 <VARIABLEPROPERTIES/>
 <FILEPROPERTIES/>
