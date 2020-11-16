@@ -1,0 +1,2096 @@
+*------------------------------------------------------------*
+Usuario:                Admin
+Fecha:                16/11/20
+Hora:                09H07
+Sitio:                70161230
+Plataforma:            X64_10HOME
+Versión de mantenimiento: 9.04.01M6P111518
+Versión de EM:          15.1
+* 
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "16/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "09H07" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log de entrenamiento
+Fecha:                16/11/20
+Hora:                09H07
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O2PZJ8D7 "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O2PZJ8D7 new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOG "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMLOG.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "16/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "09H07" );
+MPRINT(EM_DIAGRAM):   file _LOG;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "Sitio:                70161230";
+MPRINT(EM_DIAGRAM):   put "Plataforma:            X64_10HOME";
+MPRINT(EM_DIAGRAM):   put "Versión de mantenimiento: 9.04.01M6P111518";
+MPRINT(EM_DIAGRAM):   put "Versión de EM:          15.1";
+MPRINT(EM_DIAGRAM):   put "* ";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _LOG MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_LOGIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   filename _LOGIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMSCORE.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMREPORT.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    filename _LOG;
+MPRINT(EM_DIAGRAM):    filename _OUT "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMOUTPUT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "16/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "09H07" );
+MPRINT(EM_DIAGRAM):   file _OUT;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida de entrenamiento";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   ;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _OUT MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_OUTIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida de puntuación";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida del informe";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    filename _OUT;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+18294      proc freq data=EMWS1.Stat_VariableSet noprint;
+MPRINT(EM_DIAGRAM):    proc freq data=EMWS1.Stat_VariableSet noprint;
+18295      table ROLE*LEVEL/out=WORK.StatMETA;
+MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.StatMETA;
+18296      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 242 observations read from the data set EMWS1.STAT_VARIABLESET.
+NOTE: The data set WORK.STATMETA has 2 observations and 4 variables.
+NOTE: PROCEDURE FREQ ha utilizado (Tiempo de proceso total):
+      real time           0.10 seconds
+      cpu time            0.03 seconds
+ 
+ 
+18297      proc print data=WORK.StatMETA label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.StatMETA label noobs;
+18298      var ROLE LEVEL COUNT;
+MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
+18299      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label ROLE = "Rol" LEVEL = "Nivel de medida" COUNT = "Número de ocurrencias";
+18300      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+18301      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "Resumen de variables";
+MPRINT(EM_DIAGRAM):   run;
+18302      run;
+ 
+NOTE: There were 2 observations read from the data set WORK.STATMETA.
+NOTE: The PROCEDURE PRINT printed page 1.
+NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
+      real time           0.22 seconds
+      cpu time            0.06 seconds
+ 
+ 
+18303      title10;
+MPRINT(EM_DIAGRAM):   title10;
+18304      data WORK.M0M_ERL4;
+MPRINT(EM_DIAGRAM):    data WORK.M0M_ERL4;
+18305      set WORK.M0M_ERL4;
+MPRINT(EM_DIAGRAM):   set WORK.M0M_ERL4;
+18306      where((role in('TARGET' 'FREQ' 'INPUT') and use in('D','Y')) or (role = 'REJECTED' and use = 'Y'));
+MPRINT(EM_DIAGRAM):   where((role in('TARGET' 'FREQ' 'INPUT') and use in('D','Y')) or (role = 'REJECTED' and use = 'Y'));
+18307      if ROLE = 'REJECTED' then role = 'INPUT';
+MPRINT(EM_DIAGRAM):   if ROLE = 'REJECTED' then role = 'INPUT';
+18308      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.M0M_ERL4.
+      WHERE (role in ('FREQ', 'INPUT', 'TARGET') and use in ('D', 'Y')) or ((role='REJECTED') and (use='Y'));
+NOTE: The data set WORK.M0M_ERL4 has 240 observations and 21 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18309      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+18310      * Stat: determinando las variables de análisis;
+MPRINT(EM_DIAGRAM):   * Stat: determinando las variables de análisis;
+18311      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+18312      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+18313      * Create DMDB macros;
+MPRINT(EM_DIAGRAM):   * Create DMDB macros;
+18314      %let _sns = %sysfunc(getoption(SOURCE));
+18315      options nosource;
+MPRINT(EM_DIAGRAM):   options nosource;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   * Stat: DMDBClass Macro ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   * Stat: DMDBVar Macro ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   options SOURCE;
+MPRINT(EM_DIAGRAM):   * End DMDB macros generation;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   * Stat: Create DMDB;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+18348      * End DMDB macros generation;
+18349      *------------------------------------------------------------*;
+18350      *------------------------------------------------------------*;
+18351      * Stat: Create DMDB;
+18352      *------------------------------------------------------------*;
+18353      proc dmdb batch data=EMWS1.Ids_DATA(obs=100000)
+18354      dmdbcat=WORK.Stat_DMDB
+18355      varout=WORK.StatDMDBVar
+18356      maxlevel = 513
+18357      ;
+MPRINT(EM_DIAGRAM):   proc dmdb batch data=EMWS1.Ids_DATA(obs=100000) dmdbcat=WORK.Stat_DMDB varout=WORK.StatDMDBVar maxlevel = 513 ;
+MPRINT(EM_DIAGRAM):   var
+18358      var %DMDBVar;
+MPRINT(DMDBVAR):   ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE COLOR
+COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL ENGIN ERROR EVENT EXPERI FACT FAX FEEL
+FILE FIND FOLLOWUP FONT FOOD FRI FRIEND FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND GROUP HAPPEN HEAR HIGH HOME IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD KEYWORD KILL
+KIND LEVEL LIST LIVE LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON MOTIF MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE POINT POLICI
+POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL SOFTWAR SOUND SOURC
+STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA VOLTAG WATER WED WIDGET WINDOW WIRE WONDER WORK
+WORLD XLIB XTERM YEAR YOU
+MPRINT(EM_DIAGRAM):  ;
+18359      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Records processed = 3000   Memory used = 511K.
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.13 seconds
+      cpu time            0.09 seconds
+ 
+NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
+NOTE: There were 3000 observations read from the data set EMWS1.IDS_DATA.
+NOTE: The data set WORK.STATDMDBVAR has 240 observations and 9 variables.
+NOTE: PROCEDURE DMDB ha utilizado (Tiempo de proceso total):
+      real time           0.20 seconds
+      cpu time            0.12 seconds
+ 
+ 
+MPRINT(EM_DIAGRAM):   quit;
+MPRINT(EM_DIAGRAM):   *--- end code ---*;
+18360      quit;
+18361      *--- end code ---*;
+ 
+18362      data WORK.StatDMDBVar;
+MPRINT(EM_DIAGRAM):    data WORK.StatDMDBVar;
+18363      set WORK.StatDMDBVar(keep=Name Mean Std);
+MPRINT(EM_DIAGRAM):   set WORK.StatDMDBVar(keep=Name Mean Std);
+18364      CV = Std/Mean;
+MPRINT(EM_DIAGRAM):   CV = Std/Mean;
+18365      Keep NAME CV;
+MPRINT(EM_DIAGRAM):   Keep NAME CV;
+18366      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.STATDMDBVAR.
+NOTE: The data set WORK.STATDMDBVAR has 240 observations and 2 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18367      proc append base=EMWS1.Stat_WORTH data=WORK.StatDMDBVar force;
+MPRINT(EM_DIAGRAM):   proc append base=EMWS1.Stat_WORTH data=WORK.StatDMDBVar force;
+18368      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Appending WORK.STATDMDBVAR a EMWS1.STAT_WORTH.
+NOTE: BASE data set does not exist. DATA file is being copied to BASE file.
+NOTE: There were 240 observations read from the data set WORK.STATDMDBVAR.
+NOTE: The data set EMWS1.STAT_WORTH has 240 observations and 2 variables.
+NOTE: PROCEDURE APPEND ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18369      proc sort data=EMWS1.Stat_WORTH;
+MPRINT(EM_DIAGRAM):    proc sort data=EMWS1.Stat_WORTH;
+18370      by descending CV;
+MPRINT(EM_DIAGRAM):   by descending CV;
+18371      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_WORTH.
+NOTE: The data set EMWS1.STAT_WORTH has 240 observations and 2 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18372      data EMWS1.Stat_WORTH;
+MPRINT(EM_DIAGRAM):   data EMWS1.Stat_WORTH;
+18373      format STATVAR 6.0;
+MPRINT(EM_DIAGRAM):   format STATVAR 6.0;
+18374      set EMWS1.Stat_WORTH;
+MPRINT(EM_DIAGRAM):   set EMWS1.Stat_WORTH;
+18375      if _N_<= 1000 then STATVAR=1;
+MPRINT(EM_DIAGRAM):   if _N_<= 1000 then STATVAR=1;
+18376      else STATVAR=0;
+MPRINT(EM_DIAGRAM):   else STATVAR=0;
+18377      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_WORTH.
+NOTE: The data set EMWS1.STAT_WORTH has 240 observations and 3 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18378      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+18379      * Stat: niveles de número;
+MPRINT(EM_DIAGRAM):   * Stat: niveles de número;
+18380      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+18381      proc sql;
+MPRINT(EM_DIAGRAM):   proc sql;
+18382      create view WORK.Stat_distinct as select distinct IDEA from EMWS1.Ids_DATA(obs=100000);
+MPRINT(EM_DIAGRAM):   create view WORK.Stat_distinct as select distinct IDEA from EMWS1.Ids_DATA(obs=100000);
+NOTE: SQL view WORK.STAT_DISTINCT has been defined.
+18383      quit;
+MPRINT(EM_DIAGRAM):   quit;
+NOTE: PROCEDURE SQL ha utilizado (Tiempo de proceso total):
+      real time           0.06 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18384      proc sql;
+MPRINT(EM_DIAGRAM):   proc sql;
+18385      reset noprint;
+MPRINT(EM_DIAGRAM):   reset noprint;
+18386      select count(*) into :_tmpcount from WORK.Stat_distinct;
+MPRINT(EM_DIAGRAM):   select count(*) into :_tmpcount from WORK.Stat_distinct;
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+ 
+NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
+18387      quit;
+MPRINT(EM_DIAGRAM):   quit;
+NOTE: PROCEDURE SQL ha utilizado (Tiempo de proceso total):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+ 
+ 
+18388      proc sql;
+MPRINT(EM_DIAGRAM):    proc sql;
+18389      create view WORK.Stat_distinct as select distinct id_documento from EMWS1.Ids_DATA(obs=100000);
+MPRINT(EM_DIAGRAM):   create view WORK.Stat_distinct as select distinct id_documento from EMWS1.Ids_DATA(obs=100000);
+NOTE: SQL view WORK.STAT_DISTINCT has been defined.
+18390      quit;
+MPRINT(EM_DIAGRAM):   quit;
+NOTE: PROCEDURE SQL ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18391      proc sql;
+MPRINT(EM_DIAGRAM):   proc sql;
+18392      reset noprint;
+MPRINT(EM_DIAGRAM):   reset noprint;
+18393      select count(*) into :_tmpcount from WORK.Stat_distinct;
+MPRINT(EM_DIAGRAM):   select count(*) into :_tmpcount from WORK.Stat_distinct;
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+ 
+NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
+18394      quit;
+MPRINT(EM_DIAGRAM):   quit;
+NOTE: PROCEDURE SQL ha utilizado (Tiempo de proceso total):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18395      proc sort data=WORK.Stat_count NOTHREADS;
+MPRINT(EM_DIAGRAM):    proc sort data=WORK.Stat_count NOTHREADS;
+18396      by NAME ROLE DATA;
+MPRINT(EM_DIAGRAM):   by NAME ROLE DATA;
+18397      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 2 observations read from the data set WORK.STAT_COUNT.
+NOTE: The data set WORK.STAT_COUNT has 2 observations and 4 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18398      proc print data=WORK.Stat_count(obs=500) label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.Stat_count(obs=500) label noobs;
+18399      label NAME = "%sysfunc(sasmsg(sashelp.dmine, rpt_variable_vlabel,    NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel,       NOQUOTE))" ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel,       NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label NAME = "Variable" COUNT = "Número de ocurrencias" ROLE = "Rol";
+18400      var NAME ROLE COUNT;
+MPRINT(EM_DIAGRAM):   var NAME ROLE COUNT;
+18401      title9 "%sysfunc(sasmsg(sashelp.dmine, rpt_varLevels_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title9 "Sumarización de los niveles de la variable";
+18402      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_maxObsPrinted_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "(máximo imprimido 500 observaciones)";
+MPRINT(EM_DIAGRAM):   run;
+18403      run;
+ 
+NOTE: There were 2 observations read from the data set WORK.STAT_COUNT.
+NOTE: The PROCEDURE PRINT printed page 2.
+NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18404      title9;
+MPRINT(EM_DIAGRAM):   title9;
+18405      title10;
+MPRINT(EM_DIAGRAM):   title10;
+18406      proc sort data=EMWS1.Stat_WORTH nodupkey out=WORK.Stat_SELVAR(keep=Name StatVar);
+MPRINT(EM_DIAGRAM):    proc sort data=EMWS1.Stat_WORTH nodupkey out=WORK.Stat_SELVAR(keep=Name StatVar);
+18407      by NAME;
+MPRINT(EM_DIAGRAM):   by NAME;
+18408      where statvar=1;
+MPRINT(EM_DIAGRAM):   where statvar=1;
+18409      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_WORTH.
+      WHERE statvar=1;
+NOTE: 0 observations with duplicate key values were deleted.
+NOTE: The data set WORK.STAT_SELVAR has 240 observations and 2 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18410      proc sort data=WORK.M08FKDPF;
+MPRINT(EM_DIAGRAM):    proc sort data=WORK.M08FKDPF;
+18411      by name;
+MPRINT(EM_DIAGRAM):   by name;
+18412      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 242 observations read from the data set WORK.M08FKDPF.
+NOTE: The data set WORK.M08FKDPF has 242 observations and 21 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18413      data WORK.Stat_analysisMeta;
+MPRINT(EM_DIAGRAM):   data WORK.Stat_analysisMeta;
+18414      merge WORK.M08FKDPF WORK.Stat_SELVAR(in=_a);
+MPRINT(EM_DIAGRAM):   merge WORK.M08FKDPF WORK.Stat_SELVAR(in=_a);
+18415      by name;
+MPRINT(EM_DIAGRAM):   by name;
+18416      if _a then STATVAR = 1;
+MPRINT(EM_DIAGRAM):   if _a then STATVAR = 1;
+18417      else if ROLE in('INPUT', 'REJECTED') and REPORT ne 'Y' then delete;
+MPRINT(EM_DIAGRAM):   else if ROLE in('INPUT', 'REJECTED') and REPORT ne 'Y' then delete;
+18418      if REPORT eq 'Y' then STATVAR = 1;
+MPRINT(EM_DIAGRAM):   if REPORT eq 'Y' then STATVAR = 1;
+18419      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 242 observations read from the data set WORK.M08FKDPF.
+NOTE: There were 240 observations read from the data set WORK.STAT_SELVAR.
+NOTE: The data set WORK.STAT_ANALYSISMETA has 242 observations and 22 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18420      data WORK.M0GQE934;
+MPRINT(EM_DIAGRAM):    data WORK.M0GQE934;
+18421      set WORK.M0GQE934;
+MPRINT(EM_DIAGRAM):   set WORK.M0GQE934;
+18422      where(use = 'Y' or Report='Y' or (role in('TARGET' 'FREQ' 'PREDICT' 'RESIDUAL' 'INPUT') and use = 'D'));
+MPRINT(EM_DIAGRAM):   where(use = 'Y' or Report='Y' or (role in('TARGET' 'FREQ' 'PREDICT' 'RESIDUAL' 'INPUT') and use = 'D'));
+18423      if ROLE = 'SEGMENT' then delete;
+MPRINT(EM_DIAGRAM):   if ROLE = 'SEGMENT' then delete;
+18424      else if ROLE ^in('FREQ','TARGET') then role = 'INPUT';
+MPRINT(EM_DIAGRAM):   else if ROLE ^in('FREQ','TARGET') then role = 'INPUT';
+18425      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.M0GQE934.
+      WHERE (use='Y') or (Report='Y') or (role in ('FREQ', 'INPUT', 'PREDICT', 'RESIDUAL', 'TARGET') and (use='D'));
+NOTE: The data set WORK.M0GQE934 has 240 observations and 22 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18426      data WORK.M2OQZ5ZI;
+MPRINT(EM_DIAGRAM):    data WORK.M2OQZ5ZI;
+18427      set WORK.M2OQZ5ZI;
+MPRINT(EM_DIAGRAM):   set WORK.M2OQZ5ZI;
+18428      where(use = 'Y' or Report='Y' or (role in('SEGMENT', 'TARGET' 'FREQ' 'PREDICT' 'RESIDUAL' 'INPUT') and use = 'D'));
+MPRINT(EM_DIAGRAM):   where(use = 'Y' or Report='Y' or (role in('SEGMENT', 'TARGET' 'FREQ' 'PREDICT' 'RESIDUAL' 'INPUT') and use = 'D'));
+18429      if ROLE ne 'FREQ' then role = 'INPUT';
+MPRINT(EM_DIAGRAM):   if ROLE ne 'FREQ' then role = 'INPUT';
+18430      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.M2OQZ5ZI.
+      WHERE (use='Y') or (Report='Y') or (role in ('FREQ', 'INPUT', 'PREDICT', 'RESIDUAL', 'SEGMENT', 'TARGET') and (use='D'));
+NOTE: The data set WORK.M2OQZ5ZI has 240 observations and 22 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18431      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+18432      * Stat: calculando estadísticos para las variables de intervalo;
+MPRINT(EM_DIAGRAM):   * Stat: calculando estadísticos para las variables de intervalo;
+18433      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+18434      proc dmdb data=EMWS1.Ids_DATA(obs=100000) nonorm maxlevel=513
+18435      varout=work._DMDBVAR(RENAME=(NAME=VARIABLE))
+18436      ;
+MPRINT(EM_DIAGRAM):   proc dmdb data=EMWS1.Ids_DATA(obs=100000) nonorm maxlevel=513 varout=work._DMDBVAR(RENAME=(NAME=VARIABLE)) ;
+18437      var
+18438      ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC
+18439      ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD
+18440      BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE
+18441      COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT
+18442      CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI
+18443      DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL
+18444      ENGIN ERROR EVENT EXPERI FACT FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND
+18445      FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND
+18446      GROUP HAPPEN HEAR HIGH HOME IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST
+18447      INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD KEYWORD KILL KIND LEVEL LIST LIVE
+18448      LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON MOTIF
+18449      MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN
+18450      OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE POINT
+18451      POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR
+18452      RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN
+18453      SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL
+18454      SOFTWAR SOUND SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN
+18455      SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE
+18456      TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA
+18457      VOLTAG WATER WED WIDGET WINDOW WIRE WONDER WORK WORLD XLIB XTERM YEAR YOU
+18458      ;
+MPRINT(EM_DIAGRAM):   var ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE
+COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL ENGIN ERROR EVENT EXPERI FACT
+FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND GROUP HAPPEN HEAR HIGH HOME IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD
+KEYWORD KILL KIND LEVEL LIST LIVE LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON MOTIF MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE
+POINT POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL SOFTWAR SOUND
+SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA VOLTAG WATER WED WIDGET WINDOW WIRE WONDER
+WORK WORLD XLIB XTERM YEAR YOU ;
+18459      ;
+MPRINT(EM_DIAGRAM):   ;
+18460      ;
+MPRINT(EM_DIAGRAM):   ;
+18461      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Records processed = 3000   Memory used = 511K.
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+ 
+NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
+NOTE: There were 3000 observations read from the data set EMWS1.IDS_DATA.
+NOTE: The data set WORK._DMDBVAR has 240 observations and 9 variables.
+NOTE: PROCEDURE DMDB ha utilizado (Tiempo de proceso total):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+ 
+ 
+18462      proc stdize data = EMWS1.Ids_DATA(obs=100000) out=_null_ outstat=work._STDIZE add=0 fuzz=1E-14 initial=MAD vardef=df method=STD mult=1 pctlmtd=ORD_STAT pctldef=2 pctlpts=(0 5 50 95 100);
+MPRINT(EM_DIAGRAM):   proc stdize data = EMWS1.Ids_DATA(obs=100000) out=_null_ outstat=work._STDIZE add=0 fuzz=1E-14 initial=MAD vardef=df method=STD mult=1 pctlmtd=ORD_STAT pctldef=2 pctlpts=(0 5 50 95 100);
+18463      var
+18464      ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC
+18465      ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD
+18466      BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE
+18467      COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT
+18468      CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI
+18469      DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL
+18470      ENGIN ERROR EVENT EXPERI FACT FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND
+18471      FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND
+18472      GROUP HAPPEN HEAR HIGH HOME IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST
+18473      INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD KEYWORD KILL KIND LEVEL LIST LIVE
+18474      LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON MOTIF
+18475      MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN
+18476      OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE POINT
+18477      POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR
+18478      RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN
+18479      SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL
+18480      SOFTWAR SOUND SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN
+18481      SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE
+18482      TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA
+18483      VOLTAG WATER WED WIDGET WINDOW WIRE WONDER WORK WORLD XLIB XTERM YEAR YOU
+18484      ;
+MPRINT(EM_DIAGRAM):   var ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE
+COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL ENGIN ERROR EVENT EXPERI FACT
+FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND GROUP HAPPEN HEAR HIGH HOME IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD
+KEYWORD KILL KIND LEVEL LIST LIVE LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON MOTIF MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE
+POINT POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL SOFTWAR SOUND
+SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA VOLTAG WATER WED WIDGET WINDOW WIRE WONDER
+WORK WORLD XLIB XTERM YEAR YOU ;
+18485      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: INITIAL= will be ignored.
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.13 seconds
+      cpu time            0.10 seconds
+ 
+NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
+NOTE: There were 3000 observations read from the data set EMWS1.IDS_DATA.
+NOTE: The data set WORK._STDIZE has 13 observations and 241 variables.
+NOTE: PROCEDURE STDIZE ha utilizado (Tiempo de proceso total):
+      real time           0.13 seconds
+      cpu time            0.10 seconds
+ 
+ 
+18486      proc transpose data=work._STDIZE out=work._TRANSSTDIZE(drop=_LABEL_ rename=(_NAME_=VARIABLE));
+MPRINT(EM_DIAGRAM):   proc transpose data=work._STDIZE out=work._TRANSSTDIZE(drop=_LABEL_ rename=(_NAME_=VARIABLE));
+18487      id _type_;
+MPRINT(EM_DIAGRAM):   id _type_;
+18488      where _TYPE_='P50';
+MPRINT(EM_DIAGRAM):   where _TYPE_='P50';
+18489      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+WARNING: The variable _LABEL_ in the DROP, KEEP, or RENAME list has never been referenced.
+NOTE: There were 1 observations read from the data set WORK._STDIZE.
+      WHERE _TYPE_='P50';
+NOTE: The data set WORK._TRANSSTDIZE has 240 observations and 2 variables.
+NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18490      proc sort data=work._TRANSSTDIZE;
+MPRINT(EM_DIAGRAM):   proc sort data=work._TRANSSTDIZE;
+18491      by VARIABLE;
+MPRINT(EM_DIAGRAM):   by VARIABLE;
+18492      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK._TRANSSTDIZE.
+NOTE: The data set WORK._TRANSSTDIZE has 240 observations and 2 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18493      proc sort data=work._DMDBVAR;
+MPRINT(EM_DIAGRAM):   proc sort data=work._DMDBVAR;
+18494      by VARIABLE;
+MPRINT(EM_DIAGRAM):   by VARIABLE;
+18495      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK._DMDBVAR.
+NOTE: The data set WORK._DMDBVAR has 240 observations and 9 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18496      data WORK.StatINTERVAL;
+MPRINT(EM_DIAGRAM):   data WORK.StatINTERVAL;
+18497      merge work._TRANSSTDIZE work._DMDBVAR;
+MPRINT(EM_DIAGRAM):   merge work._TRANSSTDIZE work._DMDBVAR;
+18498      format N NMISS 8. MIN MAX P50 MEAN STD SKEWNESS KURTOSIS BEST8.3;
+MPRINT(EM_DIAGRAM):   format N NMISS 8. MIN MAX P50 MEAN STD SKEWNESS KURTOSIS BEST8.3;
+18499      by VARIABLE;
+MPRINT(EM_DIAGRAM):   by VARIABLE;
+18500      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+WARNING: Multiple lengths were specified for the BY variable VARIABLE by input data sets. This might cause unexpected results.
+NOTE: There were 240 observations read from the data set WORK._TRANSSTDIZE.
+NOTE: There were 240 observations read from the data set WORK._DMDBVAR.
+NOTE: The data set WORK.STATINTERVAL has 240 observations and 10 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+NOTE: There were 13 observations read from the data set WORK._STDIZE.
+NOTE: The data set EMWS1.STAT_TRAINPCTLS has 13 observations and 241 variables.
+18501      data WORK.StatINTERVAL;
+MPRINT(EM_DIAGRAM):    data WORK.StatINTERVAL;
+18502      length DATAROLE $20;
+MPRINT(EM_DIAGRAM):   length DATAROLE $20;
+18503      retain DATAROLE "TRAIN";
+MPRINT(EM_DIAGRAM):   retain DATAROLE "TRAIN";
+18504      set WORK.StatINTERVAL;
+MPRINT(EM_DIAGRAM):   set WORK.StatINTERVAL;
+18505      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.STATINTERVAL.
+NOTE: The data set WORK.STATINTERVAL has 240 observations and 11 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18506      proc append base=EMWS1.Stat_INTERVAL data=WORK.StatINTERVAL force;
+MPRINT(EM_DIAGRAM):   proc append base=EMWS1.Stat_INTERVAL data=WORK.StatINTERVAL force;
+18507      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Appending WORK.STATINTERVAL a EMWS1.STAT_INTERVAL.
+NOTE: BASE data set does not exist. DATA file is being copied to BASE file.
+NOTE: There were 240 observations read from the data set WORK.STATINTERVAL.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 11 variables.
+NOTE: PROCEDURE APPEND ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18508      run;
+MPRINT(EM_DIAGRAM):    run;
+18509      proc sort data=EMWS1.Stat_VariableSet out=tempVariable(keep=name label role rename=(name=variable));
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS1.Stat_VariableSet out=tempVariable(keep=name label role rename=(name=variable));
+18510      by name;
+MPRINT(EM_DIAGRAM):   by name;
+18511      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 242 observations read from the data set EMWS1.STAT_VARIABLESET.
+NOTE: The data set WORK.TEMPVARIABLE has 242 observations and 3 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18512      proc sort data=EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS1.Stat_INTERVAL;
+18513      by Variable;
+MPRINT(EM_DIAGRAM):   by Variable;
+18514      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 11 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18515      data EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   data EMWS1.Stat_INTERVAL;
+18516      merge EMWS1.Stat_INTERVAL(in=_a) tempVariable;
+MPRINT(EM_DIAGRAM):   merge EMWS1.Stat_INTERVAL(in=_a) tempVariable;
+18517      by variable;
+MPRINT(EM_DIAGRAM):   by variable;
+18518      if label = '' then label=Variable;
+MPRINT(EM_DIAGRAM):   if label = '' then label=Variable;
+18519      if _a then output;
+MPRINT(EM_DIAGRAM):   if _a then output;
+18520      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+WARNING: Multiple lengths were specified for the BY variable VARIABLE by input data sets. This might cause unexpected results.
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: There were 242 observations read from the data set WORK.TEMPVARIABLE.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 13 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+18521      proc datasets library=EMWS1 nolist;
+MPRINT(EM_DIAGRAM):   proc datasets library=EMWS1 nolist;
+18522      modify Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   modify Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   label DATAROLE = "Rol de los datos";
+18523      label DATAROLE = "%sysfunc(sasmsg(sashelp.dmine, rpt_datarole_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Variable = "Variable";
+18524      label Variable = "%sysfunc(sasmsg(sashelp.dmine, rpt_variable_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label MEAN = "Media";
+18525      label MEAN = "%sysfunc(sasmsg(sashelp.dmine, rpt_mean_vlabel,    NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label N = "No ausente";
+18526      label N = "%sysfunc(sasmsg(sashelp.dmine, rpt_nonMiss_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label STD = "Desviación estándar";
+18527      label STD = "%sysfunc(sasmsg(sashelp.dmine, rpt_std_vlabel,     NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label NMISS = "Ausente";
+18528      label NMISS = "%sysfunc(sasmsg(sashelp.dmine, rpt_missing_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label p50 = "Mediana";
+18529      label p50 = "%sysfunc(sasmsg(sashelp.dmine, rpt_median_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label MIN = "Mínimo";
+18530      label MIN = "%sysfunc(sasmsg(sashelp.dmine, rpt_minimum_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label MAX = "Máximo";
+18531      label MAX = "%sysfunc(sasmsg(sashelp.dmine, rpt_maximum_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label SKEWNESS = "Asimetría";
+18532      label SKEWNESS = "%sysfunc(sasmsg(sashelp.dmine, rpt_skewness_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label KURTOSIS = "Curtosis";
+18533      label KURTOSIS = "%sysfunc(sasmsg(sashelp.dmine, rpt_kurtosis_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   run;
+18534      run;
+ 
+NOTE: MODIFY was successful for EMWS1.STAT_INTERVAL.DATA.
+ 
+NOTE: PROCEDURE DATASETS ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+18535      data WORK.StatINTERVALSUMMARY;
+MPRINT(EM_DIAGRAM):   data WORK.StatINTERVALSUMMARY;
+18536      set EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   set EMWS1.Stat_INTERVAL;
+18537      length ROLE $32;
+MPRINT(EM_DIAGRAM):   length ROLE $32;
+18538      if Variable = "ACCESS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   if Variable = "ACCESS" then ROLE="INPUT";
+18539      else
+18540      if Variable = "ADAM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ADAM" then ROLE="INPUT";
+18541      else
+18542      if Variable = "ADDRESS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ADDRESS" then ROLE="INPUT";
+18543      else
+18544      if Variable = "ADVANC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ADVANC" then ROLE="INPUT";
+18545      else
+18546      if Variable = "AMERICAN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "AMERICAN" then ROLE="INPUT";
+18547      else
+18548      if Variable = "ANDI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ANDI" then ROLE="INPUT";
+18549      else
+18550      if Variable = "ANSWER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ANSWER" then ROLE="INPUT";
+18551      else
+18552      if Variable = "APPLIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "APPLIC" then ROLE="INPUT";
+18553      else
+18554      if Variable = "APPRECI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "APPRECI" then ROLE="INPUT";
+18555      else
+18556      if Variable = "ARAB" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ARAB" then ROLE="INPUT";
+18557      else
+18558      if Variable = "AREA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "AREA" then ROLE="INPUT";
+18559      else
+18560      if Variable = "ARGIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ARGIC" then ROLE="INPUT";
+18561      else
+18562      if Variable = "ARMENIA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ARMENIA" then ROLE="INPUT";
+18563      else
+18564      if Variable = "ARMENIAN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ARMENIAN" then ROLE="INPUT";
+18565      else
+18566      if Variable = "ATTACK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ATTACK" then ROLE="INPUT";
+18567      else
+18568      if Variable = "AUDIO" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "AUDIO" then ROLE="INPUT";
+18569      else
+18570      if Variable = "BANK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BANK" then ROLE="INPUT";
+18571      else
+18572      if Variable = "BASE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BASE" then ROLE="INPUT";
+18573      else
+18574      if Variable = "BATTERI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BATTERI" then ROLE="INPUT";
+18575      else
+18576      if Variable = "BILL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BILL" then ROLE="INPUT";
+18577      else
+18578      if Variable = "BOOK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BOOK" then ROLE="INPUT";
+18579      else
+18580      if Variable = "BRAIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BRAIN" then ROLE="INPUT";
+18581      else
+18582      if Variable = "BRIAN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BRIAN" then ROLE="INPUT";
+18583      else
+18584      if Variable = "BUILD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BUILD" then ROLE="INPUT";
+18585      else
+18586      if Variable = "BUTTON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "BUTTON" then ROLE="INPUT";
+18587      else
+18588      if Variable = "CALIFORNIA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CALIFORNIA" then ROLE="INPUT";
+18589      else
+18590      if Variable = "CALL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CALL" then ROLE="INPUT";
+18591      else
+18592      if Variable = "CAN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CAN" then ROLE="INPUT";
+18593      else
+18594      if Variable = "CARD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CARD" then ROLE="INPUT";
+18595      else
+18596      if Variable = "CASE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CASE" then ROLE="INPUT";
+18597      else
+18598      if Variable = "CENTER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CENTER" then ROLE="INPUT";
+18599      else
+18600      if Variable = "CHANG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CHANG" then ROLE="INPUT";
+18601      else
+18602      if Variable = "CHIP" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CHIP" then ROLE="INPUT";
+18603      else
+18604      if Variable = "CIRCUIT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CIRCUIT" then ROLE="INPUT";
+18605      else
+18606      if Variable = "CLIENT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CLIENT" then ROLE="INPUT";
+18607      else
+18608      if Variable = "CODE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CODE" then ROLE="INPUT";
+18609      else
+18610      if Variable = "COLOR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COLOR" then ROLE="INPUT";
+18611      else
+18612      if Variable = "COMMUN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COMMUN" then ROLE="INPUT";
+18613      else
+18614      if Variable = "COMP" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COMP" then ROLE="INPUT";
+18615      else
+18616      if Variable = "COMPANI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COMPANI" then ROLE="INPUT";
+18617      else
+18618      if Variable = "COMPIL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COMPIL" then ROLE="INPUT";
+18619      else
+18620      if Variable = "COMPUT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COMPUT" then ROLE="INPUT";
+18621      else
+18622      if Variable = "CONNECT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CONNECT" then ROLE="INPUT";
+18623      else
+18624      if Variable = "CONTROL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CONTROL" then ROLE="INPUT";
+18625      else
+18626      if Variable = "COPI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "COPI" then ROLE="INPUT";
+18627      else
+18628      if Variable = "CORRECT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CORRECT" then ROLE="INPUT";
+18629      else
+18630      if Variable = "CREAT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CREAT" then ROLE="INPUT";
+18631      else
+18632      if Variable = "CURRENT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "CURRENT" then ROLE="INPUT";
+18633      else
+18634      if Variable = "DAI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DAI" then ROLE="INPUT";
+18635      else
+18636      if Variable = "DATA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DATA" then ROLE="INPUT";
+18637      else
+18638      if Variable = "DAVID" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DAVID" then ROLE="INPUT";
+18639      else
+18640      if Variable = "DEPART" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DEPART" then ROLE="INPUT";
+18641      else
+18642      if Variable = "DEPT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DEPT" then ROLE="INPUT";
+18643      else
+18644      if Variable = "DESIGN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DESIGN" then ROLE="INPUT";
+18645      else
+18646      if Variable = "DETECTOR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DETECTOR" then ROLE="INPUT";
+18647      else
+18648      if Variable = "DEVIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DEVIC" then ROLE="INPUT";
+18649      else
+18650      if Variable = "DISEAS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DISEAS" then ROLE="INPUT";
+18651      else
+18652      if Variable = "DISPLAI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DISPLAI" then ROLE="INPUT";
+18653      else
+18654      if Variable = "DISTRIBUT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DISTRIBUT" then ROLE="INPUT";
+18655      else
+18656      if Variable = "DOCTOR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DOCTOR" then ROLE="INPUT";
+18657      else
+18658      if Variable = "DOESN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DOESN" then ROLE="INPUT";
+18659      else
+18660      if Variable = "DON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DON" then ROLE="INPUT";
+18661      else
+18662      if Variable = "DRAW" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DRAW" then ROLE="INPUT";
+18663      else
+18664      if Variable = "DRIVE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DRIVE" then ROLE="INPUT";
+18665      else
+18666      if Variable = "DRUG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "DRUG" then ROLE="INPUT";
+18667      else
+18668      if Variable = "EDU" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "EDU" then ROLE="INPUT";
+18669      else
+18670      if Variable = "EFFECT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "EFFECT" then ROLE="INPUT";
+18671      else
+18672      if Variable = "ELECTR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ELECTR" then ROLE="INPUT";
+18673      else
+18674      if Variable = "ELECTRON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ELECTRON" then ROLE="INPUT";
+18675      else
+18676      if Variable = "EMAIL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "EMAIL" then ROLE="INPUT";
+18677      else
+18678      if Variable = "ENGIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ENGIN" then ROLE="INPUT";
+18679      else
+18680      if Variable = "ERROR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ERROR" then ROLE="INPUT";
+18681      else
+18682      if Variable = "EVENT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "EVENT" then ROLE="INPUT";
+18683      else
+18684      if Variable = "EXPERI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "EXPERI" then ROLE="INPUT";
+18685      else
+18686      if Variable = "FACT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FACT" then ROLE="INPUT";
+18687      else
+18688      if Variable = "FAX" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FAX" then ROLE="INPUT";
+18689      else
+18690      if Variable = "FEEL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FEEL" then ROLE="INPUT";
+18691      else
+18692      if Variable = "FILE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FILE" then ROLE="INPUT";
+18693      else
+18694      if Variable = "FIND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FIND" then ROLE="INPUT";
+18695      else
+18696      if Variable = "FOLLOWUP" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FOLLOWUP" then ROLE="INPUT";
+18697      else
+18698      if Variable = "FONT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FONT" then ROLE="INPUT";
+18699      else
+18700      if Variable = "FOOD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FOOD" then ROLE="INPUT";
+18701      else
+18702      if Variable = "FRI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FRI" then ROLE="INPUT";
+18703      else
+18704      if Variable = "FRIEND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FRIEND" then ROLE="INPUT";
+18705      else
+18706      if Variable = "FUNCTION" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "FUNCTION" then ROLE="INPUT";
+18707      else
+18708      if Variable = "GEB" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GEB" then ROLE="INPUT";
+18709      else
+18710      if Variable = "GENER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GENER" then ROLE="INPUT";
+18711      else
+18712      if Variable = "GEORGIA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GEORGIA" then ROLE="INPUT";
+18713      else
+18714      if Variable = "GIVE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GIVE" then ROLE="INPUT";
+18715      else
+18716      if Variable = "GOOD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GOOD" then ROLE="INPUT";
+18717      else
+18718      if Variable = "GORDON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GORDON" then ROLE="INPUT";
+18719      else
+18720      if Variable = "GOVERN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GOVERN" then ROLE="INPUT";
+18721      else
+18722      if Variable = "GRAPHIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GRAPHIC" then ROLE="INPUT";
+18723      else
+18724      if Variable = "GREAT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GREAT" then ROLE="INPUT";
+18725      else
+18726      if Variable = "GREEK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GREEK" then ROLE="INPUT";
+18727      else
+18728      if Variable = "GROUND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GROUND" then ROLE="INPUT";
+18729      else
+18730      if Variable = "GROUP" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "GROUP" then ROLE="INPUT";
+18731      else
+18732      if Variable = "HAPPEN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "HAPPEN" then ROLE="INPUT";
+18733      else
+18734      if Variable = "HEAR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "HEAR" then ROLE="INPUT";
+18735      else
+18736      if Variable = "HIGH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "HIGH" then ROLE="INPUT";
+18737      else
+18738      if Variable = "HOME" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "HOME" then ROLE="INPUT";
+18739      else
+18740      if Variable = "IMAG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "IMAG" then ROLE="INPUT";
+18741      else
+18742      if Variable = "INCLUD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INCLUD" then ROLE="INPUT";
+18743      else
+18744      if Variable = "INFO" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INFO" then ROLE="INPUT";
+18745      else
+18746      if Variable = "INFORM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INFORM" then ROLE="INPUT";
+18747      else
+18748      if Variable = "INPUT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INPUT" then ROLE="INPUT";
+18749      else
+18750      if Variable = "INSTITUT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INSTITUT" then ROLE="INPUT";
+18751      else
+18752      if Variable = "INTEREST" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INTEREST" then ROLE="INPUT";
+18753      else
+18754      if Variable = "INTERNET" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "INTERNET" then ROLE="INPUT";
+18755      else
+18756      if Variable = "ISRA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ISRA" then ROLE="INPUT";
+18757      else
+18758      if Variable = "ISRAEL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ISRAEL" then ROLE="INPUT";
+18759      else
+18760      if Variable = "JEW" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "JEW" then ROLE="INPUT";
+18761      else
+18762      if Variable = "JEWISH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "JEWISH" then ROLE="INPUT";
+18763      else
+18764      if Variable = "JOHN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "JOHN" then ROLE="INPUT";
+18765      else
+18766      if Variable = "KEYBOARD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "KEYBOARD" then ROLE="INPUT";
+18767      else
+18768      if Variable = "KEYWORD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "KEYWORD" then ROLE="INPUT";
+18769      else
+18770      if Variable = "KILL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "KILL" then ROLE="INPUT";
+18771      else
+18772      if Variable = "KIND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "KIND" then ROLE="INPUT";
+18773      else
+18774      if Variable = "LEVEL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "LEVEL" then ROLE="INPUT";
+18775      else
+18776      if Variable = "LIST" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "LIST" then ROLE="INPUT";
+18777      else
+18778      if Variable = "LIVE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "LIVE" then ROLE="INPUT";
+18779      else
+18780      if Variable = "LONG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "LONG" then ROLE="INPUT";
+18781      else
+18782      if Variable = "MACHIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MACHIN" then ROLE="INPUT";
+18783      else
+18784      if Variable = "MAIL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MAIL" then ROLE="INPUT";
+18785      else
+18786      if Variable = "MANAG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MANAG" then ROLE="INPUT";
+18787      else
+18788      if Variable = "MARK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MARK" then ROLE="INPUT";
+18789      else
+18790      if Variable = "MED" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MED" then ROLE="INPUT";
+18791      else
+18792      if Variable = "MEDIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MEDIC" then ROLE="INPUT";
+18793      else
+18794      if Variable = "MEDICIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MEDICIN" then ROLE="INPUT";
+18795      else
+18796      if Variable = "MEMORI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MEMORI" then ROLE="INPUT";
+18797      else
+18798      if Variable = "MICHAEL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MICHAEL" then ROLE="INPUT";
+18799      else
+18800      if Variable = "MIKE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MIKE" then ROLE="INPUT";
+18801      else
+18802      if Variable = "MON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MON" then ROLE="INPUT";
+18803      else
+18804      if Variable = "MOTIF" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MOTIF" then ROLE="INPUT";
+18805      else
+18806      if Variable = "MOTOROLA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "MOTOROLA" then ROLE="INPUT";
+18807      else
+18808      if Variable = "NATION" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NATION" then ROLE="INPUT";
+18809      else
+18810      if Variable = "NETWORK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NETWORK" then ROLE="INPUT";
+18811      else
+18812      if Variable = "NEW" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NEW" then ROLE="INPUT";
+18813      else
+18814      if Variable = "NEWS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NEWS" then ROLE="INPUT";
+18815      else
+18816      if Variable = "NEWSREAD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NEWSREAD" then ROLE="INPUT";
+18817      else
+18818      if Variable = "NOIS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NOIS" then ROLE="INPUT";
+18819      else
+18820      if Variable = "NUMBER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "NUMBER" then ROLE="INPUT";
+18821      else
+18822      if Variable = "OPER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "OPER" then ROLE="INPUT";
+18823      else
+18824      if Variable = "OPINION" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "OPINION" then ROLE="INPUT";
+18825      else
+18826      if Variable = "ORIGIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ORIGIN" then ROLE="INPUT";
+18827      else
+18828      if Variable = "OUTPUT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "OUTPUT" then ROLE="INPUT";
+18829      else
+18830      if Variable = "PAIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PAIN" then ROLE="INPUT";
+18831      else
+18832      if Variable = "PALESTINIAN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PALESTINIAN" then ROLE="INPUT";
+18833      else
+18834      if Variable = "PART" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PART" then ROLE="INPUT";
+18835      else
+18836      if Variable = "PATIENT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PATIENT" then ROLE="INPUT";
+18837      else
+18838      if Variable = "PERSON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PERSON" then ROLE="INPUT";
+18839      else
+18840      if Variable = "PHONE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PHONE" then ROLE="INPUT";
+18841      else
+18842      if Variable = "PITT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PITT" then ROLE="INPUT";
+18843      else
+18844      if Variable = "PITTSBURGH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PITTSBURGH" then ROLE="INPUT";
+18845      else
+18846      if Variable = "PLACE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PLACE" then ROLE="INPUT";
+18847      else
+18848      if Variable = "POINT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "POINT" then ROLE="INPUT";
+18849      else
+18850      if Variable = "POLICI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "POLICI" then ROLE="INPUT";
+18851      else
+18852      if Variable = "POSIT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "POSIT" then ROLE="INPUT";
+18853      else
+18854      if Variable = "POST" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "POST" then ROLE="INPUT";
+18855      else
+18856      if Variable = "POWER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "POWER" then ROLE="INPUT";
+18857      else
+18858      if Variable = "PROBLEM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PROBLEM" then ROLE="INPUT";
+18859      else
+18860      if Variable = "PRODUCT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PRODUCT" then ROLE="INPUT";
+18861      else
+18862      if Variable = "PROGRAM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PROGRAM" then ROLE="INPUT";
+18863      else
+18864      if Variable = "PROJECT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PROJECT" then ROLE="INPUT";
+18865      else
+18866      if Variable = "PUBLIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "PUBLIC" then ROLE="INPUT";
+18867      else
+18868      if Variable = "QUESTION" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "QUESTION" then ROLE="INPUT";
+18869      else
+18870      if Variable = "RADAR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RADAR" then ROLE="INPUT";
+18871      else
+18872      if Variable = "RADIO" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RADIO" then ROLE="INPUT";
+18873      else
+18874      if Variable = "READ" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "READ" then ROLE="INPUT";
+18875      else
+18876      if Variable = "REASON" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "REASON" then ROLE="INPUT";
+18877      else
+18878      if Variable = "RECEIV" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RECEIV" then ROLE="INPUT";
+18879      else
+18880      if Variable = "REMEMB" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "REMEMB" then ROLE="INPUT";
+18881      else
+18882      if Variable = "REPLI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "REPLI" then ROLE="INPUT";
+18883      else
+18884      if Variable = "REPORT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "REPORT" then ROLE="INPUT";
+18885      else
+18886      if Variable = "REQUIR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "REQUIR" then ROLE="INPUT";
+18887      else
+18888      if Variable = "RESEARCH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RESEARCH" then ROLE="INPUT";
+18889      else
+18890      if Variable = "RESPONS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RESPONS" then ROLE="INPUT";
+18891      else
+18892      if Variable = "ROBERT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "ROBERT" then ROLE="INPUT";
+18893      else
+18894      if Variable = "RUN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "RUN" then ROLE="INPUT";
+18895      else
+18896      if Variable = "SAT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SAT" then ROLE="INPUT";
+18897      else
+18898      if Variable = "SCHOOL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SCHOOL" then ROLE="INPUT";
+18899      else
+18900      if Variable = "SCI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SCI" then ROLE="INPUT";
+18901      else
+18902      if Variable = "SCIENC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SCIENC" then ROLE="INPUT";
+18903      else
+18904      if Variable = "SCREEN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SCREEN" then ROLE="INPUT";
+18905      else
+18906      if Variable = "SELL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SELL" then ROLE="INPUT";
+18907      else
+18908      if Variable = "SEND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SEND" then ROLE="INPUT";
+18909      else
+18910      if Variable = "SERDAR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SERDAR" then ROLE="INPUT";
+18911      else
+18912      if Variable = "SERVER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SERVER" then ROLE="INPUT";
+18913      else
+18914      if Variable = "SERVIC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SERVIC" then ROLE="INPUT";
+18915      else
+18916      if Variable = "SHOW" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SHOW" then ROLE="INPUT";
+18917      else
+18918      if Variable = "SIDE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SIDE" then ROLE="INPUT";
+18919      else
+18920      if Variable = "SIGNAL" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SIGNAL" then ROLE="INPUT";
+18921      else
+18922      if Variable = "SOFTWAR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SOFTWAR" then ROLE="INPUT";
+18923      else
+18924      if Variable = "SOUND" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SOUND" then ROLE="INPUT";
+18925      else
+18926      if Variable = "SOURC" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SOURC" then ROLE="INPUT";
+18927      else
+18928      if Variable = "STANDARD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "STANDARD" then ROLE="INPUT";
+18929      else
+18930      if Variable = "START" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "START" then ROLE="INPUT";
+18931      else
+18932      if Variable = "STATE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "STATE" then ROLE="INPUT";
+18933      else
+18934      if Variable = "STEVE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "STEVE" then ROLE="INPUT";
+18935      else
+18936      if Variable = "STUDI" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "STUDI" then ROLE="INPUT";
+18937      else
+18938      if Variable = "SUBSCRIB" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SUBSCRIB" then ROLE="INPUT";
+18939      else
+18940      if Variable = "SUGGEST" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SUGGEST" then ROLE="INPUT";
+18941      else
+18942      if Variable = "SUN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SUN" then ROLE="INPUT";
+18943      else
+18944      if Variable = "SUPPORT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SUPPORT" then ROLE="INPUT";
+18945      else
+18946      if Variable = "SWITCH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SWITCH" then ROLE="INPUT";
+18947      else
+18948      if Variable = "SYSTEM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "SYSTEM" then ROLE="INPUT";
+18949      else
+18950      if Variable = "TALK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TALK" then ROLE="INPUT";
+18951      else
+18952      if Variable = "TECHNOLOG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TECHNOLOG" then ROLE="INPUT";
+18953      else
+18954      if Variable = "TERMIN" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TERMIN" then ROLE="INPUT";
+18955      else
+18956      if Variable = "TEST" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TEST" then ROLE="INPUT";
+18957      else
+18958      if Variable = "THAT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "THAT" then ROLE="INPUT";
+18959      else
+18960      if Variable = "THU" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "THU" then ROLE="INPUT";
+18961      else
+18962      if Variable = "TIME" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TIME" then ROLE="INPUT";
+18963      else
+18964      if Variable = "TREATMENT" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TREATMENT" then ROLE="INPUT";
+18965      else
+18966      if Variable = "TRUE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TRUE" then ROLE="INPUT";
+18967      else
+18968      if Variable = "TUE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TUE" then ROLE="INPUT";
+18969      else
+18970      if Variable = "TURKISH" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TURKISH" then ROLE="INPUT";
+18971      else
+18972      if Variable = "TYPE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "TYPE" then ROLE="INPUT";
+18973      else
+18974      if Variable = "UNIV" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "UNIV" then ROLE="INPUT";
+18975      else
+18976      if Variable = "UNIVERS" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "UNIVERS" then ROLE="INPUT";
+18977      else
+18978      if Variable = "UNIX" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "UNIX" then ROLE="INPUT";
+18979      else
+18980      if Variable = "USENET" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "USENET" then ROLE="INPUT";
+18981      else
+18982      if Variable = "USER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "USER" then ROLE="INPUT";
+18983      else
+18984      if Variable = "UTEXA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "UTEXA" then ROLE="INPUT";
+18985      else
+18986      if Variable = "UUCP" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "UUCP" then ROLE="INPUT";
+18987      else
+18988      if Variable = "VERSION" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "VERSION" then ROLE="INPUT";
+18989      else
+18990      if Variable = "VIRGINIA" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "VIRGINIA" then ROLE="INPUT";
+18991      else
+18992      if Variable = "VOLTAG" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "VOLTAG" then ROLE="INPUT";
+18993      else
+18994      if Variable = "WATER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WATER" then ROLE="INPUT";
+18995      else
+18996      if Variable = "WED" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WED" then ROLE="INPUT";
+18997      else
+18998      if Variable = "WIDGET" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WIDGET" then ROLE="INPUT";
+18999      else
+19000      if Variable = "WINDOW" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WINDOW" then ROLE="INPUT";
+19001      else
+19002      if Variable = "WIRE" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WIRE" then ROLE="INPUT";
+19003      else
+19004      if Variable = "WONDER" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WONDER" then ROLE="INPUT";
+19005      else
+19006      if Variable = "WORK" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WORK" then ROLE="INPUT";
+19007      else
+19008      if Variable = "WORLD" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "WORLD" then ROLE="INPUT";
+19009      else
+19010      if Variable = "XLIB" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "XLIB" then ROLE="INPUT";
+19011      else
+19012      if Variable = "XTERM" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "XTERM" then ROLE="INPUT";
+19013      else
+19014      if Variable = "YEAR" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "YEAR" then ROLE="INPUT";
+19015      else
+19016      if Variable = "YOU" then ROLE="INPUT";
+MPRINT(EM_DIAGRAM):   else if Variable = "YOU" then ROLE="INPUT";
+19017      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: The data set WORK.STATINTERVALSUMMARY has 240 observations and 13 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+19018      proc sort data=WORK.StatINTERVALSUMMARY NOTHREADS;
+MPRINT(EM_DIAGRAM):    proc sort data=WORK.StatINTERVALSUMMARY NOTHREADS;
+19019      by DATAROLE ROLE Variable;
+MPRINT(EM_DIAGRAM):   by DATAROLE ROLE Variable;
+19020      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set WORK.STATINTERVALSUMMARY.
+NOTE: The data set WORK.STATINTERVALSUMMARY has 240 observations and 13 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+19021      %let _cn = %sysfunc(getoption(CENTER));
+19022      %let _nb = %sysfunc(getoption(NUMBER));
+19023      options nonumber nocenter;
+MPRINT(EM_DIAGRAM):   options nonumber nocenter;
+19024      title;
+MPRINT(EM_DIAGRAM):   title;
+19025      proc print data=WORK.StatINTERVALSUMMARY(obs=500) label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.StatINTERVALSUMMARY(obs=500) label noobs;
+19026      var Variable ROLE MEAN STD N NMISS MIN P50 MAX SKEWNESS KURTOSIS;
+MPRINT(EM_DIAGRAM):   var Variable ROLE MEAN STD N NMISS MIN P50 MAX SKEWNESS KURTOSIS;
+19027      by DATAROLE;
+MPRINT(EM_DIAGRAM):   by DATAROLE;
+19028      title9 "%sysfunc(sasmsg(sashelp.dmine, rpt_intervalStats_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title9 "Estadísticos descriptivos de la variable de intervalo";
+19029      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_maxObsPrinted_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "(máximo imprimido 500 observaciones)";
+MPRINT(EM_DIAGRAM):   run;
+19030      run;
+ 
+NOTE: There were 240 observations read from the data set WORK.STATINTERVALSUMMARY.
+NOTE: The PROCEDURE PRINT printed page 3.
+NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
+      real time           0.03 seconds
+      cpu time            0.01 seconds
+ 
+ 
+19031      title9;
+MPRINT(EM_DIAGRAM):   title9;
+19032      title10;
+MPRINT(EM_DIAGRAM):   title10;
+19033      options &_cn &_nb;
+MPRINT(EM_DIAGRAM):   options NOCENTER NONUMBER;
+19034      proc sort data=WORK.M08FKDPF;
+MPRINT(EM_DIAGRAM):    proc sort data=WORK.M08FKDPF;
+19035      by name;
+MPRINT(EM_DIAGRAM):   by name;
+19036      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+19037      data EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):    data EMWS1.Stat_INTERVAL;
+19038      set EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   set EMWS1.Stat_INTERVAL;
+19039      label NMiss = "%sysfunc(sasmsg(sashelp.dmine, rpt_missing_vlabel, NOQUOTE))" absCV = "%sysfunc(sasmsg(sashelp.dmine, rpt_absCV_vlabel,   NOQUOTE))" CV = "%sysfunc(sasmsg(sashelp.dmine, rpt_cv_vlabel,      NOQUOTE))" Sign =
+19040         "%sysfunc(sasmsg(sashelp.dmine, rpt_sign_vlabel,    NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label NMiss = "Ausente" absCV = "Valor absoluto del c.v." CV = "Coeficiente de variación" Sign = "Signo";
+19041      if MEAN ne . then do;
+MPRINT(EM_DIAGRAM):   if MEAN ne . then do;
+19042      CV = STD/MEAN;
+MPRINT(EM_DIAGRAM):   CV = STD/MEAN;
+19043      absCV = abs(CV);
+MPRINT(EM_DIAGRAM):   absCV = abs(CV);
+19044      if absCV < 0 then Sign = '-';
+MPRINT(EM_DIAGRAM):   if absCV < 0 then Sign = '-';
+19045      else Sign = '+';
+MPRINT(EM_DIAGRAM):   else Sign = '+';
+19046      absCV = abs(absCV);
+MPRINT(EM_DIAGRAM):   absCV = abs(absCV);
+19047      end;
+MPRINT(EM_DIAGRAM):   end;
+19048      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 16 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+19049      proc sort data = EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   proc sort data = EMWS1.Stat_INTERVAL;
+19050      by DATAROLE descending absCV;
+MPRINT(EM_DIAGRAM):   by DATAROLE descending absCV;
+19051      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 16 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+19052      data EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   data EMWS1.Stat_INTERVAL;
+19053      retain OrderedInput;
+MPRINT(EM_DIAGRAM):   retain OrderedInput;
+19054      set EMWS1.Stat_INTERVAL;
+MPRINT(EM_DIAGRAM):   set EMWS1.Stat_INTERVAL;
+19055      by DATAROLE;
+MPRINT(EM_DIAGRAM):   by DATAROLE;
+19056      label OrderedInput = "%sysfunc(sasmsg(sashelp.dmine, rpt_orderedInput_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label OrderedInput = "Inputs ordenados";
+19057      format OrderedInput 5.0;
+MPRINT(EM_DIAGRAM):   format OrderedInput 5.0;
+19058      if first.DATAROLE then OrderedInput = 1;
+MPRINT(EM_DIAGRAM):   if first.DATAROLE then OrderedInput = 1;
+19059      else OrderedInput + 1;
+MPRINT(EM_DIAGRAM):   else OrderedInput + 1;
+19060      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: There were 240 observations read from the data set EMWS1.STAT_INTERVAL.
+NOTE: The data set EMWS1.STAT_INTERVAL has 240 observations and 17 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+19061      proc sort data=WORK.M08FKDPF;
+MPRINT(EM_DIAGRAM):    proc sort data=WORK.M08FKDPF;
+19062      by name;
+MPRINT(EM_DIAGRAM):   by name;
+19063      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "16/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "09H07" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log de puntuación";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log de puntuación
+Fecha:                16/11/20
+Hora:                09H07
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O27VFLJY "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O27VFLJY new;
+MPRINT(EM_DIAGRAM):   run;
+19165      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+19166      * Stat: Scoring DATA data;
+MPRINT(EM_DIAGRAM):   * Stat: Scoring DATA data;
+19167      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+19168      data EMWS1.Stat_TRAIN
+19169      / view=EMWS1.Stat_TRAIN
+19170      ;
+MPRINT(EM_DIAGRAM):   data EMWS1.Stat_TRAIN / view=EMWS1.Stat_TRAIN ;
+19171      set EMWS1.Ids_DATA
+19172      ;
+MPRINT(EM_DIAGRAM):   set EMWS1.Ids_DATA ;
+19173      run;
+MPRINT(EM_DIAGRAM):   run;
+ 
+NOTE: DATA STEP view saved on file EMWS1.STAT_TRAIN.
+NOTE: A stored DATA STEP view cannot run under a different operating system.
+NOTE: Vista EMWS1.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.06 seconds
+      cpu time            0.03 seconds
+ 
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.07 seconds
+      cpu time            0.03 seconds
+ 
+ 
+MPRINT(EM_DIAGRAM):   quit;
+19174      quit;
+ 
+19175      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+19176      * Stat: Computing metadata for TRAIN data;
+MPRINT(EM_DIAGRAM):   * Stat: Computing metadata for TRAIN data;
+19177      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+ 
+NOTE: Vista EMWS1.STAT_TRAIN.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+ 
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   * &nodeid: Computing Metadata for TRAIN data;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   filename _delta "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\CDELTA_TRAIN.sas";
+MPRINT(EMADVISECOLUMNS):   proc display c=sashelp.emmeta.advisecolumns.scl;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    options validvarname=any;
+MPRINT(EMADVISECOLUMNS):   proc contents data=EMWS1.Stat_TRAIN out=_tempAdvisor noprint;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):   options validvarname=V7;
+MPRINT(EMADVISECOLUMNS):    data _null_;
+MPRINT(EMADVISECOLUMNS):   dsid = open('EMWS1.Stat_TRAIN');
+MPRINT(EMADVISECOLUMNS):   call symput('_dsidTable', strip(put(dsid, best.)));
+MPRINT(EMADVISECOLUMNS):   if dsid then do;
+MPRINT(EMADVISECOLUMNS):   call symput('_engineTable', attrc(dsid, 'ENGINE'));
+MPRINT(EMADVISECOLUMNS):   dsid = close(dsid);
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    proc contents data=EMWS1.Stat_TRAIN out=WORK.M3757GSQ noprint;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M3757GSQ;
+MPRINT(EMADVISECOLUMNS):   length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
+MPRINT(EMADVISECOLUMNS):   label NAME =;
+MPRINT(EMADVISECOLUMNS):   set WORK.M3757GSQ(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
+MPRINT(EMADVISECOLUMNS):   if itype = 1 then type = 'N';
+MPRINT(EMADVISECOLUMNS):   else type = 'C';
+MPRINT(EMADVISECOLUMNS):   if formatl > 0 then do;
+MPRINT(EMADVISECOLUMNS):   if format ne '' then do;
+MPRINT(EMADVISECOLUMNS):   if type='N' then format = strip(format)!!strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+MPRINT(EMADVISECOLUMNS):   else format = strip(format)!!strip(put(formatl, best12.))!!'.';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else format = strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if format ne '' then format = strip(format)!!'.';
+MPRINT(EMADVISECOLUMNS):   if informl > 0 then do;
+MPRINT(EMADVISECOLUMNS):   if informat ne ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if type='N' then informat = strip(informat)!!strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+MPRINT(EMADVISECOLUMNS):   else informat = strip(informat)!!strip(put(informl, best12.))!!'.';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else informat = strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if informat ne '' then informat = strip(informat)!!'.';
+MPRINT(EMADVISECOLUMNS):   if idxusage = 'NONE' then index ="N";
+MPRINT(EMADVISECOLUMNS):   else index = "Y";
+MPRINT(EMADVISECOLUMNS):   indextype = idxusage;
+MPRINT(EMADVISECOLUMNS):   drop idxusage itype formatl formatd informl informd;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M3757GSQ;
+MPRINT(EMADVISECOLUMNS):   length UNAME $64;
+MPRINT(EMADVISECOLUMNS):   set WORK.M3757GSQ;
+MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M19JSDAY NOTHREADS;
+MPRINT(EMADVISECOLUMNS):   by UNAME;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   drop UNAME;
+MPRINT(EMADVISECOLUMNS):   set WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M35SK_Z1(keep=NAME ATTR);
+MPRINT(EMADVISECOLUMNS):   length ATTR $ 20;
+MPRINT(EMADVISECOLUMNS):   set WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   if level ne "INTERVAL" then do;
+MPRINT(EMADVISECOLUMNS):   if order = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'ORDER';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if format ne ' ' and formattype = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'FORMATTYPE';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if role = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'ROLE';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if level = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'LEVEL';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if type = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'TYPE';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if index = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'INDEX';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if report = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   attr = 'REPORT';
+MPRINT(EMADVISECOLUMNS):   output;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):   proc sort NOTHREADS;
+MPRINT(EMADVISECOLUMNS):   by attr;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   length NAME $64 ROLE $ 32 LEVEL $ 10 ORDER $ 8 CREATOR $32 FORMATTYPE $ 10 FAMILY $ 10 LOWERLIMIT 8 UPPERLIMIT 8 REPORT $1 DISTRIBUTION $ 20 COMMENT $64;
+MPRINT(EMADVISECOLUMNS):   length levelAssigned 8 roleAssigned 8 PRICE 8;
+MPRINT(EMADVISECOLUMNS):   set WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   if formattype = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if format ne ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if type = 'N' then do;
+MPRINT(EMADVISECOLUMNS):   pos = indexc(format,'.1234567890');
+MPRINT(EMADVISECOLUMNS):   if pos > 1 then tempfmt = substr(format,1, pos-1);
+MPRINT(EMADVISECOLUMNS):   else tempfmt = ' ';
+MPRINT(EMADVISECOLUMNS):   flen = length(tempfmt);
+MPRINT(EMADVISECOLUMNS):   select;
+MPRINT(EMADVISECOLUMNS):   when(tempfmt in ("DATE" "DAY" "DDMMYY" "DOWNAME" "JULDAY" "JULIAN" "MMDDYY" "MMDDYYD" "MMDDYYC" "MMDDYYN" "MMDDYYP" "MMDDYYS" "MONNAME" "MONTH" "MONYY" "NENGO" "QTR" "QTRR" "WEEKDATE" "WEEKDATX" "WEEKDAY" "WORDDATE" "WORDDATX"
+"YEAR" "YYMMDD" "YYMON" "YYMMDDC" "YYMMDDD" "YYMMDDN" "YYMMDDP" "YYMMDDS" "EURDFDE" "NJDATE" "NLDATE" "EURDFDD" "EURDFDWN" "EURDFMN" "EURDFMY" "EURDFWK" "EURDFWKX" "EURDFWDX" "EURDFDN" "EURDFDE" )) formattype = 'DATE';
+MPRINT(EMADVISECOLUMNS):   when(tempfmt in ("DATETIME" "EURDFDT" "TOD" )) formattype = "DATETIME";
+MPRINT(EMADVISECOLUMNS):   when(tempfmt in ("HHMM" "HOUR" "MMSS" "TIME" "TIMEAMPM" )) formattype = "TIME";
+MPRINT(EMADVISECOLUMNS):   when(tempfmt in ("COMMA" "COMMAX" "DOLLAR" "DOLLARX" "E" "FRACT" "NEGPAREN" "PERCENT")) formattype="QUANTITY";
+MPRINT(EMADVISECOLUMNS):   when(tempfmt in ("BINARY" "HEX" "IB" "OCTAL" "PD" "PIB" "PK" "RB" "SSN" "Z" "ZD")) formattype = "CODING";
+MPRINT(EMADVISECOLUMNS):   otherwise do;
+MPRINT(EMADVISECOLUMNS):   formattype = "USER";
+MPRINT(EMADVISECOLUMNS):   if compress(tempfmt, '0123456789.', '') = '' then formattype='NUM';
+MPRINT(EMADVISECOLUMNS):   else if substr(tempfmt, 1, 6)='NLDATE' then formattype = "DATE";
+MPRINT(EMADVISECOLUMNS):   else if substr(tempfmt, 1, 6)='NLDATM' then formattype = "DATETIME";
+MPRINT(EMADVISECOLUMNS):   else if substr(tempfmt, 1, 4)='NLTIM' then formattype = "TIME";
+MPRINT(EMADVISECOLUMNS):   else if flen >= 4 then do;
+MPRINT(EMADVISECOLUMNS):   str = substr(tempfmt,1,4);
+MPRINT(EMADVISECOLUMNS):   if str in ("MMYY" "YYMM" "YYQR") then formattype ="DATE";
+MPRINT(EMADVISECOLUMNS):   else if str = "S370" then formattype = "CODING";
+MPRINT(EMADVISECOLUMNS):   else if str = "BEST" then formattype = "NUM";
+MPRINT(EMADVISECOLUMNS):   drop str;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if flen >=3 and substr(tempfmt,1,3) = "YYQ" then formatType = "DATE";
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   drop flen tempfmt pos;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else do;
+MPRINT(EMADVISECOLUMNS):   formatType = "CATEGORY";
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if formatType = "NUM" then do;
+MPRINT(EMADVISECOLUMNS):   if index = "Y" then formatType = "DISCRETE";
+MPRINT(EMADVISECOLUMNS):   else formatType = "QUANTITY";
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if level = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if formatType in ("CATEGORY", "CODING", "ID") or type = "C" then level = "NOMINAL";
+MPRINT(EMADVISECOLUMNS):   else level = "INTERVAL";
+MPRINT(EMADVISECOLUMNS):   levelAssigned = 1;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else level = upcase(level);
+MPRINT(EMADVISECOLUMNS):   if role = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   length name_prefix $8 _uname $64;
+MPRINT(EMADVISECOLUMNS):   drop name_prefix _uname _freqflag;
+MPRINT(EMADVISECOLUMNS):   retain _freqflag;
+MPRINT(EMADVISECOLUMNS):   if LENGTH> 80 then ROLE = 'TEXT';
+MPRINT(EMADVISECOLUMNS):   _uname = upcase(NAME);
+MPRINT(EMADVISECOLUMNS):   select(_uname);
+MPRINT(EMADVISECOLUMNS):   when('_PARTIND_') do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'ID';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   when('_WARN_') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('EM_SEGMENT') do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'SEGMENT';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   when('_NODE_') do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'SEGMENT';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   when('EM_CLASSTARGET') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('EM_VALUETARGET') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('EM_PREDICTION') ROLE = 'PREDICT';
+MPRINT(EMADVISECOLUMNS):   when('EM_PROBABILITY') ROLE = 'PREDICT';
+MPRINT(EMADVISECOLUMNS):   when('EM_EVENTPROBABILITY') ROLE = 'PREDICT';
+MPRINT(EMADVISECOLUMNS):   when('EM_CLASSIFICATION') ROLE = 'CLASSIFICATION';
+MPRINT(EMADVISECOLUMNS):   when('EM_DECISION') ROLE = 'DECISION';
+MPRINT(EMADVISECOLUMNS):   when('EM_PROFIT') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('EM_LOSS') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('EM_ROI') ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   when('URI') ROLE = 'URL';
+MPRINT(EMADVISECOLUMNS):   when('FILTERED') ROLE = 'TEXTLOC';
+MPRINT(EMADVISECOLUMNS):   otherwise do;
+MPRINT(EMADVISECOLUMNS):   if upcase(NAME) =: 'ZIP' then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'REJECTED';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   COMMENT = 'Rejected by: Exceed the maximum class level of %s';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if upcase(NAME) in('FREQ', 'FREQUENCY') then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'FREQ';
+MPRINT(EMADVISECOLUMNS):   if TYPE = 'C' then ROLE = 'INPUT';
+MPRINT(EMADVISECOLUMNS):   else if _freqflag =1 then ROLE='REJECTED';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else do;
+MPRINT(EMADVISECOLUMNS):   name_prefix = scan(_uname, 1, '_');
+MPRINT(EMADVISECOLUMNS):   if scan(_uname, 2, '_') = '' then name_prefix='';
+MPRINT(EMADVISECOLUMNS):   if name_prefix in('F', 'I', 'U') then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'CLASSIFICATION';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if name_prefix in('Q') then ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   else if name_prefix in('P', 'V') then ROLE = 'PREDICT';
+MPRINT(EMADVISECOLUMNS):   else if name_prefix in('R', 'RS', 'RT', 'RD', 'RDS', 'RDT', 'RA', 'RAS', 'RAT') then ROLE = 'RESIDUAL';
+MPRINT(EMADVISECOLUMNS):   else if name_prefix ='D' then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'DECISION';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if name_prefix ='B' then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'SEGMENT';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else if name_prefix in('EP', 'BP', 'CP', 'EL', 'CL', 'BL', 'ROI', 'IC') then ROLE = 'ASSESS';
+MPRINT(EMADVISECOLUMNS):   else do;
+MPRINT(EMADVISECOLUMNS):   array _ROLE_ (19) $32 _TEMPORARY_ ('ASSESS','CLASSIFICATION','CENSOR', 'COST', 'CROSSID', 'DECISION', 'ID','INPUT', 'LABEL', 'MISSING','PREDICT','REFERRER','REJECTED', 'RESIDUAL','SEGMENT', 'SEQUENCE','TARGET', 'TEXT', 'TIMEID');
+MPRINT(EMADVISECOLUMNS):   drop _found_ i;
+MPRINT(EMADVISECOLUMNS):   _found_=0;
+MPRINT(EMADVISECOLUMNS):   do i=1 to 19 until(_found_=1);
+MPRINT(EMADVISECOLUMNS):   if index(_uname, trim(_ROLE_{i}))=1 then do;
+MPRINT(EMADVISECOLUMNS):   ROLE=_ROLE_{i};
+MPRINT(EMADVISECOLUMNS):   if ROLE = 'ID' then LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   else if ROLE = 'SEGMENT' then LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   else if ROLE = 'TIMEID' and TYPE='N' then LEVEL = 'INTERVAL';
+MPRINT(EMADVISECOLUMNS):   _found_=1;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if length(_uname)>2 then do;
+MPRINT(EMADVISECOLUMNS):   if substr(reverse(trim(_uname)), 1, 3) = 'DI_' then do;
+MPRINT(EMADVISECOLUMNS):   ROLE = 'ID';
+MPRINT(EMADVISECOLUMNS):   LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if ROLE='FREQ' then _freqflag=1;
+MPRINT(EMADVISECOLUMNS):   else if ROLE = 'CLASSIFICATION' then LEVEL = 'NOMINAL';
+MPRINT(EMADVISECOLUMNS):   if symexist('RATEMKG_ROLE') then do;
+MPRINT(EMADVISECOLUMNS):   if upcase(symget('RATEMKG_ROLE')) in('Y', 'YES') then do;
+MPRINT(EMADVISECOLUMNS):   if _uname =: 'POLICY' then ROLE = 'POLICYID';
+MPRINT(EMADVISECOLUMNS):   else if _uname in ('PARTITION', '_PARTIND_') then ROLE = 'PARTITION';
+MPRINT(EMADVISECOLUMNS):   else if type = 'N' then do;
+MPRINT(EMADVISECOLUMNS):   if _uname = 'EXPOSURE' then ROLE = 'EXPOSURE';
+MPRINT(EMADVISECOLUMNS):   else if _uname = 'YEAR' then ROLE = 'YEAR';
+MPRINT(EMADVISECOLUMNS):   else if _uname = 'WEIGHT' then ROLE = 'WEIGHT';
+MPRINT(EMADVISECOLUMNS):   else if _uname = 'OFFSET' then ROLE = 'OFFSET';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   if role = ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if formattype in('DATE', 'DATETIME', 'TIME') then role = 'TIMEID';
+MPRINT(EMADVISECOLUMNS):   else role = 'INPUT';
+MPRINT(EMADVISECOLUMNS):   roleAssigned = 1;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   else role = upcase(role);
+MPRINT(EMADVISECOLUMNS):   if REPORT = '' then REPORT = 'N';
+MPRINT(EMADVISECOLUMNS):   if symexist('dmwb_product') then do;
+MPRINT(EMADVISECOLUMNS):   if upcase(symget('dmwb_product')) = 'FACTORYMINER_DATASOURCE' then do;
+MPRINT(EMADVISECOLUMNS):   if ROLE ^in('INPUT', 'TARGET', 'REJECTED', 'SEGMENT', 'FREQ', 'ID', 'KEY') then ROLE='REJECTED';
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   end;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):    data WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   set WORK.M19JSDAY;
+MPRINT(EMADVISECOLUMNS):   label NAME = "Nombre de la variable" TYPE = "Tipo" ROLE = "Rol" LEVEL= "Nivel de medida" ORDER= "Orden" CREATOR= "Creador" FORMATTYPE= "Tipo de formato" FAMILY= "Familia" DISTRIBUTION= "Distribución" PRICE= "Precio" LOWERLIMIT=
+"Límite inferior" UPPERLIMIT= "Límite superior" REPORT= "Informe" COMMENT= "Comentario" INDEX= "Índice" INDEXTYPE= "TipoÍndice" LABEL= "Etiqueta" LENGTH= "Longitud";
+MPRINT(EMADVISECOLUMNS):   drop levelAssigned roleAssigned;
+MPRINT(EMADVISECOLUMNS):   run;
+MPRINT(EMADVISECOLUMNS):
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.COLUMNMETA;
+MPRINT(EM_DIAGRAM):   by NAME;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   * &nodeid: Merge incoming metadata;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   proc contents data=EMWS1.Ids_DATA noprint out=_temp2(keep=NAME);
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   proc sort data=_temp2;
+MPRINT(EM_DIAGRAM):   by NAME;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS1.Ids_CMeta_DATA out=_temp;
+MPRINT(EM_DIAGRAM):   by NAME;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data EMWS1.Stat_CMeta_TRAIN;
+MPRINT(EM_DIAGRAM):   merge WORK.COLUMNMETA(in=_a) _temp2(in=_b) _temp(drop=FORMAT INFORMAT LENGTH INDEX INDEXTYPE in=_c) end=_eof_;
+MPRINT(EM_DIAGRAM):   by NAME;
+MPRINT(EM_DIAGRAM):   if (^_a and _b) or (^_c and _a and _b) then delete;
+MPRINT(EM_DIAGRAM):   if ^_b then CREATOR = "Stat";
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   * Stat: Apply Delta Code;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   if ROLE in('INPUT', 'REJECTED') then do;
+MPRINT(EM_DIAGRAM):   if upcase(NAME) in( 'ACCESS' 'ADAM' 'ADDRESS' 'ADVANC' 'AMERICAN' 'ANDI' 'ANSWER' 'APPLIC' 'APPRECI' 'ARAB' 'AREA' 'ARGIC' 'ARMENIA' 'ARMENIAN' 'ATTACK' 'AUDIO' 'BANK' 'BASE' 'BATTERI' 'BILL' 'BOOK' 'BRAIN' 'BRIAN' 'BUILD' 'BUTTON'
+'CALIFORNIA' 'CALL' 'CAN' 'CARD' 'CASE' 'CENTER' 'CHANG' 'CHIP' 'CIRCUIT' 'CLIENT' 'CODE' 'COLOR' 'COMMUN' 'COMP' 'COMPANI' 'COMPIL' 'COMPUT' 'CONNECT' 'CONTROL' 'COPI' 'CORRECT' 'CREAT' 'CURRENT' 'DAI' 'DATA' 'DAVID' 'DEPART' 'DEPT' 'DESIGN' 'DETECTOR'
+'DEVIC' 'DISEAS' 'DISPLAI' 'DISTRIBUT' 'DOCTOR' 'DOESN' 'DON' 'DRAW' 'DRIVE' 'DRUG' 'EDU' 'EFFECT' 'ELECTR' 'ELECTRON' 'EMAIL' 'ENGIN' 'ERROR' 'EVENT' 'EXPERI' 'FACT' 'FAX' 'FEEL' 'FILE' 'FIND' 'FOLLOWUP' 'FONT' 'FOOD' 'FRI' 'FRIEND' 'FUNCTION' 'GEB'
+'GENER' 'GEORGIA' 'GIVE' 'GOOD' 'GORDON' 'GOVERN' 'GRAPHIC' 'GREAT' 'GREEK' 'GROUND' 'GROUP' 'HAPPEN' 'HEAR' 'HIGH' 'HOME' 'IMAG' 'INCLUD' 'INFO' 'INFORM' 'INPUT' 'INSTITUT' 'INTEREST' 'INTERNET' 'ISRA' 'ISRAEL' 'JEW' 'JEWISH' 'JOHN' 'KEYBOARD' 'KEYWORD'
+'KILL' 'KIND' 'LEVEL' 'LIST' 'LIVE' 'LONG' 'MACHIN' 'MAIL' 'MANAG' 'MARK' 'MED' 'MEDIC' 'MEDICIN' 'MEMORI' 'MICHAEL' 'MIKE' 'MON' 'MOTIF' 'MOTOROLA' 'NATION' 'NETWORK' 'NEW' 'NEWS' 'NEWSREAD' 'NOIS' 'NUMBER' 'OPER' 'OPINION' 'ORIGIN' 'OUTPUT' 'PAIN'
+'PALESTINIAN' 'PART' 'PATIENT' 'PERSON' 'PHONE' 'PITT' 'PITTSBURGH' 'PLACE' 'POINT' 'POLICI' 'POSIT' 'POST' 'POWER' 'PROBLEM' 'PRODUCT' 'PROGRAM' 'PROJECT' 'PUBLIC' 'QUESTION' 'RADAR' 'RADIO' 'READ' 'REASON' 'RECEIV' 'REMEMB' 'REPLI' 'REPORT' 'REQUIR'
+'RESEARCH' 'RESPONS' 'ROBERT' 'RUN' 'SAT' 'SCHOOL' 'SCI' 'SCIENC' 'SCREEN' 'SELL' 'SEND' 'SERDAR' 'SERVER' 'SERVIC' 'SHOW' 'SIDE' 'SIGNAL' 'SOFTWAR' 'SOUND' 'SOURC' 'STANDARD' 'START' 'STATE' 'STEVE' 'STUDI' 'SUBSCRIB' 'SUGGEST' 'SUN' 'SUPPORT' 'SWITCH'
+'SYSTEM' 'TALK' 'TECHNOLOG' 'TERMIN' 'TEST' 'THAT' 'THU' 'TIME' 'TREATMENT' 'TRUE' 'TUE' 'TURKISH' 'TYPE' 'UNIV' 'UNIVERS' 'UNIX' 'USENET' 'USER' 'UTEXA' 'UUCP' 'VERSION' 'VIRGINIA' 'VOLTAG' 'WATER' 'WED' 'WIDGET' 'WINDOW' 'WIRE' 'WONDER' 'WORK' 'WORLD'
+'XLIB' 'XTERM' 'YEAR' 'YOU' ) then ROLE='INPUT';
+MPRINT(EM_DIAGRAM):   else delete;
+MPRINT(EM_DIAGRAM):   end;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   filename _delta;
+NOTE: Vista EMWS1.STAT_TRAIN.VIEW ha utilizado (Tiempo de proceso total):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+ 
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "16/11/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "09H07" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log del informe";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log del informe
+Fecha:                16/11/20
+Hora:                09H07
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O28GSV6E "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\Stat\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O28GSV6E new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;
