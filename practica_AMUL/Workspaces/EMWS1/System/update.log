@@ -9,13 +9,13 @@ Trasversal: iniciando trasversal del flujo
 *------------------------------------------------------------* 
 * 
 * Ids : Beginning Update 
-* datetime : 16NOV2020:09:32:07 
+* datetime : 19NOV2020:13:11:52 
 * 
 *------------------------------------------------------------* 
-8577       %let _HPDMGRIDHOST=;
-8578       %let _HPDMGRIDINSTALLLOC=;
-8579       %let _HPDMGRIDDATASERVER=;
-8580       %hpdm_gridSetOPtions;
+7874       %let _HPDMGRIDHOST=;
+7875       %let _HPDMGRIDINSTALLLOC=;
+7876       %let _HPDMGRIDDATASERVER=;
+7877       %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -26,141 +26,10 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 *------------------------------------------------------------* 
 * 
 * Ids : End Update 
-* datetime : 16NOV2020:09:32:07 
-* 
-*------------------------------------------------------------* 
-traverser_readyNode_note 
-*------------------------------------------------------------* 
-* 
-* PRINCOMP3 : Beginning Update 
-* datetime : 16NOV2020:09:32:08 
-* 
-*------------------------------------------------------------* 
-8599       data _null_;
-8600       set EMWS1.Ids_CMeta_DATA (obs=1);
-8601       run;
-
-NOTE: There were 1 observations read from the data set EMWS1.IDS_CMETA_DATA.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8602       *------------------------------------------------------------*;
-8603       * PRINCOMP3: Update Variables Set;
-8604       *------------------------------------------------------------*;
-
-8605       data EMWS1.PRINCOMP3_VariableSet;
-8606       length USE $1;
-8607       label USE = "Uso";
-8608       set EMWS1.Ids_CMeta_DATA;
-8609       where(ROLE in( "INPUT" "REJECTED" "FREQ"));
-8610       run;
-
-NOTE: Variable USE is uninitialized.
-NOTE: There were 240 observations read from the data set EMWS1.IDS_CMETA_DATA.
-      WHERE ROLE in ('FREQ', 'INPUT', 'REJECTED');
-NOTE: The data set EMWS1.PRINCOMP3_VARIABLESET has 240 observations and 21 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8611       * PRINCOMP3: End of Update Variables Set;
-8612       *------------------------------------------------------------*;
-
-8613       *------------------------------------------------------------*;
-8614       * PRINCOMP3: Computing metadata for TRAIN data;
-8615       *------------------------------------------------------------*;
-
-8625       options nosource;
-
-NOTE: There were 242 observations read from the data set EMWS1.PRINCOMP3_CMETA_TRAIN.
-NOTE: The data set EMWS1.PRINCOMP3_FULLCMETA has 242 observations and 20 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-NOTE: There were 242 observations read from the data set EMWS1.PRINCOMP3_CMETA_TRAIN.
-NOTE: The data set EMWS1.PRINCOMP3_CMETA_TRAIN has 242 observations and 20 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-ERROR: File EMWS1.PRINCOMP3_SAMPLE_DATA.DATA does not exist.
-NOTE: SCL source line.
-8636       ;
-           _
-           415
-
-WARNING 415-185: No KEEP variables found, statement is ignored.
-
-NOTE: The SAS System stopped processing this step because of errors.
-WARNING: The data set EMWS1.PRINCOMP3_PRINPLOT may be incomplete.  When this step was stopped there were 0 observations and 0 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-ERROR: File EMWS1.PRINCOMP3_SUBEIGENVECTOR.DATA does not exist.
-
-NOTE: The SAS System stopped processing this step because of errors.
-WARNING: The data set EMWS1.PRINCOMP3_PRINCOEFFPLOT may be incomplete.  When this step was stopped there were 0 observations and 0 variables.
-NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
-      real time           0.04 seconds
-      cpu time            0.00 seconds
-      
-
-
-
-NOTE: Variable Label is uninitialized.
-NOTE: Variable Variable is uninitialized.
-NOTE: There were 0 observations read from the data set EMWS1.PRINCOMP3_PRINCOEFFPLOT.
-NOTE: The data set EMWS1.PRINCOMP3_PRINCOEFFPLOT has 0 observations and 0 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-ERROR: Variable _ABS_PC_1_ not found.
-
-NOTE: The SAS System stopped processing this step because of errors.
-NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-
-WARNING: The variable _ABS_PC_1_ in the DROP, KEEP, or RENAME list has never been referenced.
-NOTE: There were 0 observations read from the data set EMWS1.PRINCOMP3_PRINCOEFFPLOT.
-NOTE: The data set EMWS1.PRINCOMP3_PRINCOEFFPLOT has 0 observations and 0 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8655       %let _HPDMGRIDHOST=;
-8656       %let _HPDMGRIDINSTALLLOC=;
-8657       %let _HPDMGRIDDATASERVER=;
-8658       %hpdm_gridSetOPtions;
-
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-*------------------------------------------------------------* 
-* 
-* PRINCOMP3 : End Update 
-* datetime : 16NOV2020:09:32:08 
+* datetime : 19NOV2020:13:11:52 
 * 
 *------------------------------------------------------------* 
 Trasversal: ejecución completa 
-8659       proc printto;
-8660       run;
+7878       proc printto;
+7879       run;
 

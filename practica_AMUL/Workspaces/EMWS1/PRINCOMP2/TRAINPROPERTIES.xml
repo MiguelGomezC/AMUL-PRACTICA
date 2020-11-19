@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  MaxPrincomp="20" CumEigenCutoff="0.99" EigenIncreCutoff="0.001" EigenSource="UNCORRECTED"
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  MaxPrincomp="50" CumEigenCutoff="0.8" EigenIncreCutoff="0.1" EigenSource="UNCORRECTED"
  ApplyMaxPrincomp="Y" RejectOriginalInputVariables="Y" PrintEigenSourceMatrix="N"
- PrincompPrefix="PC" HideOriginalInputVariables="Y" NUserSelectedPrincomp="20" ForceRun="N"
+ PrincompPrefix="PC" HideOriginalInputVariables="Y" NUserSelectedPrincomp="50" ForceRun="N"
  RunAction="Train" Component="PrinComp" PrincompLabel="PRINCOMPLABEL" RawCreateTime="1921136953.9"
- CreateTime="16NOV2020:09:09:14" RunId="e0c1e00e-2784-4f4c-a6b9-d1fe3189b7cd" RawLastTimeRun="1921137039.5"
- RawRunTime="3.0720000267" LastTimeRun="16NOV2020:09:10:40" RunTime="0 Hr. 0 Min. 3.07 Sec."
+ CreateTime="16NOV2020:09:09:14" RunId="ef2d6a9b-bea0-44e1-8d88-2e26d0d02a88" RawLastTimeRun="1921411696.6"
+ RawRunTime="19.776000023" LastTimeRun="19NOV2020:13:28:17" RunTime="0 Hr. 0 Min. 19.78 Sec."
 >
 <VARIABLEPROPERTIES/>
 <FILEPROPERTIES/>

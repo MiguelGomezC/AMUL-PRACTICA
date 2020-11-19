@@ -1,1 +1,0 @@
-Start: 1920748113.3 Time: 3.8130002022 StartFmt: 11NOV2020:21:08:33 EndFmt: 11NOV2020:21:08:37 TimeFmt: 0 Hr. 0 Min. 3.81 Sec.
