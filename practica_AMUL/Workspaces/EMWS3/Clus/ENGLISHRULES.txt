@@ -1,0 +1,153 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if SURREND >= 0.02845
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 72
+ Predicted: _SEGMENT_=3  = 0.03
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=1  = 0.97
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if SURREND < 0.02845 or MISSING
+AND SERA >= 0.01385
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 10
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 10
+*------------------------------------------------------------*
+if TURK < 0.00518
+AND SURREND < 0.02845 or MISSING
+AND ARMENIAN >= 0.04244
+then 
+ Tree Node Identifier   = 10
+ Number of Observations = 33
+ Predicted: _SEGMENT_=3  = 0.61
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.39
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if TURK >= 0.06777
+AND SURREND < 0.02845 or MISSING
+AND SERA < 0.01385 or MISSING
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 8
+ Predicted: _SEGMENT_=3  = 0.38
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.63
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if TURK >= 0.00518 or MISSING
+AND TALK < 0.00363 or MISSING
+AND SURREND < 0.02845 or MISSING
+AND ARMENIAN >= 0.04244
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 86
+ Predicted: _SEGMENT_=3  = 0.01
+ Predicted: _SEGMENT_=2  = 0.01
+ Predicted: _SEGMENT_=4  = 0.98
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 15
+*------------------------------------------------------------*
+if TURK >= 0.00518 or MISSING
+AND TALK >= 0.00363
+AND SURREND < 0.02845 or MISSING
+AND ARMENIAN >= 0.04244
+then 
+ Tree Node Identifier   = 15
+ Number of Observations = 5
+ Predicted: _SEGMENT_=3  = 0.60
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.40
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 20
+*------------------------------------------------------------*
+if TURK < 0.06777 or MISSING
+AND SURREND < 0.02845 or MISSING
+AND SERA < 0.01385 or MISSING
+AND ISRAEL < 0.00802 or MISSING
+AND ISRA < 0.00648 or MISSING
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 20
+ Number of Observations = 2394
+ Predicted: _SEGMENT_=3  = 0.97
+ Predicted: _SEGMENT_=2  = 0.03
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 21
+*------------------------------------------------------------*
+if TURK < 0.06777 or MISSING
+AND SURREND < 0.02845 or MISSING
+AND SERA < 0.01385 or MISSING
+AND ISRAEL < 0.00802 or MISSING
+AND ISRA >= 0.00648
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 21
+ Number of Observations = 77
+ Predicted: _SEGMENT_=3  = 0.23
+ Predicted: _SEGMENT_=2  = 0.77
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 22
+*------------------------------------------------------------*
+if TURK < 0.06777 or MISSING
+AND SURREND < 0.02845 or MISSING
+AND SERA < 0.01385 or MISSING
+AND MED < 0.00513 or MISSING
+AND ISRAEL >= 0.00802
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 22
+ Number of Observations = 302
+ Predicted: _SEGMENT_=3  = 0.07
+ Predicted: _SEGMENT_=2  = 0.93
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 23
+*------------------------------------------------------------*
+if TURK < 0.06777 or MISSING
+AND SURREND < 0.02845 or MISSING
+AND SERA < 0.01385 or MISSING
+AND MED >= 0.00513
+AND ISRAEL >= 0.00802
+AND ARMENIAN < 0.04244 or MISSING
+then 
+ Tree Node Identifier   = 23
+ Number of Observations = 13
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 

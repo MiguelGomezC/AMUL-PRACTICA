@@ -9,13 +9,13 @@ Trasversal: iniciando trasversal del flujo
 *------------------------------------------------------------* 
 * 
 * Ids : Beginning Update 
-* datetime : 19NOV2020:13:11:52 
+* datetime : 23NOV2020:15:49:14 
 * 
 *------------------------------------------------------------* 
-7874       %let _HPDMGRIDHOST=;
-7875       %let _HPDMGRIDINSTALLLOC=;
-7876       %let _HPDMGRIDDATASERVER=;
-7877       %hpdm_gridSetOPtions;
+8665       %let _HPDMGRIDHOST=;
+8666       %let _HPDMGRIDINSTALLLOC=;
+8667       %let _HPDMGRIDDATASERVER=;
+8668       %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -26,10 +26,34 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 *------------------------------------------------------------* 
 * 
 * Ids : End Update 
-* datetime : 19NOV2020:13:11:52 
+* datetime : 23NOV2020:15:49:14 
+* 
+*------------------------------------------------------------* 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* PRINCOMP2 : Beginning Update 
+* datetime : 23NOV2020:15:49:14 
+* 
+*------------------------------------------------------------* 
+8688       %let _HPDMGRIDHOST=;
+8689       %let _HPDMGRIDINSTALLLOC=;
+8690       %let _HPDMGRIDDATASERVER=;
+8691       %hpdm_gridSetOPtions;
+
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* PRINCOMP2 : End Update 
+* datetime : 23NOV2020:15:49:14 
 * 
 *------------------------------------------------------------* 
 Trasversal: ejecución completa 
-7878       proc printto;
-7879       run;
+8692       proc printto;
+8693       run;
 
