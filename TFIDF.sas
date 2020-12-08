@@ -1,5 +1,9 @@
 LIBNAME AMUL 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\DATA';
 
+/************************/
+/* TRATAMIENTO DE DATOS */
+/************************/
+
 /*  TF  */
 PROC SQL;
   CREATE TABLE
@@ -51,7 +55,7 @@ DATA AMUL.VECTORIZADO(KEEP=ID_DOCUMENTO PALABRA TFIDF);
   TFIDF = TF * IDF;
 RUN;
 
-/*  DISTRIBUCIÓN DE SUM(TFIDF) */
+/*  DISTRIBUCIÃ“N DE SUM(TFIDF) */
 
 PROC SQL;
   CREATE TABLE
@@ -102,9 +106,91 @@ data AMUL.TERMINOS_DOCUMENTOS;
  set WORK.TRANSPUESTO;
  drop _i_;
  array _c_(*) _numeric_;/* Se declara un array compuesto por todas las variables
- numéricas que existen en la tabla (entre ellas, el propio
+ numÃ©ricas que existen en la tabla (entre ellas, el propio
 id_documento) */
- do _i_=2 to dim(_c_);/*La primera variable numérica es el id_documento.Se excluye */
+ do _i_=2 to dim(_c_);/*La primera variable numÃ©rica es el id_documento.Se excluye */
  if _c_(_i_)=. then _c_(_i_)=0;
  end;
  run;
+
+/***************************/
+/* COMPONENTES PRINCIPALES */
+/***************************/
+
+PROC PRINCOMP DATA = AMUL.TERMINOS_DOCUMENTOS
+              OUT = AMUL.COMPONENTES
+              NOINT
+	      N = 50
+              noprint;
+  /* VAR; */
+RUN;
+QUIT;
+
+DATA AMUL.COMPONENTES;
+  SET AMUL.COMPONENTES(KEEP = id_documento Prin1-Prin50); /* 'keep' de las componentes */
+RUN;
+
+/* Representacion de componentes */
+
+PROC TEMPLATE;
+  define statgraph scatterplot;
+  begingraph; 
+    entrytitle "Componentes 1 y 2"; 
+    layout overlay; 	 
+      scatterplot x = prin1 y = prin2 / 
+      /* datalabel = id_documento */; /*Si se pone el id no se ve nada*/
+    endlayout;	
+  endgraph;
+end;
+RUN;
+
+PROC SGRENDER DATA = AMUL.COMPONENTES TEMPLATE = scatterplot;
+RUN;
+
+/********************/
+/* ANALISIS CLUSTER */
+/********************/
+
+/* MUESTRA DE 100 DOCUMENTOS */
+
+DATA AMUL.TERMINOS_DOCUMENTOS;
+  SET AMUL.TERMINOS_DOCUMENTOS;
+  ALEA = RANUNI(12345);
+RUN;
+ 
+PROC SORT DATA = AMUL.TERMINOS_DOCUMENTOS;
+  BY ALEA;
+RUN;
+QUIT;
+
+DATA AMUL.TERMINOS_DOCUMENTOS;
+  SET AMUL.TERMINOS_DOCUMENTOS;
+  IF  _N_ <= 100;
+RUN;
+
+/* PROC CLUSTER */
+
+PROC CLUSTER DATA = AMUL.TERMINOS_DOCUMENTOS(DROP = id_documento)
+             METHOD = WARD /* SINGLE, COMPLETE , AVERAGE, CENTROID */
+	     OUTTREE = AMUL.CLUSTER_WARD CCC RSQUARE NOPRINT;
+  /* VAR; */
+RUN;
+QUIT;
+
+PROC TREE DATA = AMUL.CLUSTER_WARD
+          N = 10 /* NUMERO DE CLUSTERS QUE SE GENERAN */
+	  OUT = AMUL.CLUSTER_JERARQUICO;
+RUN;
+QUIT;
+
+/* PROC FASTCLUS */
+
+PROC FASTCLUS DATA = AMUL.TERMINOS_DOCUMENTOS(DROP = id_documento)
+              OUT = AMUL.CLUSTER_KMEANS
+              MAXCLUSTERS = 5
+	      /* PONER "MAXITER=1 DRIFT" PARA MCQUEEN */
+	      /* SEED = TABLA CON COORDENADAS CENTROIDES INICIALES*/  
+              OUTSEED = AMUL.KMEANS_CENTROIDES_FINALES;
+  /* VAR; */
+RUN;
+QUIT;
