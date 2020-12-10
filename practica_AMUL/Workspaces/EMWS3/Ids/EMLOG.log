@@ -1,7 +1,7 @@
 *------------------------------------------------------------*
 Usuario:                Admin
-Fecha:                23/11/20
-Hora:                15H52
+Fecha:                10/12/20
+Hora:                21H14
 Sitio:                70161230
 Plataforma:            X64_10HOME
 Versión de mantenimiento: 9.04.01M6P111518
@@ -12,8 +12,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "23/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H52" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H13" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -22,11 +22,11 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de entrenamiento
-Fecha:                23/11/20
-Hora:                15H52
+Fecha:                10/12/20
+Hora:                21H13
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O1V5X253 "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMTRAIN.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O1V5X253 new;
+MPRINT(EM_DIAGRAM):    filename O2LG1B9R "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O2LG1B9R new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    filename _LOG "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMLOG.log" encoding="UTF-8" NOBOM;
 MPRINT(EM_DIAGRAM):    data _null_;
@@ -34,8 +34,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "23/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H52" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H13" );
 MPRINT(EM_DIAGRAM):   file _LOG;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -85,8 +85,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "23/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H52" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H13" );
 MPRINT(EM_DIAGRAM):   file _OUT;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -137,49 +137,49 @@ MPRINT(EM_DIAGRAM):  ;
 MPRINT(EM_DIAGRAM):   filename _OUTIN;
 MPRINT(EM_DIAGRAM):    filename _OUT;
 MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
-18238      proc freq data=EMWS3.Ids_VariableSet noprint;
+22031      proc freq data=EMWS3.Ids_VariableSet noprint;
 MPRINT(EM_DIAGRAM):    proc freq data=EMWS3.Ids_VariableSet noprint;
-18239      table ROLE*LEVEL/out=WORK.IdsMETA;
+22032      table ROLE*LEVEL/out=WORK.IdsMETA;
 MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.IdsMETA;
-18240      run;
+22033      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set EMWS3.IDS_VARIABLESET.
 NOTE: The data set WORK.IDSMETA has 2 observations and 4 variables.
 NOTE: PROCEDURE FREQ ha utilizado (Tiempo de proceso total):
-      real time           0.10 seconds
-      cpu time            0.06 seconds
+      real time           0.09 seconds
+      cpu time            0.04 seconds
  
  
-18241      proc print data=WORK.IdsMETA label noobs;
+22034      proc print data=WORK.IdsMETA label noobs;
 MPRINT(EM_DIAGRAM):   proc print data=WORK.IdsMETA label noobs;
-18242      var ROLE LEVEL COUNT;
+22035      var ROLE LEVEL COUNT;
 MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
-18243      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
+22036      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label ROLE = "Rol" LEVEL = "Nivel de medida" COUNT = "Número de ocurrencias";
-18244      title9 ' ';
+22037      title9 ' ';
 MPRINT(EM_DIAGRAM):   title9 ' ';
-18245      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
+22038      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
 MPRINT(EM_DIAGRAM):   title10 "Resumen de variables";
 MPRINT(EM_DIAGRAM):   run;
-18246      run;
+22039      run;
  
 NOTE: There were 2 observations read from the data set WORK.IDSMETA.
 NOTE: The PROCEDURE PRINT printed page 1.
 NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
-      real time           0.22 seconds
+      real time           0.11 seconds
       cpu time            0.03 seconds
  
  
-18247      title10;
+22040      title10;
 MPRINT(EM_DIAGRAM):   title10;
-18248      data _null_;
+22041      data _null_;
 MPRINT(EM_DIAGRAM):    data _null_;
-18249      rc = libref("AMUL");
+22042      rc = libref("AMUL");
 MPRINT(EM_DIAGRAM):   rc = libref("AMUL");
-18250      call symput('_librc', strip(put(rc, best.)));
+22043      call symput('_librc', strip(put(rc, best.)));
 MPRINT(EM_DIAGRAM):   call symput('_librc', strip(put(rc, best.)));
-18251      run;
+22044      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
@@ -187,20 +187,20 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18252      %let _engineTable =;
-18253      data _null_;
+22045      %let _engineTable =;
+22046      data _null_;
 MPRINT(EM_DIAGRAM):    data _null_;
-18254      dsid = open("AMUL.TERMINOS_DOCUMENTOS");
+22047      dsid = open("AMUL.TERMINOS_DOCUMENTOS");
 MPRINT(EM_DIAGRAM):   dsid = open("AMUL.TERMINOS_DOCUMENTOS");
-18255      if dsid then do;
+22048      if dsid then do;
 MPRINT(EM_DIAGRAM):   if dsid then do;
-18256      call symput('_engineTable', attrc(dsid, 'ENGINE'));
+22049      call symput('_engineTable', attrc(dsid, 'ENGINE'));
 MPRINT(EM_DIAGRAM):   call symput('_engineTable', attrc(dsid, 'ENGINE'));
-18257      dsid = close(dsid);
+22050      dsid = close(dsid);
 MPRINT(EM_DIAGRAM):   dsid = close(dsid);
-18258      end;
+22051      end;
 MPRINT(EM_DIAGRAM):   end;
-18259      run;
+22052      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
@@ -208,47 +208,47 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18260      %let _lasrFile=;
-18261      %let _sasiolaFile=;
-18262      data null_;
+22053      %let _lasrFile=;
+22054      %let _sasiolaFile=;
+22055      data null_;
 MPRINT(EM_DIAGRAM):    data null_;
-18263      length lasrfile sasiolaFile $2000;
+22056      length lasrfile sasiolaFile $2000;
 MPRINT(EM_DIAGRAM):   length lasrfile sasiolaFile $2000;
-18264      LASRFile = pathname("EMWS3")!!"\"!!"HPDM\"!!"hpdmlasr";
+22057      LASRFile = pathname("EMWS3")!!"\"!!"HPDM\"!!"hpdmlasr";
 MPRINT(EM_DIAGRAM):   LASRFile = pathname("EMWS3")!!"\"!!"HPDM\"!!"hpdmlasr";
-18265      SASIOLAFile = pathname("EMWS3")!!"\"!!"HPDM\"!!'sasiola.sas';
+22058      SASIOLAFile = pathname("EMWS3")!!"\"!!"HPDM\"!!'sasiola.sas';
 MPRINT(EM_DIAGRAM):   SASIOLAFile = pathname("EMWS3")!!"\"!!"HPDM\"!!'sasiola.sas';
-18266      call symput('_lasrFile', strip(lasrfile));
+22059      call symput('_lasrFile', strip(lasrfile));
 MPRINT(EM_DIAGRAM):   call symput('_lasrFile', strip(lasrfile));
-18267      call symput('_sasiolaFile', strip(sasiolafile));
+22060      call symput('_sasiolaFile', strip(sasiolafile));
 MPRINT(EM_DIAGRAM):   call symput('_sasiolaFile', strip(sasiolafile));
-18268      run;
+22061      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: The data set WORK.NULL_ has 1 observations and 2 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.00 seconds
+      cpu time            0.00 seconds
  
  
-18269      %let _UseGrid = 0;
-18270      %hpdm_performance(data=AMUL.TERMINOS_DOCUMENTOS, isGrid=_UseGrid);
+22062      %let _UseGrid = 0;
+22063      %hpdm_performance(data=AMUL.TERMINOS_DOCUMENTOS, isGrid=_UseGrid);
 MPRINT(EM_DIAGRAM):
 MPRINT(HPDM_PERFORMANCE):  ;
 PERFORMANCE  DETAILS
 MPRINT(EM_DIAGRAM):  ;
-18271      %put &_UseGrid;
+22064      %put &_UseGrid;
 0
-18272      %let em_idskey =;
-18273      data _null_;
+22065      %let em_idskey =;
+22066      data _null_;
 MPRINT(EM_DIAGRAM):    data _null_;
-18274      set EMWS3.Ids_VariableSet;
+22067      set EMWS3.Ids_VariableSet;
 MPRINT(EM_DIAGRAM):   set EMWS3.Ids_VariableSet;
-18275      where ROLE = 'KEY';
+22068      where ROLE = 'KEY';
 MPRINT(EM_DIAGRAM):   where ROLE = 'KEY';
-18276      call symput('em_idskey', strip(tranwrd(name, '"', '""')));
+22069      call symput('em_idskey', strip(tranwrd(name, '"', '""')));
 MPRINT(EM_DIAGRAM):   call symput('em_idskey', strip(tranwrd(name, '"', '""')));
-18277      run;
+22070      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 0 observations read from the data set EMWS3.IDS_VARIABLESET.
@@ -258,30 +258,30 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18278      %let emexceptionstring=;
-18279      %EmAdviseColumns(AMUL.TERMINOS_DOCUMENTOS, adviseMode=BASIC, applyIntervalLevelLowerLimit=N, applyMaxPercentMissing=N, applyMaxClassLevels=N, identifyEmptyColumns=N, maxLevelDetection=0, outdata=EMWS3.Ids_EMCMETADEFAULT, newdataflag=N);
+22071      %let emexceptionstring=;
+22072      %EmAdviseColumns(AMUL.TERMINOS_DOCUMENTOS, adviseMode=BASIC, applyIntervalLevelLowerLimit=N, applyMaxPercentMissing=N, applyMaxClassLevels=N, identifyEmptyColumns=N, maxLevelDetection=0, outdata=EMWS3.Ids_EMCMETADEFAULT, newdataflag=N);
 MPRINT(EM_DIAGRAM):
 MPRINT(EMADVISECOLUMNS):   proc display c=sashelp.emmeta.advisecolumns.scl;
 MPRINT(EMADVISECOLUMNS):   run;
  
-18280      %let SYSCC = 0;
-18281      %let _dsidTable = 0;
-18282      %let _engineTable =;
-18283      data _null_;
+22073      %let SYSCC = 0;
+22074      %let _dsidTable = 0;
+22075      %let _engineTable =;
+22076      data _null_;
 MPRINT(EMADVISECOLUMNS):    data _null_;
-18284      dsid = open('AMUL.TERMINOS_DOCUMENTOS');
+22077      dsid = open('AMUL.TERMINOS_DOCUMENTOS');
 MPRINT(EMADVISECOLUMNS):   dsid = open('AMUL.TERMINOS_DOCUMENTOS');
-18285      call symput('_dsidTable', strip(put(dsid, best.)));
+22078      call symput('_dsidTable', strip(put(dsid, best.)));
 MPRINT(EMADVISECOLUMNS):   call symput('_dsidTable', strip(put(dsid, best.)));
-18286      if dsid then do;
+22079      if dsid then do;
 MPRINT(EMADVISECOLUMNS):   if dsid then do;
-18287      call symput('_engineTable', attrc(dsid, 'ENGINE'));
+22080      call symput('_engineTable', attrc(dsid, 'ENGINE'));
 MPRINT(EMADVISECOLUMNS):   call symput('_engineTable', attrc(dsid, 'ENGINE'));
-18288      dsid = close(dsid);
+22081      dsid = close(dsid);
 MPRINT(EMADVISECOLUMNS):   dsid = close(dsid);
-18289      end;
+22082      end;
 MPRINT(EMADVISECOLUMNS):   end;
-18290      run;
+22083      run;
 MPRINT(EMADVISECOLUMNS):   run;
  
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
@@ -289,170 +289,170 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18291      options fmterr;
+22084      options fmterr;
 MPRINT(EMADVISECOLUMNS):    options fmterr;
-18292      data _metaTestView;
+22085      data _metaTestView;
 MPRINT(EMADVISECOLUMNS):   data _metaTestView;
-18293      set AMUL.TERMINOS_DOCUMENTOS;
+22086      set AMUL.TERMINOS_DOCUMENTOS;
 MPRINT(EMADVISECOLUMNS):   set AMUL.TERMINOS_DOCUMENTOS;
-18294      if _N_=1 then do;
+22087      if _N_=1 then do;
 MPRINT(EMADVISECOLUMNS):   if _N_=1 then do;
-18295      output;
+22088      output;
 MPRINT(EMADVISECOLUMNS):   output;
-18296      stop;
+22089      stop;
 MPRINT(EMADVISECOLUMNS):   stop;
-18297      end;
+22090      end;
 MPRINT(EMADVISECOLUMNS):   end;
-18298      run;
+22091      run;
 MPRINT(EMADVISECOLUMNS):   run;
  
 NOTE: There were 1 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
 NOTE: The data set WORK._METATESTVIEW has 1 observations and 1205 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
+      real time           0.01 seconds
       cpu time            0.01 seconds
  
  
-18299      proc contents data=AMUL.TERMINOS_DOCUMENTOS
-18300      out=WORK.M3J9FJQD noprint;
-MPRINT(EMADVISECOLUMNS):    proc contents data=AMUL.TERMINOS_DOCUMENTOS out=WORK.M3J9FJQD noprint;
-18301      run;
+22092      proc contents data=AMUL.TERMINOS_DOCUMENTOS
+22093      out=WORK.M241B63F noprint;
+MPRINT(EMADVISECOLUMNS):    proc contents data=AMUL.TERMINOS_DOCUMENTOS out=WORK.M241B63F noprint;
+22094      run;
 MPRINT(EMADVISECOLUMNS):   run;
  
-NOTE: The data set WORK.M3J9FJQD has 1205 observations and 41 variables.
+NOTE: The data set WORK.M241B63F has 1205 observations and 41 variables.
 NOTE: PROCEDURE CONTENTS ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+22095      data WORK.M241B63F;
+MPRINT(EMADVISECOLUMNS):    data WORK.M241B63F;
+22096      length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
+MPRINT(EMADVISECOLUMNS):   length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
+22097      label NAME =;
+MPRINT(EMADVISECOLUMNS):   label NAME =;
+22098      set WORK.M241B63F(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
+MPRINT(EMADVISECOLUMNS):   set WORK.M241B63F(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
+22099      if itype = 1 then type = 'N';
+MPRINT(EMADVISECOLUMNS):   if itype = 1 then type = 'N';
+22100      else type = 'C';
+MPRINT(EMADVISECOLUMNS):   else type = 'C';
+22101      if formatl > 0 then do;
+MPRINT(EMADVISECOLUMNS):   if formatl > 0 then do;
+22102      if format ne '' then do;
+MPRINT(EMADVISECOLUMNS):   if format ne '' then do;
+22103      if type='N' then format = strip(format)!!strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+MPRINT(EMADVISECOLUMNS):   if type='N' then format = strip(format)!!strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+22104      else format = strip(format)!!strip(put(formatl, best12.))!!'.';
+MPRINT(EMADVISECOLUMNS):   else format = strip(format)!!strip(put(formatl, best12.))!!'.';
+22105      end;
+MPRINT(EMADVISECOLUMNS):   end;
+22106      else format = strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+MPRINT(EMADVISECOLUMNS):   else format = strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
+22107      end;
+MPRINT(EMADVISECOLUMNS):   end;
+22108      else if format ne '' then format = strip(format)!!'.';
+MPRINT(EMADVISECOLUMNS):   else if format ne '' then format = strip(format)!!'.';
+22109      if informl > 0 then do;
+MPRINT(EMADVISECOLUMNS):   if informl > 0 then do;
+22110      if informat ne ' ' then do;
+MPRINT(EMADVISECOLUMNS):   if informat ne ' ' then do;
+22111      if type='N' then informat = strip(informat)!!strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+MPRINT(EMADVISECOLUMNS):   if type='N' then informat = strip(informat)!!strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+22112      else informat = strip(informat)!!strip(put(informl, best12.))!!'.';
+MPRINT(EMADVISECOLUMNS):   else informat = strip(informat)!!strip(put(informl, best12.))!!'.';
+22113      end;
+MPRINT(EMADVISECOLUMNS):   end;
+22114      else informat = strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+MPRINT(EMADVISECOLUMNS):   else informat = strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
+22115      end;
+MPRINT(EMADVISECOLUMNS):   end;
+22116      else if informat ne '' then informat = strip(informat)!!'.';
+MPRINT(EMADVISECOLUMNS):   else if informat ne '' then informat = strip(informat)!!'.';
+22117      if idxusage = 'NONE' then index ="N";
+MPRINT(EMADVISECOLUMNS):   if idxusage = 'NONE' then index ="N";
+22118      else index = "Y";
+MPRINT(EMADVISECOLUMNS):   else index = "Y";
+22119      indextype = idxusage;
+MPRINT(EMADVISECOLUMNS):   indextype = idxusage;
+22120      drop idxusage itype formatl formatd informl informd;
+MPRINT(EMADVISECOLUMNS):   drop idxusage itype formatl formatd informl informd;
+22121      run;
+MPRINT(EMADVISECOLUMNS):   run;
+ 
+NOTE: There were 1205 observations read from the data set WORK.M241B63F.
+NOTE: The data set WORK.M241B63F has 1205 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+22122      data WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):    data WORK.M1_CCYZ2;
+22123      length UNAME $64;
+MPRINT(EMADVISECOLUMNS):   length UNAME $64;
+22124      set WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):   set WORK.M1_CCYZ2;
+22125      UNAME = upcase(NAME);
+MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
+22126      run;
+MPRINT(EMADVISECOLUMNS):   run;
+ 
+NOTE: There were 1205 observations read from the data set WORK.M1_CCYZ2.
+NOTE: The data set WORK.M1_CCYZ2 has 1205 observations and 22 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
       cpu time            0.01 seconds
  
  
-18302      data WORK.M3J9FJQD;
-MPRINT(EMADVISECOLUMNS):    data WORK.M3J9FJQD;
-18303      length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
-MPRINT(EMADVISECOLUMNS):   length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
-18304      label NAME =;
-MPRINT(EMADVISECOLUMNS):   label NAME =;
-18305      set WORK.M3J9FJQD(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
-MPRINT(EMADVISECOLUMNS):   set WORK.M3J9FJQD(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
-18306      if itype = 1 then type = 'N';
-MPRINT(EMADVISECOLUMNS):   if itype = 1 then type = 'N';
-18307      else type = 'C';
-MPRINT(EMADVISECOLUMNS):   else type = 'C';
-18308      if formatl > 0 then do;
-MPRINT(EMADVISECOLUMNS):   if formatl > 0 then do;
-18309      if format ne '' then do;
-MPRINT(EMADVISECOLUMNS):   if format ne '' then do;
-18310      if type='N' then format = strip(format)!!strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
-MPRINT(EMADVISECOLUMNS):   if type='N' then format = strip(format)!!strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
-18311      else format = strip(format)!!strip(put(formatl, best12.))!!'.';
-MPRINT(EMADVISECOLUMNS):   else format = strip(format)!!strip(put(formatl, best12.))!!'.';
-18312      end;
-MPRINT(EMADVISECOLUMNS):   end;
-18313      else format = strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
-MPRINT(EMADVISECOLUMNS):   else format = strip(put(formatl, best12.))!!'.'!!strip(put(formatd, best12.));
-18314      end;
-MPRINT(EMADVISECOLUMNS):   end;
-18315      else if format ne '' then format = strip(format)!!'.';
-MPRINT(EMADVISECOLUMNS):   else if format ne '' then format = strip(format)!!'.';
-18316      if informl > 0 then do;
-MPRINT(EMADVISECOLUMNS):   if informl > 0 then do;
-18317      if informat ne ' ' then do;
-MPRINT(EMADVISECOLUMNS):   if informat ne ' ' then do;
-18318      if type='N' then informat = strip(informat)!!strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
-MPRINT(EMADVISECOLUMNS):   if type='N' then informat = strip(informat)!!strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
-18319      else informat = strip(informat)!!strip(put(informl, best12.))!!'.';
-MPRINT(EMADVISECOLUMNS):   else informat = strip(informat)!!strip(put(informl, best12.))!!'.';
-18320      end;
-MPRINT(EMADVISECOLUMNS):   end;
-18321      else informat = strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
-MPRINT(EMADVISECOLUMNS):   else informat = strip(put(informl, best12.))!!'.'!!strip(put(informd, best12.));
-18322      end;
-MPRINT(EMADVISECOLUMNS):   end;
-18323      else if informat ne '' then informat = strip(informat)!!'.';
-MPRINT(EMADVISECOLUMNS):   else if informat ne '' then informat = strip(informat)!!'.';
-18324      if idxusage = 'NONE' then index ="N";
-MPRINT(EMADVISECOLUMNS):   if idxusage = 'NONE' then index ="N";
-18325      else index = "Y";
-MPRINT(EMADVISECOLUMNS):   else index = "Y";
-18326      indextype = idxusage;
-MPRINT(EMADVISECOLUMNS):   indextype = idxusage;
-18327      drop idxusage itype formatl formatd informl informd;
-MPRINT(EMADVISECOLUMNS):   drop idxusage itype formatl formatd informl informd;
-18328      run;
-MPRINT(EMADVISECOLUMNS):   run;
- 
-NOTE: There were 1205 observations read from the data set WORK.M3J9FJQD.
-NOTE: The data set WORK.M3J9FJQD has 1205 observations and 8 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
- 
- 
-18329      data WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):    data WORK.M2PLI_LS;
-18330      length UNAME $64;
+22127      data WORK.M241B63F;
+MPRINT(EMADVISECOLUMNS):    data WORK.M241B63F;
+22128      length UNAME $64;
 MPRINT(EMADVISECOLUMNS):   length UNAME $64;
-18331      set WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):   set WORK.M2PLI_LS;
-18332      UNAME = upcase(NAME);
+22129      set WORK.M241B63F;
+MPRINT(EMADVISECOLUMNS):   set WORK.M241B63F;
+22130      UNAME = upcase(NAME);
 MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
-18333      run;
+22131      run;
 MPRINT(EMADVISECOLUMNS):   run;
  
-NOTE: There were 1205 observations read from the data set WORK.M2PLI_LS.
-NOTE: The data set WORK.M2PLI_LS has 1205 observations and 21 variables.
+NOTE: There were 1205 observations read from the data set WORK.M241B63F.
+NOTE: The data set WORK.M241B63F has 1205 observations and 9 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-18334      data WORK.M3J9FJQD;
-MPRINT(EMADVISECOLUMNS):    data WORK.M3J9FJQD;
-18335      length UNAME $64;
-MPRINT(EMADVISECOLUMNS):   length UNAME $64;
-18336      set WORK.M3J9FJQD;
-MPRINT(EMADVISECOLUMNS):   set WORK.M3J9FJQD;
-18337      UNAME = upcase(NAME);
-MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
-18338      run;
-MPRINT(EMADVISECOLUMNS):   run;
- 
-NOTE: There were 1205 observations read from the data set WORK.M3J9FJQD.
-NOTE: The data set WORK.M3J9FJQD has 1205 observations and 9 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
- 
- 
-MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M3J9FJQD NOTHREADS;
+MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M241B63F NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by UNAME;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):   proc sort data=WORK.M2PLI_LS NOTHREADS;
+MPRINT(EMADVISECOLUMNS):   proc sort data=WORK.M1_CCYZ2 NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by UNAME;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):   data WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):   merge WORK.M2PLI_LS(in=_a) WORK.M3J9FJQD(in=_b);
+MPRINT(EMADVISECOLUMNS):   data WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):   merge WORK.M1_CCYZ2(in=_a) WORK.M241B63F(in=_b);
 MPRINT(EMADVISECOLUMNS):   by UNAME;
 MPRINT(EMADVISECOLUMNS):   if _a and ^_b then delete;
 MPRINT(EMADVISECOLUMNS):   run;
-18350      data WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):    data WORK.M2PLI_LS;
-18351      drop UNAME;
+22143      data WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):    data WORK.M1_CCYZ2;
+22144      drop UNAME;
 MPRINT(EMADVISECOLUMNS):   drop UNAME;
-18352      set WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):   set WORK.M2PLI_LS;
-18353      run;
+22145      set WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):   set WORK.M1_CCYZ2;
+22146      run;
 MPRINT(EMADVISECOLUMNS):   run;
  
-NOTE: There were 1205 observations read from the data set WORK.M2PLI_LS.
-NOTE: The data set WORK.M2PLI_LS has 1205 observations and 20 variables.
+NOTE: There were 1205 observations read from the data set WORK.M1_CCYZ2.
+NOTE: The data set WORK.M1_CCYZ2 has 1205 observations and 21 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
       cpu time            0.01 seconds
  
  
-MPRINT(EMADVISECOLUMNS):    data WORK.M11OLPAR(keep=NAME ATTR);
+MPRINT(EMADVISECOLUMNS):    data WORK.M1VDJEUY(keep=NAME ATTR);
 MPRINT(EMADVISECOLUMNS):   length ATTR $ 20;
-MPRINT(EMADVISECOLUMNS):   set WORK.M2PLI_LS;
+MPRINT(EMADVISECOLUMNS):   set WORK.M1_CCYZ2;
 MPRINT(EMADVISECOLUMNS):   if level ne "INTERVAL" then do;
 MPRINT(EMADVISECOLUMNS):   if order = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   attr = 'ORDER';
@@ -487,10 +487,10 @@ MPRINT(EMADVISECOLUMNS):   run;
 MPRINT(EMADVISECOLUMNS):   proc sort NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by attr;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M2PLI_LS;
+MPRINT(EMADVISECOLUMNS):    data WORK.M1_CCYZ2;
 MPRINT(EMADVISECOLUMNS):   length NAME $64 ROLE $ 32 LEVEL $ 10 ORDER $ 8 CREATOR $32 FORMATTYPE $ 10 FAMILY $ 10 LOWERLIMIT 8 UPPERLIMIT 8 REPORT $1 DISTRIBUTION $ 20 COMMENT $64;
 MPRINT(EMADVISECOLUMNS):   length levelAssigned 8 roleAssigned 8 PRICE 8;
-MPRINT(EMADVISECOLUMNS):   set WORK.M2PLI_LS;
+MPRINT(EMADVISECOLUMNS):   set WORK.M1_CCYZ2;
 MPRINT(EMADVISECOLUMNS):   if formattype = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if format ne ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if type = 'N' then do;
@@ -651,42 +651,42 @@ MPRINT(EMADVISECOLUMNS):   if ROLE ^in('INPUT', 'TARGET', 'REJECTED', 'SEGMENT',
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M2PLI_LS;
-MPRINT(EMADVISECOLUMNS):   set WORK.M2PLI_LS;
+MPRINT(EMADVISECOLUMNS):    data WORK.M1_CCYZ2;
+MPRINT(EMADVISECOLUMNS):   set WORK.M1_CCYZ2;
 MPRINT(EMADVISECOLUMNS):   label NAME = "Nombre de la variable" TYPE = "Tipo" ROLE = "Rol" LEVEL= "Nivel de medida" ORDER= "Orden" CREATOR= "Creador" FORMATTYPE= "Tipo de formato" FAMILY= "Familia" DISTRIBUTION= "Distribución" PRICE= "Precio" LOWERLIMIT=
 "Límite inferior" UPPERLIMIT= "Límite superior" REPORT= "Informe" COMMENT= "Comentario" INDEX= "Índice" INDEXTYPE= "TipoÍndice" LABEL= "Etiqueta" LENGTH= "Longitud";
 MPRINT(EMADVISECOLUMNS):   drop levelAssigned roleAssigned;
 MPRINT(EMADVISECOLUMNS):   run;
 NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
-      real time           0.20 seconds
-      cpu time            0.17 seconds
+      real time           0.36 seconds
+      cpu time            0.20 seconds
  
  
 MPRINT(EMADVISECOLUMNS):
 MPRINT(EM_DIAGRAM):  ;
  
-18604      %EmAdviseTable(AMUL.TERMINOS_DOCUMENTOS, outdata=EMWS3.Ids_EMTMETADEFAULT, newdataflag=N);
+22397      %EmAdviseTable(AMUL.TERMINOS_DOCUMENTOS, outdata=EMWS3.Ids_EMTMETADEFAULT, newdataflag=N);
 MPRINT(EM_DIAGRAM):
 MPRINT(EMADVISETABLE):   proc display c=sashelp.emmeta.advisetable.scl;
 MPRINT(EMADVISETABLE):   run;
  
-18605      %let SYSCC = 0;
-18606      data EMWS3.Ids_EMTMETADEFAULT;
+22398      %let SYSCC = 0;
+22399      data EMWS3.Ids_EMTMETADEFAULT;
 MPRINT(EMADVISETABLE):    data EMWS3.Ids_EMTMETADEFAULT;
-18607      set EMWS3.Ids_EMTMETADEFAULT;
+22400      set EMWS3.Ids_EMTMETADEFAULT;
 MPRINT(EMADVISETABLE):   set EMWS3.Ids_EMTMETADEFAULT;
-18608      length LIBNAME $8;
+22401      length LIBNAME $8;
 MPRINT(EMADVISETABLE):   length LIBNAME $8;
-18609      LIBNAME = "AMUL";
+22402      LIBNAME = "AMUL";
 MPRINT(EMADVISETABLE):   LIBNAME = "AMUL";
-18610      run;
+22403      run;
 MPRINT(EMADVISETABLE):   run;
  
 NOTE: There were 1 observations read from the data set EMWS3.IDS_EMTMETADEFAULT.
 NOTE: The data set EMWS3.IDS_EMTMETADEFAULT has 1 observations and 15 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
+      real time           0.01 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(EMADVISETABLE):    data _null_;
@@ -699,9 +699,9 @@ MPRINT(EMADVISETABLE):   ods listing close;
 MPRINT(EMADVISETABLE):   proc contents data=AMUL.TERMINOS_DOCUMENTOS;
 MPRINT(EMADVISETABLE):   run;
 MPRINT(EMADVISETABLE):   ods listing;
-MPRINT(EMADVISETABLE):    data WORK.M2FPAZ7T;
+MPRINT(EMADVISETABLE):    data WORK.M2APQVFE;
 MPRINT(EMADVISETABLE):   length MEMNAME $ 32 MEMTYPE $ 8 MEMLABEL $ 256 TYPEMEM $ 8 ENGINE $ 8 CRDATE 8 MODATE 8 NOBS 8 NCOLS 8 NBYTES 8 ROLE $ 20 USEEXTERNALDATA $1 SAMPLINGRATE 8 SEGMENT $ 20;
-MPRINT(EMADVISETABLE):   set WORK.M2FPAZ7T(obs=1);
+MPRINT(EMADVISETABLE):   set WORK.M2APQVFE(obs=1);
 MPRINT(EMADVISETABLE):   nobs = 3000;
 MPRINT(EMADVISETABLE):   ncols = 1205;
 MPRINT(EMADVISETABLE):   nbytes = 29361152;
@@ -710,92 +710,92 @@ MPRINT(EMADVISETABLE):   memtype = "DATA    ";
 MPRINT(EMADVISETABLE):   memlabel = "";
 MPRINT(EMADVISETABLE):   typemem = "DATA    ";
 MPRINT(EMADVISETABLE):   engine = "BASE    ";
-MPRINT(EMADVISETABLE):   crdate = 1921410038.623;
-MPRINT(EMADVISETABLE):   modate = 1921410038.623;
+MPRINT(EMADVISETABLE):   crdate = 1923224310.684;
+MPRINT(EMADVISETABLE):   modate = 1923224310.684;
 MPRINT(EMADVISETABLE):   format crdate datetime16.;
 MPRINT(EMADVISETABLE):   format modate datetime16.;
 MPRINT(EMADVISETABLE):   if role = ' ' then role = 'TRAIN';
 MPRINT(EMADVISETABLE):   output;
 MPRINT(EMADVISETABLE):   run;
 NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
-      real time           0.18 seconds
-      cpu time            0.03 seconds
+      real time           0.21 seconds
+      cpu time            0.10 seconds
  
  
 MPRINT(EMADVISETABLE):
 MPRINT(EM_DIAGRAM):  ;
  
-18639      data EMWS3.Ids_EMCMETADEFAULT;
+22432      data EMWS3.Ids_EMCMETADEFAULT;
 MPRINT(EM_DIAGRAM):    data EMWS3.Ids_EMCMETADEFAULT;
-18640      set EMWS3.Ids_EMCMETADEFAULT;
+22433      set EMWS3.Ids_EMCMETADEFAULT;
 MPRINT(EM_DIAGRAM):   set EMWS3.Ids_EMCMETADEFAULT;
-18641      label DROP = "%sysfunc(sasmsg(sashelp.dmine, meta_drop_vlabel, NOQUOTE))";
+22434      label DROP = "%sysfunc(sasmsg(sashelp.dmine, meta_drop_vlabel, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label DROP = "Descartar";
-18642      if DROP='' then DROP='N';
+22435      if DROP='' then DROP='N';
 MPRINT(EM_DIAGRAM):   if DROP='' then DROP='N';
-18643      if type='C' and level='INTERVAL' then level='NOMINAL';
+22436      if type='C' and level='INTERVAL' then level='NOMINAL';
 MPRINT(EM_DIAGRAM):   if type='C' and level='INTERVAL' then level='NOMINAL';
-18644      if type='C' and role='FREQ' then role='INPUT';
+22437      if type='C' and role='FREQ' then role='INPUT';
 MPRINT(EM_DIAGRAM):   if type='C' and role='FREQ' then role='INPUT';
-18645      run;
+22438      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set EMWS3.IDS_EMCMETADEFAULT.
 NOTE: The data set EMWS3.IDS_EMCMETADEFAULT has 1205 observations and 21 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
+      real time           0.01 seconds
       cpu time            0.00 seconds
  
  
-18646      proc sort data=EMWS3.Ids_EMCMETADEFAULT;
+22439      proc sort data=EMWS3.Ids_EMCMETADEFAULT;
 MPRINT(EM_DIAGRAM):    proc sort data=EMWS3.Ids_EMCMETADEFAULT;
-18647      by NAME;
+22440      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-18648      run;
+22441      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set EMWS3.IDS_EMCMETADEFAULT.
 NOTE: The data set EMWS3.IDS_EMCMETADEFAULT has 1205 observations and 21 variables.
 NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.01 seconds
  
  
-18649      proc sort data=EMWS3.Ids_VariableSet;
+22442      proc sort data=EMWS3.Ids_VariableSet;
 MPRINT(EM_DIAGRAM):   proc sort data=EMWS3.Ids_VariableSet;
-18650      by NAME;
+22443      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-18651      run;
+22444      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set EMWS3.IDS_VARIABLESET.
 NOTE: The data set EMWS3.IDS_VARIABLESET has 1205 observations and 21 variables.
 NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
  
-18652      data EMWS3.Ids_VariableSet;
+22445      data EMWS3.Ids_VariableSet;
 MPRINT(EM_DIAGRAM):   data EMWS3.Ids_VariableSet;
-18653      merge EMWS3.Ids_EMCMETADEFAULT(in=_a) EMWS3.Ids_VariableSet(keep=NAME ROLE LEVEL ORDER DROP TYPE LOWERLIMIT UPPERLIMIT rename=(TYPE=OLDTYPE) in=_b);
+22446      merge EMWS3.Ids_EMCMETADEFAULT(in=_a) EMWS3.Ids_VariableSet(keep=NAME ROLE LEVEL ORDER DROP TYPE LOWERLIMIT UPPERLIMIT rename=(TYPE=OLDTYPE) in=_b);
 MPRINT(EM_DIAGRAM):   merge EMWS3.Ids_EMCMETADEFAULT(in=_a) EMWS3.Ids_VariableSet(keep=NAME ROLE LEVEL ORDER DROP TYPE LOWERLIMIT UPPERLIMIT rename=(TYPE=OLDTYPE) in=_b);
-18654      by NAME;
+22447      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-18655      if ^_a and _b then delete;
+22448      if ^_a and _b then delete;
 MPRINT(EM_DIAGRAM):   if ^_a and _b then delete;
-18656      if type='C' and level='INTERVAL' then level='NOMINAL';
+22449      if type='C' and level='INTERVAL' then level='NOMINAL';
 MPRINT(EM_DIAGRAM):   if type='C' and level='INTERVAL' then level='NOMINAL';
-18657      if type='C' and role='FREQ' then role='INPUT';
+22450      if type='C' and role='FREQ' then role='INPUT';
 MPRINT(EM_DIAGRAM):   if type='C' and role='FREQ' then role='INPUT';
-18658      if (type ne oldtype) and (_a and _b) then do;
+22451      if (type ne oldtype) and (_a and _b) then do;
 MPRINT(EM_DIAGRAM):   if (type ne oldtype) and (_a and _b) then do;
-18659      if type ='N' then level='INTERVAL';
+22452      if type ='N' then level='INTERVAL';
 MPRINT(EM_DIAGRAM):   if type ='N' then level='INTERVAL';
-18660      end;
+22453      end;
 MPRINT(EM_DIAGRAM):   end;
-18661      drop oldtype;
+22454      drop oldtype;
 MPRINT(EM_DIAGRAM):   drop oldtype;
-18662      run;
+22455      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set EMWS3.IDS_EMCMETADEFAULT.
@@ -803,112 +803,112 @@ NOTE: There were 1205 observations read from the data set EMWS3.IDS_VARIABLESET.
 NOTE: The data set EMWS3.IDS_VARIABLESET has 1205 observations and 21 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.01 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
-18663      data EMWS3.Ids_CMeta_DATA;
+22456      data EMWS3.Ids_CMeta_DATA;
 MPRINT(EM_DIAGRAM):    data EMWS3.Ids_CMeta_DATA;
-18664      set WORK.M1DLOBYV;
-MPRINT(EM_DIAGRAM):   set WORK.M1DLOBYV;
-18665      drop DROP;
+22457      set WORK.M3IO4ASB;
+MPRINT(EM_DIAGRAM):   set WORK.M3IO4ASB;
+22458      drop DROP;
 MPRINT(EM_DIAGRAM):   drop DROP;
-18666      where DROP='N';
+22459      where DROP='N';
 MPRINT(EM_DIAGRAM):   where DROP='N';
-18667      run;
+22460      run;
 MPRINT(EM_DIAGRAM):   run;
  
-NOTE: There were 1205 observations read from the data set WORK.M1DLOBYV.
+NOTE: There were 1205 observations read from the data set WORK.M3IO4ASB.
       WHERE DROP='N';
 NOTE: The data set EMWS3.IDS_CMETA_DATA has 1205 observations and 20 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
+      real time           0.01 seconds
       cpu time            0.00 seconds
  
  
 *------------------------------------------------------------*
 Ids: usando "AMUL.TERMINOS_DOCUMENTOS" fuentes de datos
 *------------------------------------------------------------*
-18668      *------------------------------------------------------------*;
+22461      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-18669      * Ids: creando datos DATA;
+22462      * Ids: creando datos DATA;
 MPRINT(EM_DIAGRAM):   * Ids: creando datos DATA;
-18670      *------------------------------------------------------------*;
+22463      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-18671      data EMWS3.Ids_DATA (label="")
-18672      / view=EMWS3.Ids_DATA
-18673      ;
+22464      data EMWS3.Ids_DATA (label="")
+22465      / view=EMWS3.Ids_DATA
+22466      ;
 MPRINT(EM_DIAGRAM):   data EMWS3.Ids_DATA (label="") / view=EMWS3.Ids_DATA ;
-18674      set AMUL.TERMINOS_DOCUMENTOS;
+22467      set AMUL.TERMINOS_DOCUMENTOS;
 MPRINT(EM_DIAGRAM):   set AMUL.TERMINOS_DOCUMENTOS;
-18675      run;
+22468      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: DATA STEP view saved on file EMWS3.IDS_DATA.
 NOTE: A stored DATA STEP view cannot run under a different operating system.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.03 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
-18676      data WORK.IDSOUTPUT;
+22469      data WORK.IDSOUTPUT;
 MPRINT(EM_DIAGRAM):    data WORK.IDSOUTPUT;
-18677      length ATTRIBUTE $20 LABEL $50 VALUE $50;
+22470      length ATTRIBUTE $20 LABEL $50 VALUE $50;
 MPRINT(EM_DIAGRAM):   length ATTRIBUTE $20 LABEL $50 VALUE $50;
-18678      label LABEL= "%sysfunc(sasmsg(sashelp.dmine, rpt_attribute_vlabel,   NOQUOTE))";
+22471      label LABEL= "%sysfunc(sasmsg(sashelp.dmine, rpt_attribute_vlabel,   NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label LABEL= "Atributo";
-18679      label VALUE= "%sysfunc(sasmsg(sashelp.dmine, rpt_value_vlabel,       NOQUOTE))";
+22472      label VALUE= "%sysfunc(sasmsg(sashelp.dmine, rpt_value_vlabel,       NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label VALUE= "Valor";
-18680      ATTRIBUTE = 'OUTPUT';
+22473      ATTRIBUTE = 'OUTPUT';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = 'OUTPUT';
-18681      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeloutput_value , NOQUOTE))";
+22474      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeloutput_value , NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Tabla de salida";
-18682      VALUE = "EMWS3.Ids_DATA";
+22475      VALUE = "EMWS3.Ids_DATA";
 MPRINT(EM_DIAGRAM):   VALUE = "EMWS3.Ids_DATA";
-18683      output;
+22476      output;
 MPRINT(EM_DIAGRAM):   output;
-18684      ATTRIBUTE = 'OUTPUTTYPE';
+22477      ATTRIBUTE = 'OUTPUTTYPE';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = 'OUTPUTTYPE';
-18685      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeloutputtype_value, NOQUOTE))";
+22478      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeloutputtype_value, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Tipo de salida";
-18686      VALUE = "Vista";
+22479      VALUE = "Vista";
 MPRINT(EM_DIAGRAM):   VALUE = "Vista";
-18687      output;
+22480      output;
 MPRINT(EM_DIAGRAM):   output;
-18688      ATTRIBUTE = 'DROPVARS';
+22481      ATTRIBUTE = 'DROPVARS';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = 'DROPVARS';
-18689      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeldropvars_value, NOQUOTE))";
+22482      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labeldropvars_value, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Variables descartadas";
-18690      VALUE = "0";
+22483      VALUE = "0";
 MPRINT(EM_DIAGRAM):   VALUE = "0";
-18691      output;
+22484      output;
 MPRINT(EM_DIAGRAM):   output;
-18692      ATTRIBUTE = 'ROLE';
+22485      ATTRIBUTE = 'ROLE';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = 'ROLE';
-18693      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labelrole_value , NOQUOTE))";
+22486      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labelrole_value , NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Rol de Data Mining";
-18694      VALUE = "Bruto";
+22487      VALUE = "Bruto";
 MPRINT(EM_DIAGRAM):   VALUE = "Bruto";
-18695      output;
+22488      output;
 MPRINT(EM_DIAGRAM):   output;
-18696      run;
+22489      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: The data set WORK.IDSOUTPUT has 4 observations and 3 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.01 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-18697      proc print data=WORK.IDSOUTPUT noobs label;
+22490      proc print data=WORK.IDSOUTPUT noobs label;
 MPRINT(EM_DIAGRAM):   proc print data=WORK.IDSOUTPUT noobs label;
-18698      var label value;
+22491      var label value;
 MPRINT(EM_DIAGRAM):   var label value;
-18699      title9 ' ';
+22492      title9 ' ';
 MPRINT(EM_DIAGRAM):   title9 ' ';
-18700      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_outTableAttr_title, NOQUOTE))";
+22493      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_outTableAttr_title, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   title10 "Atributos de la tabla de salida";
 MPRINT(EM_DIAGRAM):   run;
-18701      run;
+22494      run;
  
 NOTE: There were 4 observations read from the data set WORK.IDSOUTPUT.
 NOTE: The PROCEDURE PRINT printed page 2.
@@ -917,32 +917,32 @@ NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18702      title10;
+22495      title10;
 MPRINT(EM_DIAGRAM):   title10;
-18703      proc contents noprint data=AMUL.TERMINOS_DOCUMENTOS out=WORK.IDSCONTENT(drop=NAME TYPE LENGTH VARNUM LABEL FORMAT FORMATL FORMATD INFORMAT INFORML INFORMD JUST NPOS);
+22496      proc contents noprint data=AMUL.TERMINOS_DOCUMENTOS out=WORK.IDSCONTENT(drop=NAME TYPE LENGTH VARNUM LABEL FORMAT FORMATL FORMATD INFORMAT INFORML INFORMD JUST NPOS);
 MPRINT(EM_DIAGRAM):    proc contents noprint data=AMUL.TERMINOS_DOCUMENTOS out=WORK.IDSCONTENT(drop=NAME TYPE LENGTH VARNUM LABEL FORMAT FORMATL FORMATD INFORMAT INFORML INFORMD JUST NPOS);
-18704      run;
+22497      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: The data set WORK.IDSCONTENT has 1205 observations and 28 variables.
 NOTE: PROCEDURE CONTENTS ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
+      real time           0.01 seconds
       cpu time            0.01 seconds
  
  
-18705      data WORK.IDSCONTENT;
+22498      data WORK.IDSCONTENT;
 MPRINT(EM_DIAGRAM):   data WORK.IDSCONTENT;
-18706      set WORK.IDSCONTENT end=eof;
+22499      set WORK.IDSCONTENT end=eof;
 MPRINT(EM_DIAGRAM):   set WORK.IDSCONTENT end=eof;
-18707      if eof then do;
+22500      if eof then do;
 MPRINT(EM_DIAGRAM):   if eof then do;
-18708      NVARS = _n_;
+22501      NVARS = _n_;
 MPRINT(EM_DIAGRAM):   NVARS = _n_;
-18709      output;
+22502      output;
 MPRINT(EM_DIAGRAM):   output;
-18710      end;
+22503      end;
 MPRINT(EM_DIAGRAM):   end;
-18711      run;
+22504      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: There were 1205 observations read from the data set WORK.IDSCONTENT.
@@ -952,93 +952,93 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       cpu time            0.00 seconds
  
  
-18712      data WORK.IDSOUTPUT(keep=ATTRIBUTE LABEL VALUE);
+22505      data WORK.IDSOUTPUT(keep=ATTRIBUTE LABEL VALUE);
 MPRINT(EM_DIAGRAM):   data WORK.IDSOUTPUT(keep=ATTRIBUTE LABEL VALUE);
-18713      length ATTRIBUTE $20 LABEL $50 VALUE $80;
+22506      length ATTRIBUTE $20 LABEL $50 VALUE $80;
 MPRINT(EM_DIAGRAM):   length ATTRIBUTE $20 LABEL $50 VALUE $80;
-18714      label LABEL= "%sysfunc(sasmsg(sashelp.dmine, rpt_attribute_vlabel,   NOQUOTE))";
+22507      label LABEL= "%sysfunc(sasmsg(sashelp.dmine, rpt_attribute_vlabel,   NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label LABEL= "Atributo";
-18715      label VALUE= "%sysfunc(sasmsg(sashelp.dmine, rpt_value_vlabel,       NOQUOTE))";
+22508      label VALUE= "%sysfunc(sasmsg(sashelp.dmine, rpt_value_vlabel,       NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label VALUE= "Valor";
-18716      ;
+22509      ;
 MPRINT(EM_DIAGRAM):   ;
-18717      dsid = open("WORK.IDSCONTENT");
+22510      dsid = open("WORK.IDSCONTENT");
 MPRINT(EM_DIAGRAM):   dsid = open("WORK.IDSCONTENT");
-18718      rc = fetch(dsid);
+22511      rc = fetch(dsid);
 MPRINT(EM_DIAGRAM):   rc = fetch(dsid);
-18719      nvars = attrn(dsid, 'NVARS');
+22512      nvars = attrn(dsid, 'NVARS');
 MPRINT(EM_DIAGRAM):   nvars = attrn(dsid, 'NVARS');
-18720      nobs = attrn(dsid, 'NOBS');
+22513      nobs = attrn(dsid, 'NOBS');
 MPRINT(EM_DIAGRAM):   nobs = attrn(dsid, 'NOBS');
-18721      ATTRIBUTE = 'DATASOURCE';
+22514      ATTRIBUTE = 'DATASOURCE';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = 'DATASOURCE';
-18722      LABEL = "%sysfunc(sasmsg(sashelp.dmine, meta_datasource_vlabel, NOQUOTE))";
+22515      LABEL = "%sysfunc(sasmsg(sashelp.dmine, meta_datasource_vlabel, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Fuente de datos";
-18723      VALUE="terminosdocumentos1";
+22516      VALUE="terminosdocumentos1";
 MPRINT(EM_DIAGRAM):   VALUE="terminosdocumentos1";
-18724      output;
+22517      output;
 MPRINT(EM_DIAGRAM):   output;
-18725      ATTRIBUTE = '';
+22518      ATTRIBUTE = '';
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = '';
-18726      LABEL = '';
+22519      LABEL = '';
 MPRINT(EM_DIAGRAM):   LABEL = '';
-18727      VALUE='';
+22520      VALUE='';
 MPRINT(EM_DIAGRAM):   VALUE='';
-18728      output;
+22521      output;
 MPRINT(EM_DIAGRAM):   output;
-18729      do i=1 to nvars;
+22522      do i=1 to nvars;
 MPRINT(EM_DIAGRAM):   do i=1 to nvars;
-18730      ATTRIBUTE = varname(dsid, i);
+22523      ATTRIBUTE = varname(dsid, i);
 MPRINT(EM_DIAGRAM):   ATTRIBUTE = varname(dsid, i);
-18731      LABEL = varlabel(dsid, i);
+22524      LABEL = varlabel(dsid, i);
 MPRINT(EM_DIAGRAM):   LABEL = varlabel(dsid, i);
-18732      if vartype(dsid,i)='C' then do;
+22525      if vartype(dsid,i)='C' then do;
 MPRINT(EM_DIAGRAM):   if vartype(dsid,i)='C' then do;
-18733      VALUE = getvarc(dsid, i);
+22526      VALUE = getvarc(dsid, i);
 MPRINT(EM_DIAGRAM):   VALUE = getvarc(dsid, i);
-18734      end;
+22527      end;
 MPRINT(EM_DIAGRAM):   end;
-18735      else do;
+22528      else do;
 MPRINT(EM_DIAGRAM):   else do;
-18736      NVALUE = getvarn(dsid, i);
+22529      NVALUE = getvarn(dsid, i);
 MPRINT(EM_DIAGRAM):   NVALUE = getvarn(dsid, i);
-18737      if ATTRIBUTE in('CRDATE', 'MODATE') then VALUE = left(put(NVALUE, NLDATM20.));
+22530      if ATTRIBUTE in('CRDATE', 'MODATE') then VALUE = left(put(NVALUE, NLDATM20.));
 MPRINT(EM_DIAGRAM):   if ATTRIBUTE in('CRDATE', 'MODATE') then VALUE = left(put(NVALUE, NLDATM20.));
-18738      else VALUE = left(put(NVALUE, BEST12.));
+22531      else VALUE = left(put(NVALUE, BEST12.));
 MPRINT(EM_DIAGRAM):   else VALUE = left(put(NVALUE, BEST12.));
-18739      end;
+22532      end;
 MPRINT(EM_DIAGRAM):   end;
-18740      if ATTRIBUTE = 'NVARS' then do;
+22533      if ATTRIBUTE = 'NVARS' then do;
 MPRINT(EM_DIAGRAM):   if ATTRIBUTE = 'NVARS' then do;
-18741      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labelvariables_value, NOQUOTE))";
+22534      LABEL = "%sysfunc(sasmsg(sashelp.dmine, rpt_labelvariables_value, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   LABEL = "Variables";
-18742      end;
+22535      end;
 MPRINT(EM_DIAGRAM):   end;
-18743      output;
+22536      output;
 MPRINT(EM_DIAGRAM):   output;
-18744      end;
+22537      end;
 MPRINT(EM_DIAGRAM):   end;
-18745      dsid=close(dsid);
+22538      dsid=close(dsid);
 MPRINT(EM_DIAGRAM):   dsid=close(dsid);
-18746      run;
+22539      run;
 MPRINT(EM_DIAGRAM):   run;
  
 NOTE: The data set WORK.IDSOUTPUT has 31 observations and 3 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
+      real time           0.02 seconds
       cpu time            0.01 seconds
  
  
-18747      proc print data=WORK.IDSOUTPUT noobs label;
+22540      proc print data=WORK.IDSOUTPUT noobs label;
 MPRINT(EM_DIAGRAM):   proc print data=WORK.IDSOUTPUT noobs label;
-18748      var label value;
+22541      var label value;
 MPRINT(EM_DIAGRAM):   var label value;
-18749      title9 ' ';
+22542      title9 ' ';
 MPRINT(EM_DIAGRAM):   title9 ' ';
-18750      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_inTableAttr_title, NOQUOTE))";
+22543      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_inTableAttr_title, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   title10 "Atributos de la tabla input";
 MPRINT(EM_DIAGRAM):   run;
-18751      run;
+22544      run;
  
 NOTE: There were 31 observations read from the data set WORK.IDSOUTPUT.
 NOTE: The PROCEDURE PRINT printed page 3.
@@ -1054,8 +1054,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "23/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H52" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H14" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de puntuación";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -1064,11 +1064,11 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de puntuación
-Fecha:                23/11/20
-Hora:                15H52
+Fecha:                10/12/20
+Hora:                21H14
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O01NHIOH "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMSCORE.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O01NHIOH new;
+MPRINT(EM_DIAGRAM):    filename O1JBK7ML "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O1JBK7ML new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * Ids: Computing metadata for DATA data;
@@ -1092,8 +1092,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "23/11/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H52" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21H14" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log del informe";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -1102,11 +1102,11 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log del informe
-Fecha:                23/11/20
-Hora:                15H52
+Fecha:                10/12/20
+Hora:                21H14
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O2FMA7BX "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMREPORT.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O2FMA7BX new;
+MPRINT(EM_DIAGRAM):    filename O135X1SY "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O135X1SY new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    proc printto;
 MPRINT(EM_DIAGRAM):   run;

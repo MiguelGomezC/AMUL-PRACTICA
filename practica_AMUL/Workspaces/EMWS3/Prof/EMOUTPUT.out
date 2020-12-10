@@ -1,0 +1,156 @@
+*------------------------------------------------------------*
+Usuario:                Admin
+Fecha:                10/12/20
+Hora:                22H35
+*------------------------------------------------------------*
+* Salida de entrenamiento
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Resumen de variables
+ 
+            Nivel de     Número de
+Rol          medida     ocurrencias
+ 
+ID          NOMINAL            1
+INPUT       INTERVAL        1204
+REJECTED    INTERVAL           1
+REJECTED    NOMINAL            1
+SEGMENT     NOMINAL            1
+ 
+ 
+ 
+ 
+Frecuencias: _SEGMENT_
+ 
+                                       Porcentaje
+Variable                  Cantidad         de
+   de        Valor de        de        frecuencia
+segmento     segmento    frecuencia       total
+ 
+_SEGMENT_       4             2281       76.0333
+_SEGMENT_       5              478       15.9333
+_SEGMENT_       1               73        2.4333
+_SEGMENT_       2               70        2.3333
+_SEGMENT_       3               68        2.2667
+_SEGMENT_       6               30        1.0000
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 4 Número: 2281
+Perfiles de importancia del árbol de decisión
+ 
+Variable     Valor     Clasificar
+ 
+ISRAEL      0.11835         1
+ISRA        0.11022         2
+ARAB        0.08838         3
+JEW         0.08494         4
+GOVERN      0.07660         5
+JEWISH      0.06498         6
+KILL        0.06175         7
+POLICI      0.06100         8
+SCI         0.05779         9
+TURKISH     0.05424        10
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 5 Número: 478
+Perfiles de importancia del árbol de decisión
+ 
+Variable         Valor     Clasificar
+ 
+ISRAEL         0.077537         1
+JEW            0.075560         2
+ARAB           0.075484         3
+ISRA           0.071705         4
+JEWISH         0.057025         5
+POLICI         0.041883         6
+SCI            0.039404         7
+GOVERN         0.038992         8
+POLIT          0.036335         9
+PALESTINIAN    0.036285        10
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 1 Número: 73
+Perfiles de importancia del árbol de decisión
+ 
+Variable      Valor     Clasificar
+ 
+ZUMA        0.042020         1
+SERA        0.041501         2
+EXTERMIN    0.038692         3
+SERDAR      0.038271         4
+ARGIC       0.037287         5
+SOVIET      0.029735         6
+ARMENIA     0.028763         7
+GENOCID     0.027016         8
+MOUNTAIN    0.026945         9
+ARMENIAN    0.026231        10
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 2 Número: 70
+Perfiles de importancia del árbol de decisión
+ 
+Variable        Valor     Clasificar
+ 
+SURREND       0.044433         1
+CHASTITI      0.043985         2
+INTELLECT     0.043381         3
+GORDON        0.042156         4
+BANK          0.041696         5
+GEB           0.041505         6
+SHAME         0.040845         7
+SKEPTIC       0.040736         8
+PITT          0.034015         9
+PITTSBURGH    0.031105        10
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 3 Número: 68
+Perfiles de importancia del árbol de decisión
+ 
+Variable       Valor     Clasificar
+ 
+LEBANES      0.026037         1
+LEBANON      0.021149         2
+ISRAEL       0.016726         3
+HEZBOLLAH    0.013350         4
+HERNLEM      0.011357         5
+BRAD         0.008890         6
+OCCUP        0.007611         7
+VILLAG       0.006855         8
+SHELL        0.006696         9
+CIVILIAN     0.006469        10
+ 
+ 
+ 
+Variable: _SEGMENT_ Segmento: 6 Número: 30
+Perfiles de importancia del árbol de decisión
+ 
+Variable      Valor     Clasificar
+ 
+ BUSH       0.018645         1
+ JIMMI      0.018633         2
+ REDUND     0.017875         3
+ LIVNI      0.017783         4
+ JAKE       0.017707         5
+ CARTER     0.015325         6
+ PRESID     0.013494         7
+ GEORG      0.010740         8
+ EMPLOY     0.010708         9
+ REPLAC     0.010247        10
+
+
+*------------------------------------------------------------*
+* Salida de puntuación
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Salida del informe
+*------------------------------------------------------------*

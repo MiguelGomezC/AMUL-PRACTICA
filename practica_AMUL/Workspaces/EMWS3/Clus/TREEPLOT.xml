@@ -18,24 +18,24 @@
       <Value>Valores no ausentes</Value>
       <Value>SURREND</Value>
       <Value>10</Value>
-      <Value>80.07</Value>
+      <Value>76.03</Value>
       <Value>1</Value>
       <Value>0</Value>
-      <Value>          3:        80.1%
+      <Value>          4:        76.0%
  Número:         3000</Value>
-      <Value>Id de nodo:            1&#10;&#10;3:        80.1%&#10;2:        13.8%&#10;4:         3.8%&#10;1:         2.3%&#10; Número:         3000</Value>
+      <Value>Id de nodo:            1&#10;&#10;4:        76.0%&#10;5:        15.9%&#10;1:         2.4%&#10;6:         1.0%&#10;2:         2.3%&#10;3:         2.3%&#10; Número:         3000</Value>
       <Value>3000</Value>
     </Values>
     <Values>
       <Value>&lt; 0.0284 Falta Or</Value>
-      <Value>ARMENIAN</Value>
+      <Value>JIMMI</Value>
       <Value>9.76</Value>
-      <Value>81.97</Value>
+      <Value>77.83</Value>
       <Value>2</Value>
       <Value>1</Value>
-      <Value>          3:        82.0%
+      <Value>          4:        77.8%
  Número:         2928</Value>
-      <Value>Id de nodo:            2&#10;&#10;3:        82.0%&#10;2:        14.1%&#10;4:         3.9%&#10;1:         0.0%&#10; Número:         2928</Value>
+      <Value>Id de nodo:            2&#10;&#10;4:        77.8%&#10;5:        16.3%&#10;1:         2.5%&#10;6:         1.0%&#10;2:         0.0%&#10;3:         2.3%&#10; Número:         2928</Value>
       <Value>2928</Value>
     </Values>
     <Values>
@@ -45,202 +45,130 @@
       <Value>97.22</Value>
       <Value>3</Value>
       <Value>1</Value>
-      <Value>          1:        97.2%
+      <Value>          2:        97.2%
  Número:           72</Value>
-      <Value>Id de nodo:            3&#10;&#10;3:         2.8%&#10;2:         0.0%&#10;4:         0.0%&#10;1:        97.2%&#10; Número:           72</Value>
+      <Value>Id de nodo:            3&#10;&#10;4:         2.8%&#10;5:         0.0%&#10;1:         0.0%&#10;6:         0.0%&#10;2:        97.2%&#10;3:         0.0%&#10; Número:           72</Value>
       <Value>72</Value>
     </Values>
     <Values>
-      <Value>&lt; 0.0424 Falta Or</Value>
-      <Value>SERA</Value>
-      <Value>9.3466666667</Value>
-      <Value>84.74</Value>
+      <Value>&lt; 0.0304 Falta Or</Value>
+      <Value>ZUMA</Value>
+      <Value>9.6533333333</Value>
+      <Value>78.66</Value>
       <Value>4</Value>
       <Value>2</Value>
-      <Value>          3:        84.7%
- Número:         2804</Value>
-      <Value>Id de nodo:            4&#10;&#10;3:        84.7%&#10;2:        14.7%&#10;4:         0.5%&#10;1:         0.0%&#10; Número:         2804</Value>
-      <Value>2804</Value>
+      <Value>          4:        78.7%
+ Número:         2896</Value>
+      <Value>Id de nodo:            4&#10;&#10;4:        78.7%&#10;5:        16.5%&#10;1:         2.5%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         2.3%&#10; Número:         2896</Value>
+      <Value>2896</Value>
     </Values>
     <Values>
-      <Value>&gt;= 0.0424</Value>
-      <Value>TURK</Value>
-      <Value>0.4133333333</Value>
-      <Value>79.84</Value>
+      <Value>&gt;= 0.0304</Value>
+      <Value></Value>
+      <Value>0.1066666667</Value>
+      <Value>93.75</Value>
       <Value>5</Value>
       <Value>2</Value>
-      <Value>          4:        79.8%
- Número:          124</Value>
-      <Value>Id de nodo:            5&#10;&#10;3:        19.4%&#10;2:         0.8%&#10;4:        79.8%&#10;1:         0.0%&#10; Número:          124</Value>
-      <Value>124</Value>
+      <Value>          6:        93.8%
+ Número:           32</Value>
+      <Value>Id de nodo:            5&#10;&#10;4:         3.1%&#10;5:         3.1%&#10;1:         0.0%&#10;6:        93.8%&#10;2:         0.0%&#10;3:         0.0%&#10; Número:           32</Value>
+      <Value>32</Value>
     </Values>
     <Values>
-      <Value>&lt; 0.0138 Falta Or</Value>
-      <Value>TURK</Value>
-      <Value>9.3133333333</Value>
-      <Value>85.04</Value>
+      <Value>&lt; 0.0162 Falta Or</Value>
+      <Value>LEBANES</Value>
+      <Value>9.4366666667</Value>
+      <Value>80.47</Value>
       <Value>8</Value>
       <Value>4</Value>
-      <Value>          3:        85.0%
- Número:         2794</Value>
-      <Value>Id de nodo:            8&#10;&#10;3:        85.0%&#10;2:        14.8%&#10;4:         0.2%&#10;1:         0.0%&#10; Número:         2794</Value>
-      <Value>2794</Value>
+      <Value>          4:        80.5%
+ Número:         2831</Value>
+      <Value>Id de nodo:            8&#10;&#10;4:        80.5%&#10;5:        16.8%&#10;1:         0.3%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         2.4%&#10; Número:         2831</Value>
+      <Value>2831</Value>
     </Values>
     <Values>
-      <Value>&gt;= 0.0138</Value>
+      <Value>&gt;= 0.0162</Value>
       <Value></Value>
-      <Value>0.0333333333</Value>
-      <Value>100</Value>
+      <Value>0.2166666667</Value>
+      <Value>98.46</Value>
       <Value>9</Value>
       <Value>4</Value>
-      <Value>          4:       100.0%
- Número:           10</Value>
-      <Value>Id de nodo:            9&#10;&#10;3:         0.0%&#10;2:         0.0%&#10;4:       100.0%&#10;1:         0.0%&#10; Número:           10</Value>
-      <Value>10</Value>
+      <Value>          1:        98.5%
+ Número:           65</Value>
+      <Value>Id de nodo:            9&#10;&#10;4:         0.0%&#10;5:         1.5%&#10;1:        98.5%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         0.0%&#10; Número:           65</Value>
+      <Value>65</Value>
     </Values>
     <Values>
-      <Value>&lt; 0.0052</Value>
-      <Value></Value>
-      <Value>0.11</Value>
-      <Value>60.61</Value>
-      <Value>10</Value>
-      <Value>5</Value>
-      <Value>          3:        60.6%
- Número:           33</Value>
-      <Value>Id de nodo:           10&#10;&#10;3:        60.6%&#10;2:         0.0%&#10;4:        39.4%&#10;1:         0.0%&#10; Número:           33</Value>
-      <Value>33</Value>
-    </Values>
-    <Values>
-      <Value>&gt;= 0.0052 Falta Or</Value>
-      <Value>TALK</Value>
-      <Value>0.3033333333</Value>
-      <Value>94.51</Value>
-      <Value>11</Value>
-      <Value>5</Value>
-      <Value>          4:        94.5%
- Número:           91</Value>
-      <Value>Id de nodo:           11&#10;&#10;3:         4.4%&#10;2:         1.1%&#10;4:        94.5%&#10;1:         0.0%&#10; Número:           91</Value>
-      <Value>91</Value>
-    </Values>
-    <Values>
-      <Value>&lt; 0.0678 Falta Or</Value>
+      <Value>&lt; 0.0159 Falta Or</Value>
       <Value>ISRAEL</Value>
-      <Value>9.2866666667</Value>
-      <Value>85.18</Value>
-      <Value>12</Value>
+      <Value>9.2633333333</Value>
+      <Value>81.97</Value>
+      <Value>10</Value>
       <Value>8</Value>
-      <Value>          3:        85.2%
- Número:         2786</Value>
-      <Value>Id de nodo:           12&#10;&#10;3:        85.2%&#10;2:        14.8%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:         2786</Value>
-      <Value>2786</Value>
+      <Value>          4:        82.0%
+ Número:         2779</Value>
+      <Value>Id de nodo:           10&#10;&#10;4:        82.0%&#10;5:        16.9%&#10;1:         0.3%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         0.8%&#10; Número:         2779</Value>
+      <Value>2779</Value>
     </Values>
     <Values>
-      <Value>&gt;= 0.0678</Value>
+      <Value>&gt;= 0.0159</Value>
       <Value></Value>
-      <Value>0.0266666667</Value>
-      <Value>62.5</Value>
+      <Value>0.1733333333</Value>
+      <Value>88.46</Value>
+      <Value>11</Value>
+      <Value>8</Value>
+      <Value>          3:        88.5%
+ Número:           52</Value>
+      <Value>Id de nodo:           11&#10;&#10;4:         0.0%&#10;5:        11.5%&#10;1:         0.0%&#10;6:         0.0%&#10;2:         0.0%&#10;3:        88.5%&#10; Número:           52</Value>
+      <Value>52</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.1354 Falta Or</Value>
+      <Value>EXTERMIN</Value>
+      <Value>9.1933333333</Value>
+      <Value>82.6</Value>
+      <Value>12</Value>
+      <Value>10</Value>
+      <Value>          4:        82.6%
+ Número:         2758</Value>
+      <Value>Id de nodo:           12&#10;&#10;4:        82.6%&#10;5:        16.9%&#10;1:         0.3%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         0.2%&#10; Número:         2758</Value>
+      <Value>2758</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.1354</Value>
+      <Value></Value>
+      <Value>0.07</Value>
+      <Value>76.19</Value>
       <Value>13</Value>
-      <Value>8</Value>
-      <Value>          4:        62.5%
- Número:            8</Value>
-      <Value>Id de nodo:           13&#10;&#10;3:        37.5%&#10;2:         0.0%&#10;4:        62.5%&#10;1:         0.0%&#10; Número:            8</Value>
-      <Value>8</Value>
-    </Values>
-    <Values>
-      <Value>&lt; 0.0036 Falta Or</Value>
-      <Value></Value>
-      <Value>0.2866666667</Value>
-      <Value>97.67</Value>
-      <Value>14</Value>
-      <Value>11</Value>
-      <Value>          4:        97.7%
- Número:           86</Value>
-      <Value>Id de nodo:           14&#10;&#10;3:         1.2%&#10;2:         1.2%&#10;4:        97.7%&#10;1:         0.0%&#10; Número:           86</Value>
-      <Value>86</Value>
-    </Values>
-    <Values>
-      <Value>&gt;= 0.0036</Value>
-      <Value></Value>
-      <Value>0.0166666667</Value>
-      <Value>60</Value>
-      <Value>15</Value>
-      <Value>11</Value>
-      <Value>          3:        60.0%
- Número:            5</Value>
-      <Value>Id de nodo:           15&#10;&#10;3:        60.0%&#10;2:         0.0%&#10;4:        40.0%&#10;1:         0.0%&#10; Número:            5</Value>
-      <Value>5</Value>
-    </Values>
-    <Values>
-      <Value>&lt; 0.008 Falta Or</Value>
-      <Value>ISRA</Value>
-      <Value>8.2366666667</Value>
-      <Value>94.66</Value>
-      <Value>16</Value>
-      <Value>12</Value>
-      <Value>          3:        94.7%
- Número:         2471</Value>
-      <Value>Id de nodo:           16&#10;&#10;3:        94.7%&#10;2:         5.3%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:         2471</Value>
-      <Value>2471</Value>
-    </Values>
-    <Values>
-      <Value>&gt;= 0.008</Value>
-      <Value>MED</Value>
-      <Value>1.05</Value>
-      <Value>89.21</Value>
-      <Value>17</Value>
-      <Value>12</Value>
-      <Value>          2:        89.2%
- Número:          315</Value>
-      <Value>Id de nodo:           17&#10;&#10;3:        10.8%&#10;2:        89.2%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:          315</Value>
-      <Value>315</Value>
-    </Values>
-    <Values>
-      <Value>&lt; 0.0065 Falta Or</Value>
-      <Value></Value>
-      <Value>7.98</Value>
-      <Value>96.95</Value>
-      <Value>20</Value>
-      <Value>16</Value>
-      <Value>          3:        97.0%
- Número:         2394</Value>
-      <Value>Id de nodo:           20&#10;&#10;3:        97.0%&#10;2:         3.0%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:         2394</Value>
-      <Value>2394</Value>
-    </Values>
-    <Values>
-      <Value>&gt;= 0.0065</Value>
-      <Value></Value>
-      <Value>0.2566666667</Value>
-      <Value>76.62</Value>
+      <Value>10</Value>
+      <Value>          3:        76.2%
+ Número:           21</Value>
+      <Value>Id de nodo:           13&#10;&#10;4:         0.0%&#10;5:        23.8%&#10;1:         0.0%&#10;6:         0.0%&#10;2:         0.0%&#10;3:        76.2%&#10; Número:           21</Value>
       <Value>21</Value>
-      <Value>16</Value>
-      <Value>          2:        76.6%
- Número:           77</Value>
-      <Value>Id de nodo:           21&#10;&#10;3:        23.4%&#10;2:        76.6%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:           77</Value>
-      <Value>77</Value>
     </Values>
     <Values>
-      <Value>&lt; 0.0051 Falta Or</Value>
+      <Value>&lt; 0.012 Falta Or</Value>
       <Value></Value>
-      <Value>1.0066666667</Value>
-      <Value>93.05</Value>
-      <Value>22</Value>
-      <Value>17</Value>
-      <Value>          2:        93.0%
- Número:          302</Value>
-      <Value>Id de nodo:           22&#10;&#10;3:         7.0%&#10;2:        93.0%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:          302</Value>
-      <Value>302</Value>
+      <Value>9.1466666667</Value>
+      <Value>83.02</Value>
+      <Value>14</Value>
+      <Value>12</Value>
+      <Value>          4:        83.0%
+ Número:         2744</Value>
+      <Value>Id de nodo:           14&#10;&#10;4:        83.0%&#10;5:        16.7%&#10;1:         0.0%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         0.2%&#10; Número:         2744</Value>
+      <Value>2744</Value>
     </Values>
     <Values>
-      <Value>&gt;= 0.0051</Value>
+      <Value>&gt;= 0.012</Value>
       <Value></Value>
-      <Value>0.0433333333</Value>
-      <Value>100</Value>
-      <Value>23</Value>
-      <Value>17</Value>
-      <Value>          3:       100.0%
- Número:           13</Value>
-      <Value>Id de nodo:           23&#10;&#10;3:       100.0%&#10;2:         0.0%&#10;4:         0.0%&#10;1:         0.0%&#10; Número:           13</Value>
-      <Value>13</Value>
+      <Value>0.0466666667</Value>
+      <Value>57.14</Value>
+      <Value>15</Value>
+      <Value>12</Value>
+      <Value>          1:        57.1%
+ Número:           14</Value>
+      <Value>Id de nodo:           15&#10;&#10;4:         0.0%&#10;5:        42.9%&#10;1:        57.1%&#10;6:         0.0%&#10;2:         0.0%&#10;3:         0.0%&#10; Número:           14</Value>
+      <Value>14</Value>
     </Values>
                         </ValuesList>
                   </EmbeddedData>
