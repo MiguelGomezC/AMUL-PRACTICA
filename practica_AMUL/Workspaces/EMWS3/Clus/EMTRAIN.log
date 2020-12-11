@@ -3,8 +3,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H33" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H44" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -13,11 +13,11 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de entrenamiento
-Fecha:                10/12/20
-Hora:                22H33
+Fecha:                11/12/20
+Hora:                22H44
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O2VYGFID "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus\EMTRAIN.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O2VYGFID new;
+MPRINT(EM_DIAGRAM):    filename O10X3UZ1 "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O10X3UZ1 new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    filename _LOG "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus\EMLOG.log" encoding="UTF-8" NOBOM;
 MPRINT(EM_DIAGRAM):    data _null_;
@@ -25,8 +25,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H33" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H44" );
 MPRINT(EM_DIAGRAM):   file _LOG;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -76,8 +76,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "10/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H33" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "11/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "22H44" );
 MPRINT(EM_DIAGRAM):   file _OUT;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -158,23 +158,23 @@ MPRINT(EM_DIAGRAM):   run;
 NOTE: There were 2 observations read from the data set WORK.CLUSMETA.
 NOTE: The PROCEDURE PRINT printed page 1.
 NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
-      real time           0.02 seconds
+      real time           0.00 seconds
       cpu time            0.01 seconds
       
 
 22077      title10;
 MPRINT(EM_DIAGRAM):   title10;
-22078      data WORK.M1135IQK;
-MPRINT(EM_DIAGRAM):    data WORK.M1135IQK;
-22079      set WORK.M1135IQK;
-MPRINT(EM_DIAGRAM):   set WORK.M1135IQK;
+22078      data WORK.M1T2E4MI;
+MPRINT(EM_DIAGRAM):    data WORK.M1T2E4MI;
+22079      set WORK.M1T2E4MI;
+MPRINT(EM_DIAGRAM):   set WORK.M1T2E4MI;
 22080      if role eq 'REJECTED' then role = 'INPUT';
 MPRINT(EM_DIAGRAM):   if role eq 'REJECTED' then role = 'INPUT';
 22081      run;
 MPRINT(EM_DIAGRAM):   run;
 
-NOTE: There were 1204 observations read from the data set WORK.M1135IQK.
-NOTE: The data set WORK.M1135IQK has 1204 observations and 21 variables.
+NOTE: There were 1204 observations read from the data set WORK.M1T2E4MI.
+NOTE: The data set WORK.M1T2E4MI has 1204 observations and 21 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
       cpu time            0.00 seconds
@@ -184,8 +184,8 @@ MPRINT(EM_DIAGRAM):    *--------------------------------------------------------
 MPRINT(EM_DIAGRAM):   * Clus: preparando metadatos para el entrenamiento;
 MPRINT(EM_DIAGRAM):   ;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   data WORK.M1135IQK;
-MPRINT(EM_DIAGRAM):   set WORK.M1135IQK;
+MPRINT(EM_DIAGRAM):   data WORK.M1T2E4MI;
+MPRINT(EM_DIAGRAM):   set WORK.M1T2E4MI;
 MPRINT(EM_DIAGRAM):   if role eq 'REJECTED' then role = 'INPUT';
 MPRINT(EM_DIAGRAM):   run;
 22090      *------------------------------------------------------------*;
@@ -265,15 +265,15 @@ MPRINT(EM_DIAGRAM):   run;
 Note: Large memory request: 606816
 NOTE: Records processed = 3000   Memory used = 511K.
 NOTE: Vista EMWS3.IDS_DATA.VIEW ha utilizado (Tiempo de proceso total):
-      real time           0.12 seconds
-      cpu time            0.12 seconds
+      real time           0.10 seconds
+      cpu time            0.09 seconds
       
 NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS.
 NOTE: There were 3000 observations read from the data set EMWS3.IDS_DATA.
 NOTE: The data set WORK.CLUS_DMDB has 3000 observations and 1204 variables.
 NOTE: PROCEDURE DMDB ha utilizado (Tiempo de proceso total):
-      real time           0.14 seconds
-      cpu time            0.12 seconds
+      real time           0.10 seconds
+      cpu time            0.10 seconds
       
 
 MPRINT(EM_DIAGRAM):   quit;
@@ -445,9 +445,9 @@ ZUMA
 MPRINT(EM_DIAGRAM):   / level=interval;
 NOTE: 1204 input variable(s) defined for ID=I1.
 NOTE: The INPUT statement has finished with return code=0 and status=variables.
-22340      VQ maxc = 6 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
-MPRINT(EM_DIAGRAM):   VQ maxc = 6 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
-NOTE: A maximum of 6 clusters have been requested.
+22340      VQ maxc = 10 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
+MPRINT(EM_DIAGRAM):   VQ maxc = 10 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
+NOTE: A maximum of 10 clusters have been requested.
 NOTE: The VQ statement has finished with return code=0 and status=architecture.
 22341      MAKE outvar=EMWS3.Clus_OUTVAR;
 MPRINT(EM_DIAGRAM):   MAKE outvar=EMWS3.Clus_OUTVAR;
@@ -466,17 +466,17 @@ NOTE: The MAKE statement has finished with return code=0 and status=made.
 22342      INITIAL radius=0
 22343      ;
 MPRINT(EM_DIAGRAM):   INITIAL radius=0 ;
-NOTE: 6 semillas seleccionadas del conjunto de datos WORK.CLUS_DMDB.DATA usando el algoritmo SEPARATE.
+NOTE: 10 semillas seleccionadas del conjunto de datos WORK.CLUS_DMDB.DATA usando el algoritmo SEPARATE.
 NOTE: The INITIAL statement has finished with return code=0 and status=initialized.
 22344      TRAIN tech=FORGY
 22345      ;
 MPRINT(EM_DIAGRAM):   TRAIN tech=FORGY ;
-WARNING: Se ha alcanzado el límite de 10 iteraciones sin convergencia.
+NOTE: F-Convergence criterion is satisfied.
 NOTE: The TRAIN statement has finished with return code=0 and status=trained.
 22346      SAVE outstat=EMWS3.Clus_OUTSTAT outmean=EMWS3.Clus_OUTMEAN;
 MPRINT(EM_DIAGRAM):   SAVE outstat=EMWS3.Clus_OUTSTAT outmean=EMWS3.Clus_OUTMEAN;
-NOTE: The data set EMWS3.CLUS_OUTSTAT has 52 observations and 1207 variables.
-NOTE: The data set EMWS3.CLUS_OUTMEAN has 6 observations and 1213 variables.
+NOTE: The data set EMWS3.CLUS_OUTSTAT has 76 observations and 1207 variables.
+NOTE: The data set EMWS3.CLUS_OUTMEAN has 10 observations and 1213 variables.
 NOTE: The SAVE statement has finished with return code=0 and status=statistics.
 22347      code file="C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus\DMVQSCORECODE.sas"
 22348      group=Clus
@@ -492,8 +492,8 @@ MPRINT(EM_DIAGRAM):   quit;
 
 NOTE: There were 3000 observations read from the data set WORK.CLUS_DMDB.
 NOTE: PROCEDURE DMVQ ha utilizado (Tiempo de proceso total):
-      real time           1.07 seconds
-      cpu time            1.07 seconds
+      real time           1.22 seconds
+      cpu time            1.14 seconds
       
 
 22352      libname _spdslib;
@@ -551,12 +551,36 @@ MPRINT(EM_DIAGRAM):   _SEGMENT_= 6;
 MPRINT(EM_DIAGRAM):   Label='Cluster6';
 22378      output;
 MPRINT(EM_DIAGRAM):   output;
-22379      run;
+22379      _SEGMENT_= 7;
+MPRINT(EM_DIAGRAM):   _SEGMENT_= 7;
+22380      Label='Cluster7';
+MPRINT(EM_DIAGRAM):   Label='Cluster7';
+22381      output;
+MPRINT(EM_DIAGRAM):   output;
+22382      _SEGMENT_= 8;
+MPRINT(EM_DIAGRAM):   _SEGMENT_= 8;
+22383      Label='Cluster8';
+MPRINT(EM_DIAGRAM):   Label='Cluster8';
+22384      output;
+MPRINT(EM_DIAGRAM):   output;
+22385      _SEGMENT_= 9;
+MPRINT(EM_DIAGRAM):   _SEGMENT_= 9;
+22386      Label='Cluster9';
+MPRINT(EM_DIAGRAM):   Label='Cluster9';
+22387      output;
+MPRINT(EM_DIAGRAM):   output;
+22388      _SEGMENT_= 10;
+MPRINT(EM_DIAGRAM):   _SEGMENT_= 10;
+22389      Label='Cluster10';
+MPRINT(EM_DIAGRAM):   Label='Cluster10';
+22390      output;
+MPRINT(EM_DIAGRAM):   output;
+22391      run;
 MPRINT(EM_DIAGRAM):   run;
 
-NOTE: The data set EMWS3.CLUS_LABEL has 6 observations and 2 variables.
+NOTE: The data set EMWS3.CLUS_LABEL has 10 observations and 2 variables.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 

@@ -9,99 +9,13 @@ Trasversal: iniciando trasversal del flujo
 *------------------------------------------------------------* 
 * 
 * Ids : Beginning Update 
-* datetime : 23NOV2020:14:26:16 
+* datetime : 11DEC2020:22:58:21 
 * 
 *------------------------------------------------------------* 
-8312       *------------------------------------------------------------*;
-8313       * Ids: Update Variables Set;
-8314       *------------------------------------------------------------*;
-
-8315       data EMWS3.Ids_VariableSet;
-8316       length ROLE $32;
-8317       length LEVEL $10;
-8318       length REPORT $1;
-8319       label REPORT = "Informe";
-8320       length ORDER $8;
-8321       length DROP $1;
-8322       length LOWERLIMIT 8;
-8323       length UPPERLIMIT 8;
-8324       set EMWS3.Ids_EMCMETADEFAULT;
-8325       run;
-
-NOTE: Variable DROP is uninitialized.
-NOTE: There were 1205 observations read from the data set EMWS3.IDS_EMCMETADEFAULT.
-NOTE: The data set EMWS3.IDS_VARIABLESET has 1205 observations and 21 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8326       data EMWS3.Ids_VariableSet;
-8327       set EMWS3.Ids_VariableSet;
-8328       if upcase(NAME) = 'COST' then do;
-8329       ROLE = 'INPUT';
-8330       end;
-8331       if upcase(NAME) = 'IDEA' then do;
-8332       LEVEL = 'INTERVAL';
-8333       ROLE = 'INPUT';
-8334       end;
-8335       if upcase(NAME) = 'LABEL' then do;
-8336       ROLE = 'INPUT';
-8337       end;
-8338       if upcase(NAME) = 'TARGET' then do;
-8339       ROLE = 'INPUT';
-8340       end;
-8341       if upcase(NAME) = 'TEXT' then do;
-8342       ROLE = 'INPUT';
-8343       end;
-8344       run;
-
-NOTE: There were 1205 observations read from the data set EMWS3.IDS_VARIABLESET.
-NOTE: The data set EMWS3.IDS_VARIABLESET has 1205 observations and 21 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-8345       * Ids: End of Update Variables Set;
-8346       *------------------------------------------------------------*;
-
-8347       *------------------------------------------------------------*;
-8348       * Ids: Computing metadata for DATA data;
-8349       *------------------------------------------------------------*;
-
-8359       data EMWS3.Ids_EMINFO;
-8360       length TARGET KEY $32 DATA $43;
-8361       TARGET="";
-8362       KEY="IDSTABLE";
-8363       DATA="AMUL.TERMINOS_DOCUMENTOS";
-8364       output;
-8365       run;
-
-NOTE: The data set EMWS3.IDS_EMINFO has 1 observations and 3 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8366       data EMWS3.Ids_CMeta_DATA;
-8367       set EMWS3.Ids_VariableSet;
-8368       drop DROP;
-8369       where DROP='N';
-8370       run;
-
-NOTE: There were 1205 observations read from the data set EMWS3.IDS_VARIABLESET.
-      WHERE DROP='N';
-NOTE: The data set EMWS3.IDS_CMETA_DATA has 1205 observations and 20 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-8372       %let _HPDMGRIDHOST=;
-8373       %let _HPDMGRIDINSTALLLOC=;
-8374       %let _HPDMGRIDDATASERVER=;
-8375       %hpdm_gridSetOPtions;
+16063      %let _HPDMGRIDHOST=;
+16064      %let _HPDMGRIDINSTALLLOC=;
+16065      %let _HPDMGRIDDATASERVER=;
+16066      %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -112,10 +26,59 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 *------------------------------------------------------------* 
 * 
 * Ids : End Update 
-* datetime : 23NOV2020:14:26:17 
+* datetime : 11DEC2020:22:58:21 
+* 
+*------------------------------------------------------------* 
+Trasversal: WaitingNode "EMCODE" 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Clus : Beginning Update 
+* datetime : 11DEC2020:22:58:21 
+* 
+*------------------------------------------------------------* 
+16086      %let _HPDMGRIDHOST=;
+16087      %let _HPDMGRIDINSTALLLOC=;
+16088      %let _HPDMGRIDDATASERVER=;
+16089      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Clus : End Update 
+* datetime : 11DEC2020:22:58:22 
+* 
+*------------------------------------------------------------* 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* EMCODE : Beginning Update 
+* datetime : 11DEC2020:22:58:22 
+* 
+*------------------------------------------------------------* 
+16121      %let _HPDMGRIDHOST=;
+16122      %let _HPDMGRIDINSTALLLOC=;
+16123      %let _HPDMGRIDDATASERVER=;
+16124      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* EMCODE : End Update 
+* datetime : 11DEC2020:22:58:22 
 * 
 *------------------------------------------------------------* 
 Trasversal: ejecución completa 
-8376       proc printto;
-8377       run;
+16125      proc printto;
+16126      run;
 

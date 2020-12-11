@@ -1,5 +1,5 @@
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
  
 Resumen de variables
@@ -13,7 +13,7 @@ REJECTED    INTERVAL           1
 REJECTED    NOMINAL            1   
 SEGMENT     NOMINAL            1   
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
  
 Frecuencias: _SEGMENT_
@@ -23,117 +23,293 @@ Variable                  Cantidad         de
    de        Valor de        de        frecuencia
 segmento     segmento    frecuencia       total
 
-_SEGMENT_       4             2281       76.0333 
-_SEGMENT_       5              478       15.9333 
-_SEGMENT_       1               73        2.4333 
-_SEGMENT_       2               70        2.3333 
-_SEGMENT_       3               68        2.2667 
-_SEGMENT_       6               30        1.0000 
+_SEGMENT_       9             1047       34.9000 
+_SEGMENT_       3              691       23.0333 
+_SEGMENT_       5              408       13.6000 
+_SEGMENT_       1              400       13.3333 
+_SEGMENT_       2              236        7.8667 
+_SEGMENT_       8               80        2.6667 
+_SEGMENT_       10              70        2.3333 
+_SEGMENT_       6               32        1.0667 
+_SEGMENT_       7               22        0.7333 
+_SEGMENT_       4               14        0.4667 
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
-Variable: _SEGMENT_ Segmento: 4 Número: 2281
+Variable: _SEGMENT_ Segmento: 9 Número: 1047
 Perfiles de importancia del árbol de decisión
 
 Variable     Valor     Clasificar
 
-ISRAEL      0.11835         1    
-ISRA        0.11022         2    
-ARAB        0.08838         3    
-JEW         0.08494         4    
-GOVERN      0.07660         5    
-JEWISH      0.06498         6    
-KILL        0.06175         7    
-POLICI      0.06100         8    
-SCI         0.05779         9    
-TURKISH     0.05424        10    
+ELECTRON    0.20594         1    
+MED         0.05711         2    
+CIRCUIT     0.03547         3    
+SCI         0.03239         4    
+WINDOW      0.03182         5    
+CHIP        0.02732         6    
+COMP        0.02640         7    
+POWER       0.02561         8    
+ISRAEL      0.02387         9    
+SIGNAL      0.02342        10    
+ISRA        0.02114        11    
+RADIO       0.02090        12    
+VOLTAG      0.01995        13    
+BUILD       0.01961        14    
+AUDIO       0.01947        15    
+DESIGN      0.01840        16    
+DEVIC       0.01765        17    
+ARAB        0.01741        18    
+JEW         0.01736        19    
+ELECTR      0.01682        20    
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
-Variable: _SEGMENT_ Segmento: 5 Número: 478
+Variable: _SEGMENT_ Segmento: 3 Número: 691
+Perfiles de importancia del árbol de decisión
+
+Variable      Valor     Clasificar
+
+WINDOW       0.22368         1    
+COMP         0.19312         2    
+SERVER       0.05300         3    
+SCI          0.05244         4    
+DISPLAI      0.03941         5    
+RUN          0.03607         6    
+APPLIC       0.03202         7    
+MOTIF        0.03176         8    
+CLIENT       0.03094         9    
+INTELLECT    0.03027        10    
+CHASTITI     0.02985        11    
+SURREND      0.02940        12    
+ELECTRON     0.02859        13    
+XLIB         0.02733        14    
+GORDON       0.02720        15    
+SKEPTIC      0.02635        16    
+SHAME        0.02611        17    
+BANK         0.02549        18    
+GEB          0.02468        19    
+WIDGET       0.02443        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 5 Número: 408
+Perfiles de importancia del árbol de decisión
+
+Variable      Valor     Clasificar
+
+MED          0.13581         1    
+SCI          0.06714         2    
+PATIENT      0.04175         3    
+MEDIC        0.03730         4    
+FOOD         0.03655         5    
+DOCTOR       0.03383         6    
+SUPERSTIT    0.02943         7    
+DISEAS       0.02856         8    
+MEDICIN      0.02731         9    
+SENSIT       0.02724        10    
+SYNDROM      0.02645        11    
+SYMPTOM      0.02533        12    
+TREATMENT    0.02523        13    
+DIET         0.02181        14    
+CLINIC       0.02144        15    
+MSG          0.02107        16    
+CANDIDA      0.02005        17    
+PHYSICIAN    0.01955        18    
+EAT          0.01942        19    
+EFFECT       0.01847        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 1 Número: 400
 Perfiles de importancia del árbol de decisión
 
 Variable         Valor     Clasificar
 
-ISRAEL         0.077537         1    
-JEW            0.075560         2    
-ARAB           0.075484         3    
-ISRA           0.071705         4    
-JEWISH         0.057025         5    
-POLICI         0.041883         6    
-SCI            0.039404         7    
-GOVERN         0.038992         8    
-POLIT          0.036335         9    
-PALESTINIAN    0.036285        10    
+ARAB           0.079051         1    
+ISRAEL         0.078090         2    
+ISRA           0.072717         3    
+JEW            0.058297         4    
+JEWISH         0.053181         5    
+POLICI         0.048361         6    
+PEAC           0.045644         7    
+PALESTINIAN    0.041840         8    
+GOVERN         0.040345         9    
+TERRITORI      0.037133        10    
+ATTACK         0.036302        11    
+COUNTRI        0.033004        12    
+OCCUPI         0.031945        13    
+LAND           0.029495        14    
+LEBANON        0.028640        15    
+SCI            0.028040        16    
+FORC           0.026639        17    
+OCCUP          0.026632        18    
+KILL           0.024942        19    
+CIVILIAN       0.024844        20    
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
-Variable: _SEGMENT_ Segmento: 1 Número: 73
-Perfiles de importancia del árbol de decisión
-
-Variable      Valor     Clasificar
-
-ZUMA        0.042020         1    
-SERA        0.041501         2    
-EXTERMIN    0.038692         3    
-SERDAR      0.038271         4    
-ARGIC       0.037287         5    
-SOVIET      0.029735         6    
-ARMENIA     0.028763         7    
-GENOCID     0.027016         8    
-MOUNTAIN    0.026945         9    
-ARMENIAN    0.026231        10    
- 
-                                                                                                                                                                                                                                                                
- 
-Variable: _SEGMENT_ Segmento: 2 Número: 70
-Perfiles de importancia del árbol de decisión
-
-Variable        Valor     Clasificar
-
-SURREND       0.044433         1    
-CHASTITI      0.043985         2    
-INTELLECT     0.043381         3    
-GORDON        0.042156         4    
-BANK          0.041696         5    
-GEB           0.041505         6    
-SHAME         0.040845         7    
-SKEPTIC       0.040736         8    
-PITT          0.034015         9    
-PITTSBURGH    0.031105        10    
- 
-                                                                                                                                                                                                                                                                
- 
-Variable: _SEGMENT_ Segmento: 3 Número: 68
+Variable: _SEGMENT_ Segmento: 2 Número: 236
 Perfiles de importancia del árbol de decisión
 
 Variable       Valor     Clasificar
 
-LEBANES      0.026037         1    
-LEBANON      0.021149         2    
-ISRAEL       0.016726         3    
-HEZBOLLAH    0.013350         4    
-HERNLEM      0.011357         5    
-BRAD         0.008890         6    
-OCCUP        0.007611         7    
-VILLAG       0.006855         8    
-SHELL        0.006696         9    
-CIVILIAN     0.006469        10    
+MED          0.095135         1    
+SCI          0.036048         2    
+DOCTOR       0.007574         3    
+INFORM       0.006193         4    
+INFECT       0.005933         5    
+DRUG         0.005094         6    
+MEDIC        0.005038         7    
+DISTRIBUT    0.004891         8    
+HAPPEN       0.004760         9    
+HEALTH       0.004704        10    
+YEAST        0.004609        11    
+HELP         0.004414        12    
+CANCER       0.004362        13    
+DISEAS       0.004275        14    
+TREATMENT    0.004247        15    
+EFFECT       0.004192        16    
+TUE          0.003763        17    
+RECAL        0.003659        18    
+WINDOW       0.003539        19    
+ANTIBIOT     0.003478        20    
  
-                                                                                                                                                                                                                                                                
+                                                                                                   
  
-Variable: _SEGMENT_ Segmento: 6 Número: 30
+Variable: _SEGMENT_ Segmento: 8 Número: 80
 Perfiles de importancia del árbol de decisión
 
 Variable      Valor     Clasificar
 
- BUSH       0.018645         1    
- JIMMI      0.018633         2    
- REDUND     0.017875         3    
- LIVNI      0.017783         4    
- JAKE       0.017707         5    
- CARTER     0.015325         6    
- PRESID     0.013494         7    
- GEORG      0.010740         8    
- EMPLOY     0.010708         9    
- REPLAC     0.010247        10    
+ZUMA        0.045409         1    
+SERA        0.044285         2    
+SERDAR      0.041113         3    
+EXTERMIN    0.040900         4    
+ARGIC       0.040248         5    
+SOVIET      0.033948         6    
+ARMENIA     0.033383         7    
+MOUNTAIN    0.031786         8    
+GENOCID     0.030893         9    
+TURK        0.030210        10    
+ARMENIAN    0.029770        11    
+ROAD        0.028713        12    
+WAI         0.027313        13    
+TURKISH     0.026092        14    
+ESCAP       0.024569        15    
+LONGER      0.022351        16    
+SERV        0.022135        17    
+SINGL       0.021999        18    
+PASS        0.021590        19    
+CLOSE       0.020053        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 10 Número: 70
+Perfiles de importancia del árbol de decisión
+
+Variable       Valor     Clasificar
+
+ANDI         0.011433         1    
+BEYER        0.011138         2    
+TERROR       0.010639         3    
+ISRA         0.009413         4    
+ANA          0.008587         5    
+OMRAN        0.008412         6    
+IRVIN        0.008372         7    
+VIRGINIA     0.007901         8    
+TRUTH        0.007089         9    
+CLOCK        0.006145        10    
+REPORT       0.006068        11    
+POLIT        0.005973        12    
+TIM          0.005760        13    
+HOLOCAUST    0.005718        14    
+TEL          0.004714        15    
+NEUTRAL      0.004183        16    
+COMMIT       0.004094        17    
+CLEVELAND    0.003933        18    
+NAZI         0.003913        19    
+ISRAEL       0.003845        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 6 Número: 32
+Perfiles de importancia del árbol de decisión
+
+Variable      Valor     Clasificar
+
+JIMMI       0.019572         1    
+BUSH        0.019534         2    
+JAKE        0.019041         3    
+LIVNI       0.018911         4    
+REDUND      0.018657         5    
+CARTER      0.016185         6    
+PRESID      0.014354         7    
+EMPLOY      0.011213         8    
+GEORG       0.011015         9    
+REPLAC      0.010881        10    
+OPINION     0.008759        11    
+FAIL        0.008431        12    
+YORK        0.008415        13    
+STANDARD    0.006655        14    
+DEPART      0.006332        15    
+YEAR        0.002696        16    
+OCCUPI      0.000886        17    
+HERNLEM     0.000879        18    
+CIVILIAN    0.000818        19    
+BRAD        0.000816        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 7 Número: 22
+Perfiles de importancia del árbol de decisión
+
+Variable         Valor     Clasificar
+
+URBANA         0.010861         1    
+ILLINOI        0.008951         2    
+OWNER          0.007134         3    
+SHNEKENDORF    0.005403         4    
+NOIS           0.005339         5    
+NET            0.004360         6    
+EDWARD         0.003753         7    
+HAPPI          0.002769         8    
+BIRTHDAI       0.002616         9    
+HAMID          0.002098        10    
+KILL           0.001407        11    
+ISRAEL         0.001391        12    
+MON            0.000982        13    
+DON            0.000743        14    
+ZIONISM        0.000724        15    
+THU            0.000606        16    
+NUMBER         0.000598        17    
+UNIVERS        0.000594        18    
+PEAC           0.000519        19    
+ENTIR          0.000518        20    
+ 
+                                                                                                   
+ 
+Variable: _SEGMENT_ Segmento: 4 Número: 14
+Perfiles de importancia del árbol de decisión
+
+Variable         Valor    Clasificar
+
+UTEXA       .008706444         1    
+PROLIN      .005297799         2    
+EDU         .004725595         3    
+GATEWAI     .004705351         4    
+BENSON      .004705209         5    
+SERDAR      .004231398         6    
+FRANK       .004131154         7    
+MAIL        .004121987         8    
+MEAN        .003971607         9    
+QUOT        .003971016        10    
+DIMENS      .003970753        11    
+CUTE        .003970733        12    
+FOURD       .003970695        13    
+UUCP        .003705916        14    
+YOU         .002972306        15    
+INTERNET    .002666118        16    
+COMPUT      .002640648        17    
+PHONE       .002638437        18    
+NEW         .002538032        19    
+ARGIC       .002356063        20    

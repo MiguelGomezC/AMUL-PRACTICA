@@ -247,7 +247,7 @@ options nodate;
 proc dmvq data=WORK.Clus_DMDB dmdbcat=WORK.Clus_DMDB std=RANGE nominal=GLM ordinal=RANK
 ;
 input %DMVQINTERVAL / level=interval;
-VQ maxc = 6 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
+VQ maxc = 10 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
 MAKE outvar=EMWS3.Clus_OUTVAR;
 INITIAL radius=0
 ;
