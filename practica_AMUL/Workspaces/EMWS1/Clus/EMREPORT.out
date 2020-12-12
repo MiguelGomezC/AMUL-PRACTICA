@@ -1,0 +1,25 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Importancia de la variable
+
+ Nombre                                 Número de     Número de
+  de la                                 reglas de      reglas
+variable            Etiqueta             división    sustitutas    Importancia
+
+  PC_9       Componente principal 9         1             2          1.00000  
+  PC_10      Componente principal 10        1             2          0.96978  
+  PC_13      Componente principal 13        2             0          0.35300  
+  PC_20      Componente principal 20        0             2          0.35232  
+  PC_17      Componente principal 17        0             2          0.35229  
+  PC_3       Componente principal 3         1             2          0.33361  
+  PC_2       Componente principal 2         0             3          0.33361  
+  PC_4       Componente principal 4         0             2          0.26897  
+  PC_1       Componente principal 1         1             1          0.26897  
+  PC_14      Componente principal 14        0             1          0.25080  
+  PC_15      Componente principal 15        0             1          0.25076  
+  PC_16      Componente principal 16        0             1          0.24761  
+  PC_7       Componente principal 7         0             1          0.24748  
+  PC_5       Componente principal 5         0             1          0.14329  
+  PC_6       Componente principal 6         0             1          0.14329  

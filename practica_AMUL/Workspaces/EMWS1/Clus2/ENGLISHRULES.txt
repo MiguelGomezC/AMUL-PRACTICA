@@ -1,0 +1,181 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Componente principal 1 >= 0.46946
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 7
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.29
+ Predicted: _SEGMENT_=1  = 0.71
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 4
+*------------------------------------------------------------*
+if Componente principal 13 < -0.2602
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 4
+ Number of Observations = 6
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 10
+*------------------------------------------------------------*
+if Componente principal 8 >= 0.02799
+AND Componente principal 17 < 0.00842 or MISSING
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 10
+ Number of Observations = 561
+ Predicted: _SEGMENT_=4  = 0.99
+ Predicted: _SEGMENT_=5  = 0.01
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 12
+*------------------------------------------------------------*
+if Componente principal 8 < 0.02799 or MISSING
+AND Componente principal 7 < -0.0007
+AND Componente principal 19 < 0.04615 or MISSING
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 12
+ Number of Observations = 724
+ Predicted: _SEGMENT_=4  = 0.18
+ Predicted: _SEGMENT_=5  = 0.82
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if Componente principal 8 < 0.02799 or MISSING
+AND Componente principal 19 >= 0.04615
+AND Componente principal 15 < 0.00411
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 44
+ Predicted: _SEGMENT_=4  = 0.41
+ Predicted: _SEGMENT_=5  = 0.59
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 15
+*------------------------------------------------------------*
+if Componente principal 8 < 0.02799 or MISSING
+AND Componente principal 19 >= 0.04615
+AND Componente principal 15 >= 0.00411 or MISSING
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 15
+ Number of Observations = 63
+ Predicted: _SEGMENT_=4  = 0.98
+ Predicted: _SEGMENT_=5  = 0.02
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 19
+*------------------------------------------------------------*
+if Componente principal 8 >= 0.02799
+AND Componente principal 17 >= 0.00842
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 12 >= 0.02614
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 19
+ Number of Observations = 71
+ Predicted: _SEGMENT_=4  = 0.01
+ Predicted: _SEGMENT_=5  = 0.99
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 22
+*------------------------------------------------------------*
+if Componente principal 8 < 0.02799 or MISSING
+AND Componente principal 7 >= -0.0007 or MISSING
+AND Componente principal 19 < 0.04615 or MISSING
+AND Componente principal 16 < 0.1483 or MISSING
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 22
+ Number of Observations = 1441
+ Predicted: _SEGMENT_=4  = 0.01
+ Predicted: _SEGMENT_=5  = 0.99
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 23
+*------------------------------------------------------------*
+if Componente principal 8 < 0.02799 or MISSING
+AND Componente principal 7 >= -0.0007 or MISSING
+AND Componente principal 19 < 0.04615 or MISSING
+AND Componente principal 16 >= 0.1483
+AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 23
+ Number of Observations = 9
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 26
+*------------------------------------------------------------*
+if Componente principal 8 >= 0.02799
+AND Componente principal 17 >= 0.00842
+AND Componente principal 13 < 0.00419 AND Componente principal 13 >= -0.2602 or MISSING
+AND Componente principal 12 < 0.02614 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 26
+ Number of Observations = 41
+ Predicted: _SEGMENT_=4  = 0.32
+ Predicted: _SEGMENT_=5  = 0.68
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 27
+*------------------------------------------------------------*
+if Componente principal 8 >= 0.02799
+AND Componente principal 17 >= 0.00842
+AND Componente principal 13 >= 0.00419
+AND Componente principal 12 < 0.02614 or MISSING
+AND Componente principal 1 < 0.46946 or MISSING
+then 
+ Tree Node Identifier   = 27
+ Number of Observations = 33
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 

@@ -8,7 +8,7 @@
  DsModifiedBy="Admin" DsModifyDate="1921411163" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
  SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train"
  Component="DataSource" RawCreateTime="1921411209.1" CreateTime="19NOV2020:13:20:09"
- Description="" Data="AMUL.TERMINOS_DOCUMENTOS" CMeta="WORK.M17EW24S" RunId="a51d8141-d7f8-4359-9ca8-0847fb7316bc"
+ Description="" Data="AMUL.TERMINOS_DOCUMENTOS" CMeta="WORK.M17EW24S" RunId="5be39ae7-f1ed-4a31-a6b9-efdfc5255527"
 >
 <VARIABLEPROPERTIES/>
 <FILEPROPERTIES/>
