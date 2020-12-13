@@ -4,7 +4,7 @@ MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
 MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "13/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H43" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "18H29" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de puntuación";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -14,93 +14,33 @@ MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de puntuación
 Fecha:                13/12/20
-Hora:                15H43
+Hora:                18H29
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O32KQZDB "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMSCORE.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O32KQZDB new;
+MPRINT(EM_DIAGRAM):    filename O3QWGG9U "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O3QWGG9U new;
 MPRINT(EM_DIAGRAM):   run;
-22329      proc transpose data=EMWS3.Clus2_OUTVAR out=WORK.Clus2_OUTVAR(rename=(COl2=NAME) where=(COL1='IMPUTED'));
 MPRINT(EM_DIAGRAM):    proc transpose data=EMWS3.Clus2_OUTVAR out=WORK.Clus2_OUTVAR(rename=(COl2=NAME) where=(COL1='IMPUTED'));
-22330      var ACCESS--YOU;
 MPRINT(EM_DIAGRAM):   var ACCESS--YOU;
-22331      where _TYPE_ in('TYPE' 'VARIABLE');
 MPRINT(EM_DIAGRAM):   where _TYPE_ in('TYPE' 'VARIABLE');
-22332      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: There were 2 observations read from the data set EMWS3.CLUS2_OUTVAR.
-      WHERE _TYPE_ in ('TYPE', 'VARIABLE');
-NOTE: The data set WORK.CLUS2_OUTVAR has 0 observations and 3 variables.
-NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-22333      proc sort data=WORK.Clus2_OUTVAR;
 MPRINT(EM_DIAGRAM):   proc sort data=WORK.Clus2_OUTVAR;
-22334      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-22335      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: Input data set is empty.
-NOTE: The data set WORK.CLUS2_OUTVAR has 0 observations and 3 variables.
-NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-22336      proc sort data=EMWS3.Clus2_VariableSet(KEEP=NAME ROLE LEVEL) out=WORK.Clus2_SORTEDVARS;
 MPRINT(EM_DIAGRAM):   proc sort data=EMWS3.Clus2_VariableSet(KEEP=NAME ROLE LEVEL) out=WORK.Clus2_SORTEDVARS;
-22337      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-22338      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: There were 242 observations read from the data set EMWS3.CLUS2_VARIABLESET.
-NOTE: The data set WORK.CLUS2_SORTEDVARS has 242 observations and 3 variables.
-NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-22339      data WORK.Clus2_OUTVAR;
 MPRINT(EM_DIAGRAM):   data WORK.Clus2_OUTVAR;
-22340      merge WORK.Clus2_OUTVAR(in=INVAR) WORK.Clus2_SORTEDVARS;
 MPRINT(EM_DIAGRAM):   merge WORK.Clus2_OUTVAR(in=INVAR) WORK.Clus2_SORTEDVARS;
-22341      by NAME;
 MPRINT(EM_DIAGRAM):   by NAME;
-22342      if INVAR then output;
 MPRINT(EM_DIAGRAM):   if INVAR then output;
-22343      run;
 MPRINT(EM_DIAGRAM):   run;
-
 WARNING: Multiple lengths were specified for the BY variable NAME by input data sets. This might cause unexpected results.
-NOTE: There were 0 observations read from the data set WORK.CLUS2_OUTVAR.
-NOTE: There were 242 observations read from the data set WORK.CLUS2_SORTEDVARS.
-NOTE: The data set WORK.CLUS2_OUTVAR has 0 observations and 5 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-NOTE: This SAS session is using a registry in WORK.  All changes will be lost at the end of this session.
-22344      filename emflow "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMFLOWSCORE.sas";
 MPRINT(EM_DIAGRAM):    filename emflow "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMFLOWSCORE.sas";
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * Clus2: Scoring DATA data;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22345      *------------------------------------------------------------*;
-22346      * Clus2: Scoring DATA data;
-22347      *------------------------------------------------------------*;
-22348      data EMWS3.Clus2_TRAIN
-22349      / view=EMWS3.Clus2_TRAIN
-22350      ;
 MPRINT(EM_DIAGRAM):   data EMWS3.Clus2_TRAIN / view=EMWS3.Clus2_TRAIN ;
-22351      set EMWS3.Ids2_DATA
-22352      ;
 MPRINT(EM_DIAGRAM):   set EMWS3.Ids2_DATA ;
-22353      %inc emflow;
 MPRINT(EM_DIAGRAM):   *****************************************;
 MPRINT(EM_DIAGRAM):   *** Begin Scoring Code from PROC DMVQ ***;
 MPRINT(EM_DIAGRAM):   *****************************************;
@@ -4259,36 +4199,12 @@ MPRINT(EM_DIAGRAM):   else if _SEGMENT_ = 7 then _SEGMENT_LABEL_="Cluster7";
 MPRINT(EM_DIAGRAM):   else if _SEGMENT_ = 8 then _SEGMENT_LABEL_="Cluster8";
 MPRINT(EM_DIAGRAM):   else if _SEGMENT_ = 9 then _SEGMENT_LABEL_="Cluster9";
 MPRINT(EM_DIAGRAM):   else if _SEGMENT_ = 10 then _SEGMENT_LABEL_="Cluster10";
-26760      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: DATA STEP view saved on file EMWS3.CLUS2_TRAIN.
-NOTE: A stored DATA STEP view cannot run under a different operating system.
-NOTE: Vista EMWS3.IDS2_DATA.VIEW ha utilizado (Tiempo de proceso total):
-      real time           0.10 seconds
-      cpu time            0.11 seconds
-      
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.11 seconds
-      cpu time            0.11 seconds
-      
-
 MPRINT(EM_DIAGRAM):   quit;
-26761      quit;
-26762      filename emflow;
 MPRINT(EM_DIAGRAM):   filename emflow;
-NOTE: Fileref EMFLOW has been deassigned.
-26763      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-26764      * Clus2: Computing metadata for TRAIN data;
 MPRINT(EM_DIAGRAM):   * Clus2: Computing metadata for TRAIN data;
-26765      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-
-NOTE: Vista EMWS3.CLUS2_TRAIN.VIEW ha utilizado (Tiempo de proceso total):
-      real time           0.04 seconds
-      cpu time            0.04 seconds
-      
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * &nodeid: Computing Metadata for TRAIN data;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
@@ -4307,12 +4223,12 @@ MPRINT(EMADVISECOLUMNS):   call symput('_engineTable', attrc(dsid, 'ENGINE'));
 MPRINT(EMADVISECOLUMNS):   dsid = close(dsid);
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    proc contents data=EMWS3.Clus2_TRAIN out=WORK.M38BFPEP noprint;
+MPRINT(EMADVISECOLUMNS):    proc contents data=EMWS3.Clus2_TRAIN out=WORK.M0FF43NN noprint;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M38BFPEP;
+MPRINT(EMADVISECOLUMNS):    data WORK.M0FF43NN;
 MPRINT(EMADVISECOLUMNS):   length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
 MPRINT(EMADVISECOLUMNS):   label NAME =;
-MPRINT(EMADVISECOLUMNS):   set WORK.M38BFPEP(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
+MPRINT(EMADVISECOLUMNS):   set WORK.M0FF43NN(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
 MPRINT(EMADVISECOLUMNS):   if itype = 1 then type = 'N';
 MPRINT(EMADVISECOLUMNS):   else type = 'C';
 MPRINT(EMADVISECOLUMNS):   if formatl > 0 then do;
@@ -4336,21 +4252,21 @@ MPRINT(EMADVISECOLUMNS):   else index = "Y";
 MPRINT(EMADVISECOLUMNS):   indextype = idxusage;
 MPRINT(EMADVISECOLUMNS):   drop idxusage itype formatl formatd informl informd;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M38BFPEP;
+MPRINT(EMADVISECOLUMNS):    data WORK.M0FF43NN;
 MPRINT(EMADVISECOLUMNS):   length UNAME $64;
-MPRINT(EMADVISECOLUMNS):   set WORK.M38BFPEP;
+MPRINT(EMADVISECOLUMNS):   set WORK.M0FF43NN;
 MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M220EM9Z NOTHREADS;
+MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M0Q68ED0 NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by UNAME;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):    data WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   drop UNAME;
-MPRINT(EMADVISECOLUMNS):   set WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):   set WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M0_JJPJP(keep=NAME ATTR);
+MPRINT(EMADVISECOLUMNS):    data WORK.M2XZFEPI(keep=NAME ATTR);
 MPRINT(EMADVISECOLUMNS):   length ATTR $ 20;
-MPRINT(EMADVISECOLUMNS):   set WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):   set WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   if level ne "INTERVAL" then do;
 MPRINT(EMADVISECOLUMNS):   if order = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   attr = 'ORDER';
@@ -4385,10 +4301,10 @@ MPRINT(EMADVISECOLUMNS):   run;
 MPRINT(EMADVISECOLUMNS):   proc sort NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by attr;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):    data WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   length NAME $64 ROLE $ 32 LEVEL $ 10 ORDER $ 8 CREATOR $32 FORMATTYPE $ 10 FAMILY $ 10 LOWERLIMIT 8 UPPERLIMIT 8 REPORT $1 DISTRIBUTION $ 20 COMMENT $64;
 MPRINT(EMADVISECOLUMNS):   length levelAssigned 8 roleAssigned 8 PRICE 8;
-MPRINT(EMADVISECOLUMNS):   set WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):   set WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   if formattype = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if format ne ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if type = 'N' then do;
@@ -4549,8 +4465,8 @@ MPRINT(EMADVISECOLUMNS):   if ROLE ^in('INPUT', 'TARGET', 'REJECTED', 'SEGMENT',
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M220EM9Z;
-MPRINT(EMADVISECOLUMNS):   set WORK.M220EM9Z;
+MPRINT(EMADVISECOLUMNS):    data WORK.M0Q68ED0;
+MPRINT(EMADVISECOLUMNS):   set WORK.M0Q68ED0;
 MPRINT(EMADVISECOLUMNS):   label NAME = "Nombre de la variable" TYPE = "Tipo" ROLE = "Rol" LEVEL= "Nivel de medida" ORDER= "Orden" CREATOR= "Creador" FORMATTYPE= "Tipo de formato" FAMILY= "Familia" DISTRIBUTION= "Distribución" PRICE= "Precio" LOWERLIMIT= 
 "Límite inferior" UPPERLIMIT= "Límite superior" REPORT= "Informe" COMMENT= "Comentario" INDEX= "Índice" INDEXTYPE= "TipoÍndice" LABEL= "Etiqueta" LENGTH= "Longitud";
 MPRINT(EMADVISECOLUMNS):   drop levelAssigned roleAssigned;
@@ -4630,9 +4546,5 @@ MPRINT(EM_DIAGRAM):   output;
 MPRINT(EM_DIAGRAM):   end;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   filename _delta;
-NOTE: Vista EMWS3.CLUS2_TRAIN.VIEW ha utilizado (Tiempo de proceso total):
-      real time           0.06 seconds
-      cpu time            0.04 seconds
-      
 MPRINT(EM_DIAGRAM):    proc printto;
 MPRINT(EM_DIAGRAM):   run;

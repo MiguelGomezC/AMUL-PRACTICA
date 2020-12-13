@@ -37,8 +37,8 @@ Etiqueta del conjunto de datos
 Conjunto de datos tipo especial (De TYPE=)                                  
 Observaciones en conjunto de datos                    3000                  
 Nombre del motor                                      BASE                  
-Fecha de creación                                     13/12/2020 14:12:56   
-Fecha de la última modificación                       13/12/2020 14:12:56   
+Fecha de creación                                     13/12/2020 18:20:26   
+Fecha de la última modificación                       13/12/2020 18:20:26   
 Observaciones borradas en conjunto de datos           0                     
 Uso de variable en índices                            NONE                  
 Tipo de miembro de librería                           DATA                  
@@ -47,9 +47,9 @@ Protección contraseña (Lectura Escritura Modificac    ---
 Actualización indicadores (Proteger Contribuir Aña    ---                   
 Rutina de compresión                                  NO                    
 Volver a usar espacio                                 NO                    
-Clasificado/validado                                  .                     
-Pos. de variable en cláusula Sortedby                 .                     
-Conj. de caracteres del host                                                
+Clasificado/validado                                  1                     
+Pos. de variable en cláusula Sortedby                 1                     
+Conj. de caracteres del host                          ANSI                  
 Secuencia de intercalación                                                  
 Opción de clasificación: no claves duplicadas         NO                    
 Opción de clasificación: no registros duplicados      NO                    

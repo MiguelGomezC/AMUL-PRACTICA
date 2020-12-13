@@ -9,8 +9,8 @@ Trasversal: iniciando trasversal del flujo
 MPRINT(EM_DIAGRAM):    data _null_;
 17156      file emwipmsg;
 MPRINT(EM_DIAGRAM):   file emwipmsg;
-17157      put '<Node Id="Ids2" Event="Run" Pid="9308" Gridid=""/>';
-MPRINT(EM_DIAGRAM):   put '<Node Id="Ids2" Event="Run" Pid="9308" Gridid=""/>';
+17157      put '<Node Id="Ids2" Event="Run" Pid="10952" Gridid=""/>';
+MPRINT(EM_DIAGRAM):   put '<Node Id="Ids2" Event="Run" Pid="10952" Gridid=""/>';
 17158      run;
 MPRINT(EM_DIAGRAM):   run;
 
@@ -19,11 +19,11 @@ NOTE: The file EMWIPMSG is:
       Local Host IP addr=fe80::7527:ec21:81a4:8884%16,
       Peer Hostname Name=MiikyMedia,
       Peer IP addr=127.0.0.1,Peer Name=N/A,
-      Peer Portno=52519,Lrecl=32767,Recfm=Variable
+      Peer Portno=53000,Lrecl=32767,Recfm=Variable
 
 NOTE: 1 record was written to the file EMWIPMSG.
-      The minimum record length was 50.
-      The maximum record length was 50.
+      The minimum record length was 51.
+      The maximum record length was 51.
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
       cpu time            0.00 seconds
@@ -33,7 +33,7 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 *------------------------------------------------------------* 
 * 
 * Ids2 : Beginning update before running 
-* datetime : 13DEC2020:17:16:08 
+* datetime : 13DEC2020:18:29:25 
 * 
 *------------------------------------------------------------* 
 MPRINT(EM_DIAGRAM):     filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids2\PROPERTIES.xml' encoding="UTF-8" NOBOM;
@@ -67,7 +67,7 @@ MPRINT(HPDM_GRIDSETOPTIONS):   run;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(EM_DIAGRAM):  ;
@@ -75,7 +75,7 @@ MPRINT(EM_DIAGRAM):  ;
 *------------------------------------------------------------* 
 * 
 * Ids2 : End update 
-* datetime : 13DEC2020:17:16:08 
+* datetime : 13DEC2020:18:29:25 
 * 
 *------------------------------------------------------------* 
 17165      %em_getactionstatus(emlib =EMWS3, nodeid=Ids2);
@@ -83,393 +83,30 @@ MPRINT(EM_DIAGRAM):
 MPRINT(EM_GETACTIONSTATUS):   proc display c=sashelp.emutil.getactionstatus.scl;
 MPRINT(EM_GETACTIONSTATUS):   run;
 
-17166      %let em_Train = N;
-17167      %let em_Score = N;
-17168      %let em_Report = N;
-17169      %let em_Run = N;
+17166      %let em_Train = Y;
+17167      %let em_Report = Y;
+17168      %let em_Score = Y;
+17169      %let em_Run = Y;
 NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(EM_GETACTIONSTATUS):   
 MPRINT(EM_DIAGRAM):  ;
 
-El nodo "Ids2" ya se ha ejecutado. 
-El nodo "Ids2" es correcto. 
-17170      data _null_;
-MPRINT(EM_DIAGRAM):    data _null_;
-17171      file emwipmsg;
-MPRINT(EM_DIAGRAM):   file emwipmsg;
-17172      put '<Node Id="Ids2" Event="Complete" Pid="9308" Gridid=""/>';
-MPRINT(EM_DIAGRAM):   put '<Node Id="Ids2" Event="Complete" Pid="9308" Gridid=""/>';
-17173      run;
-MPRINT(EM_DIAGRAM):   run;
-
-NOTE: The file EMWIPMSG is:
-      Local Host Name=MiikyMedia,
-      Local Host IP addr=fe80::7527:ec21:81a4:8884%16,
-      Peer Hostname Name=MiikyMedia,
-      Peer IP addr=127.0.0.1,Peer Name=N/A,
-      Peer Portno=52519,Lrecl=32767,Recfm=Variable
-
-NOTE: 1 record was written to the file EMWIPMSG.
-      The minimum record length was 55.
-      The maximum record length was 55.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-Trasversal: WaitingNode "EMSAVE" 
-traverser_readyNode_note 
-17174      data _null_;
-MPRINT(EM_DIAGRAM):    data _null_;
-17175      file emwipmsg;
-MPRINT(EM_DIAGRAM):   file emwipmsg;
-17176      put '<Node Id="Clus2" Event="Run" Pid="9308" Gridid=""/>';
-MPRINT(EM_DIAGRAM):   put '<Node Id="Clus2" Event="Run" Pid="9308" Gridid=""/>';
-17177      run;
-MPRINT(EM_DIAGRAM):   run;
-
-NOTE: The file EMWIPMSG is:
-      Local Host Name=MiikyMedia,
-      Local Host IP addr=fe80::7527:ec21:81a4:8884%16,
-      Peer Hostname Name=MiikyMedia,
-      Peer IP addr=127.0.0.1,Peer Name=N/A,
-      Peer Portno=52519,Lrecl=32767,Recfm=Variable
-
-NOTE: 1 record was written to the file EMWIPMSG.
-      The minimum record length was 51.
-      The maximum record length was 51.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-17178      %let emloopmode =;
+17170      %let emloopmode =;
+17171      %let emloopnumber =0;
+17172      %let emloopId =Ids2;
 *------------------------------------------------------------* 
 * 
-* Clus2 : Beginning update before running 
-* datetime : 13DEC2020:17:16:09 
+* Ids2 : Running 
+* datetime : 13DEC2020:18:29:25 
 * 
 *------------------------------------------------------------* 
-MPRINT(EM_DIAGRAM):     data WORK.Clus2_FILTERSET;
-MPRINT(EM_DIAGRAM):   length PORT $32 USE $1;
-MPRINT(EM_DIAGRAM):   DROP DELTACODE APPLYDELTA APPLYSCORE IMPORTPORT;
-MPRINT(EM_DIAGRAM):   set EMWS3.Ids2_exportSet ;
-MPRINT(EM_DIAGRAM):   PORT = '';
-MPRINT(EM_DIAGRAM):   USE = '';
-MPRINT(EM_DIAGRAM):   where role in( "RAW" "TRAIN" "VALIDATE" "TEST" ) and EXPORT = 'Y' ;
-MPRINT(EM_DIAGRAM):   run;
-MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\PROPERTIES.xml' encoding="UTF-8" NOBOM;
-17198      %let _HPDMGRIDHOST=;
-17199      %let _HPDMGRIDINSTALLLOC=;
-17200      %let _HPDMGRIDDATASERVER=;
-17201      %hpdm_gridSetOPtions;
-MPRINT(EM_DIAGRAM):   
-MPRINT(HPDM_GRIDSETOPTIONS):   data _null_;
-MPRINT(HPDM_GRIDSETOPTIONS):   length optionString string $2000;
-MPRINT(HPDM_GRIDSETOPTIONS):   optionString = reverse(getoption('SET'));
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDHOST'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   host = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDHOST', strip(host));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDINSTALLLOC'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   install = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDINSTALLLOC', strip(install));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDDATASERVER'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   server = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDDATASERVER', strip(server));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   run;
-
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-MPRINT(EM_DIAGRAM):  ;
-
-*------------------------------------------------------------* 
-* 
-* Clus2 : End update 
-* datetime : 13DEC2020:17:16:09 
-* 
-*------------------------------------------------------------* 
-17202      %em_getactionstatus(emlib =EMWS3, nodeid=Clus2);
-MPRINT(EM_DIAGRAM):   
-MPRINT(EM_GETACTIONSTATUS):   proc display c=sashelp.emutil.getactionstatus.scl;
-MPRINT(EM_GETACTIONSTATUS):   run;
-
-17203      %let em_Train = N;
-17204      %let em_Score = N;
-17205      %let em_Report = N;
-17206      %let em_Run = N;
-NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-MPRINT(EM_GETACTIONSTATUS):   
-MPRINT(EM_DIAGRAM):  ;
-
-El nodo "Clus2" ya se ha ejecutado. 
-El nodo "Clus2" es correcto. 
-17207      data _null_;
-MPRINT(EM_DIAGRAM):    data _null_;
-17208      file emwipmsg;
-MPRINT(EM_DIAGRAM):   file emwipmsg;
-17209      put '<Node Id="Clus2" Event="Complete" Pid="9308" Gridid=""/>';
-MPRINT(EM_DIAGRAM):   put '<Node Id="Clus2" Event="Complete" Pid="9308" Gridid=""/>';
-17210      run;
-MPRINT(EM_DIAGRAM):   run;
-
-NOTE: The file EMWIPMSG is:
-      Local Host Name=MiikyMedia,
-      Local Host IP addr=fe80::7527:ec21:81a4:8884%16,
-      Peer Hostname Name=MiikyMedia,
-      Peer IP addr=127.0.0.1,Peer Name=N/A,
-      Peer Portno=52519,Lrecl=32767,Recfm=Variable
-
-NOTE: 1 record was written to the file EMWIPMSG.
-      The minimum record length was 56.
-      The maximum record length was 56.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-traverser_readyNode_note 
-17211      data _null_;
-MPRINT(EM_DIAGRAM):    data _null_;
-17212      file emwipmsg;
-MPRINT(EM_DIAGRAM):   file emwipmsg;
-17213      put '<Node Id="EMSave" Event="Run" Pid="9308" Gridid=""/>';
-MPRINT(EM_DIAGRAM):   put '<Node Id="EMSave" Event="Run" Pid="9308" Gridid=""/>';
-17214      run;
-MPRINT(EM_DIAGRAM):   run;
-
-NOTE: The file EMWIPMSG is:
-      Local Host Name=MiikyMedia,
-      Local Host IP addr=fe80::7527:ec21:81a4:8884%16,
-      Peer Hostname Name=MiikyMedia,
-      Peer IP addr=127.0.0.1,Peer Name=N/A,
-      Peer Portno=52519,Lrecl=32767,Recfm=Variable
-
-NOTE: 1 record was written to the file EMWIPMSG.
-      The minimum record length was 52.
-      The maximum record length was 52.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-17215      %let emloopmode =;
-*------------------------------------------------------------* 
-* 
-* EMSave : Beginning update before running 
-* datetime : 13DEC2020:17:16:09 
-* 
-*------------------------------------------------------------* 
-MPRINT(EM_DIAGRAM):     data WORK.EMSave_FILTERSET;
-MPRINT(EM_DIAGRAM):   length PORT $32 USE $1;
-MPRINT(EM_DIAGRAM):   DROP DELTACODE APPLYDELTA APPLYSCORE IMPORTPORT;
-MPRINT(EM_DIAGRAM):   set EMWS3.Clus2_exportSet ;
-MPRINT(EM_DIAGRAM):   PORT = '';
-MPRINT(EM_DIAGRAM):   USE = '';
-MPRINT(EM_DIAGRAM):   where role in( "RAW" "TRAIN" "VALIDATE" "TEST" "SCORE" "TRANSACTION" "DOCUMENT" "RULES" "REPORTFIT" "RANK" "SCOREDIST" "ESTIMATE" "TREE" "CLUSSTAT" "CLUSMEAN" "VARMAP" ) and EXPORT = 'Y' ;
-MPRINT(EM_DIAGRAM):   run;
-MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * EMSave: Generation of macros and macro variables;
-MPRINT(EM_DIAGRAM):   * To see the code generated, set the EM_DEBUG macro variable to SOURCE or _ALL_;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * EMSave: EM Macro Variables and Macros;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-MPRINT(EM_DIAGRAM):   * System Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   length string $2000;
-MPRINT(EM_DIAGRAM):   string = 'practica_AMUL';
-MPRINT(EM_DIAGRAM):   call symput('EM_PROJECTNAME', trim(string));
-MPRINT(EM_DIAGRAM):   string = 'ANÁLISIS CLUSTER';
-MPRINT(EM_DIAGRAM):   call symput('EM_WSNAME', trim(string));
-MPRINT(EM_DIAGRAM):   run;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-MPRINT(EM_DIAGRAM):   * Properties Macro Variables ;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * Files Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * Import Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * Export Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * Decision Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   * Statement Macro Variables;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   set EMWS3.Ids2_EMINFO;
-MPRINT(EM_DIAGRAM):   where key in('HPDMSAMPLE', 'IDSTABLE');
-MPRINT(EM_DIAGRAM):   if key = 'HPDMSAMPLE' then call symput('_ForceGrid', '1');
-MPRINT(EM_DIAGRAM):   else call symput('_IDS_TABLE', DATA);
-MPRINT(EM_DIAGRAM):   run;
-MPRINT(HPDM_PERFORMANCE):  ;
-PERFORMANCE  DETAILS
-MPRINT(EM_DIAGRAM):  ;
-17445      %let emexceptionString =;
-17446      %let EMEXCEPTIONSTRING=;
-17447      *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-17448      * UPDATE: EMSave;
-MPRINT(EM_DIAGRAM):   * UPDATE: EMSave;
-17449      *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-17450      %let EM_ACTION = UPDATE;
-17451      %let syscc = 0;
-17452      *** MAIN MACRO FOR EMSAVE EXTENSION NODE;
-MPRINT(EM_DIAGRAM):     *** MAIN MACRO FOR EMSAVE EXTENSION NODE;
-17453      
-17454      %macro EM_SAVEXT_MAIN;
-17455      
-17456         %if %upcase("&EM_ACTION") = "CREATE" %then %do;
-17457             filename _create catalog 'sashelp.emutil.savext_create.source';
-17458             %include _create;
-17459             filename _create;
-17460             %EM_SAVEXT_CREATE;
-17461         %end;
-17462         %else
-17463         %if %upcase("&EM_ACTION") = "TRAIN" %then %do;
-17464             filename _train catalog 'sashelp.emutil.savext_train.source';
-17465             %include _train;
-17466             filename _train;
-17467             %EM_SAVEXT_TRAIN;
-17468         %end;
-17469      
-17470      %mend EM_SAVEXT_MAIN;
-17471      
-17472      %EM_SAVEXT_MAIN;
-MPRINT(EM_DIAGRAM):  ;
-17473      
-17474      *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-17475      * End UPDATE: EMSave;
-MPRINT(EM_DIAGRAM):   * End UPDATE: EMSave;
-17476      *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-
-17477      %em_delMacro;
-MPRINT(EM_DIAGRAM):   
-MPRINT(EM_DIAGRAM):  ;
-
-MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\EMSave\PROPERTIES.xml' encoding="UTF-8" NOBOM;
-17479      %let _HPDMGRIDHOST=;
-17480      %let _HPDMGRIDINSTALLLOC=;
-17481      %let _HPDMGRIDDATASERVER=;
-17482      %hpdm_gridSetOPtions;
-MPRINT(EM_DIAGRAM):   
-MPRINT(HPDM_GRIDSETOPTIONS):   data _null_;
-MPRINT(HPDM_GRIDSETOPTIONS):   length optionString string $2000;
-MPRINT(HPDM_GRIDSETOPTIONS):   optionString = reverse(getoption('SET'));
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDHOST'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   host = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDHOST', strip(host));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDINSTALLLOC'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   install = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDINSTALLLOC', strip(install));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDDATASERVER'));
-MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
-MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
-MPRINT(HPDM_GRIDSETOPTIONS):   server = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
-MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDDATASERVER', strip(server));
-MPRINT(HPDM_GRIDSETOPTIONS):   end;
-MPRINT(HPDM_GRIDSETOPTIONS):   run;
-
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-MPRINT(EM_DIAGRAM):  ;
-
-*------------------------------------------------------------* 
-* 
-* EMSave : End update 
-* datetime : 13DEC2020:17:16:10 
-* 
-*------------------------------------------------------------* 
-17483      %em_getactionstatus(emlib =EMWS3, nodeid=EMSave);
-MPRINT(EM_DIAGRAM):   
-MPRINT(EM_GETACTIONSTATUS):   proc display c=sashelp.emutil.getactionstatus.scl;
-MPRINT(EM_GETACTIONSTATUS):   run;
-
-17484      %let em_filemodtime=;
-17485      data _null_;
-MPRINT(EM_GETACTIONSTATUS):   data _null_;
-17486      format modate best.;
-MPRINT(EM_GETACTIONSTATUS):   format modate best.;
-17487      set sashelp.Vextfl;
-MPRINT(EM_GETACTIONSTATUS):   set sashelp.Vextfl;
-17488      where fileref eq "#LN00190";
-MPRINT(EM_GETACTIONSTATUS):   where fileref eq "#LN00190";
-17489      call symput('EM_FILEMODTIME', put(modate, best.));
-MPRINT(EM_GETACTIONSTATUS):   call symput('EM_FILEMODTIME', put(modate, best.));
-17490      run;
-MPRINT(EM_GETACTIONSTATUS):   run;
-
-NOTE: There were 1 observations read from the data set SASHELP.VEXTFL.
-      WHERE fileref='#LN00190';
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
-17491      %symdel em_filemodtime;
-WARNING: Attempt to delete macro variable EM_FILEMODTIME failed. Variable not found.
-17492      %let em_Train = Y;
-17493      %let em_Score = N;
-17494      %let em_Report = N;
-17495      %let em_Run = Y;
-NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
-      
-
-MPRINT(EM_GETACTIONSTATUS):     
-MPRINT(EM_DIAGRAM):  ;
-
-17496      %let emloopmode =;
-17497      %let emloopnumber =0;
-17498      %let emloopId =EMSave;
-*------------------------------------------------------------* 
-* 
-* EMSave : Running 
-* datetime : 13DEC2020:17:16:10 
-* 
-*------------------------------------------------------------* 
-17499      %let SYSCC =0;
-17500      %let EMGROUPMODE =;
-17501      %let EMGROUPID =;
+17173      %let SYSCC =0;
+17174      %let EMGROUPMODE =;
+17175      %let EMGROUPID =;
 MPRINT(EM_DIAGRAM):      filename temp catalog 'sashelp.emutil.em_vardist.source';
 MPRINT(EM_DIAGRAM):   filename temp;
 MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_classdist.source';
@@ -486,6 +123,6 @@ MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_getvarname.source
 MPRINT(EM_DIAGRAM):   filename temp;
 MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emassmt.em_assess.source';
 MPRINT(EM_DIAGRAM):   filename temp;
-MPRINT(EM_DIAGRAM):    filename L3EZKZ9L "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\EMSave\EMTRAIN.log" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto log=L3EZKZ9L new;
+MPRINT(EM_DIAGRAM):    filename L2L70E7Z "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Ids2\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto log=L2L70E7Z new;
 MPRINT(EM_DIAGRAM):   run;

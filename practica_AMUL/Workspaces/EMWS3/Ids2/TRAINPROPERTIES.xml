@@ -8,9 +8,9 @@
  DsModifiedBy="Admin" DsModifyDate="1923488172.2" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
  SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train"
  Component="DataSource" RawCreateTime="1923493110.4" CreateTime="13DEC2020:15:38:30"
- Description="" Data="AMUL.TERMINOS_DOCUMENTOS_99" CMeta="WORK.M3E2XQTG" RunId="d0746fb2-2baa-4a0d-b64a-70e5ea1acb96"
- RawLastTimeRun="1923493177.5" RawRunTime="1.2960000038" LastTimeRun="13DEC2020:15:39:38"
- RunTime="0 Hr. 0 Min. 1.30 Sec.">
+ Description="" Data="AMUL.TERMINOS_DOCUMENTOS_99" CMeta="WORK.M3E2XQTG" RunId="cf31f3d1-2314-47da-a70b-78a6ae936347"
+ RawLastTimeRun="1923503364.6" RawRunTime="1.4919998646" LastTimeRun="13DEC2020:18:29:25"
+ RunTime="0 Hr. 0 Min. 1.49 Sec.">
 <VARIABLEPROPERTIES/>
 <FILEPROPERTIES/>
 </_ROOT_>

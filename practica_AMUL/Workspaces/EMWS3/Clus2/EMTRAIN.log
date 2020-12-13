@@ -4,7 +4,7 @@ MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
 MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "13/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H43" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "18H29" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -14,10 +14,10 @@ MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Log de entrenamiento
 Fecha:                13/12/20
-Hora:                15H43
+Hora:                18H29
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O04_OSV2 "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMTRAIN.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O04_OSV2 new;
+MPRINT(EM_DIAGRAM):    filename O24IHFMY "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O24IHFMY new;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):    filename _LOG "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMLOG.log" encoding="UTF-8" NOBOM;
 MPRINT(EM_DIAGRAM):    data _null_;
@@ -26,7 +26,7 @@ MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
 MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "13/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H43" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "18H29" );
 MPRINT(EM_DIAGRAM):   file _LOG;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -77,7 +77,7 @@ MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
 MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "13/12/20" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "15H43" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "18H29" );
 MPRINT(EM_DIAGRAM):   file _OUT;
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "Usuario:                Admin";
@@ -128,78 +128,33 @@ MPRINT(EM_DIAGRAM):  ;
 MPRINT(EM_DIAGRAM):   filename _OUTIN;
 MPRINT(EM_DIAGRAM):    filename _OUT;
 MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
-22068      proc freq data=EMWS3.Clus2_VariableSet noprint;
 MPRINT(EM_DIAGRAM):    proc freq data=EMWS3.Clus2_VariableSet noprint;
-22069      table ROLE*LEVEL/out=WORK.Clus2META;
 MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.Clus2META;
-22070      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: There were 242 observations read from the data set EMWS3.CLUS2_VARIABLESET.
-NOTE: The data set WORK.CLUS2META has 2 observations and 4 variables.
-NOTE: PROCEDURE FREQ ha utilizado (Tiempo de proceso total):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
-      
-
-22071      proc print data=WORK.Clus2META label noobs;
 MPRINT(EM_DIAGRAM):   proc print data=WORK.Clus2META label noobs;
-22072      var ROLE LEVEL COUNT;
 MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
-22073      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label ROLE = "Rol" LEVEL = "Nivel de medida" COUNT = "Número de ocurrencias";
-22074      title9 ' ';
 MPRINT(EM_DIAGRAM):   title9 ' ';
-22075      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
 MPRINT(EM_DIAGRAM):   title10 "Resumen de variables";
 MPRINT(EM_DIAGRAM):   run;
-22076      run;
-
-NOTE: There were 2 observations read from the data set WORK.CLUS2META.
-NOTE: The PROCEDURE PRINT printed page 1.
-NOTE: PROCEDURE PRINT ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-22077      title10;
 MPRINT(EM_DIAGRAM):   title10;
-22078      data WORK.M3D7H8K6;
-MPRINT(EM_DIAGRAM):    data WORK.M3D7H8K6;
-22079      set WORK.M3D7H8K6;
-MPRINT(EM_DIAGRAM):   set WORK.M3D7H8K6;
-22080      if role eq 'REJECTED' then role = 'INPUT';
+MPRINT(EM_DIAGRAM):    data WORK.M2G_NA4R;
+MPRINT(EM_DIAGRAM):   set WORK.M2G_NA4R;
 MPRINT(EM_DIAGRAM):   if role eq 'REJECTED' then role = 'INPUT';
-22081      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: There were 241 observations read from the data set WORK.M3D7H8K6.
-NOTE: The data set WORK.M3D7H8K6 has 241 observations and 21 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * Clus2: preparando metadatos para el entrenamiento;
 MPRINT(EM_DIAGRAM):   ;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-MPRINT(EM_DIAGRAM):   data WORK.M3D7H8K6;
-MPRINT(EM_DIAGRAM):   set WORK.M3D7H8K6;
+MPRINT(EM_DIAGRAM):   data WORK.M2G_NA4R;
+MPRINT(EM_DIAGRAM):   set WORK.M2G_NA4R;
 MPRINT(EM_DIAGRAM):   if role eq 'REJECTED' then role = 'INPUT';
 MPRINT(EM_DIAGRAM):   run;
-22090      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-22091      * Clus2: entrenamiento;
 MPRINT(EM_DIAGRAM):   * Clus2: entrenamiento;
-22092      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22093      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22094      * Create DMDB macros;
 MPRINT(EM_DIAGRAM):   * Create DMDB macros;
-22095      %let _sns = %sysfunc(getoption(SOURCE));
-22096      options nosource;
 MPRINT(EM_DIAGRAM):   options nosource;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
 MPRINT(EM_DIAGRAM):   * Clus2: DMDBClass Macro ;
@@ -207,25 +162,14 @@ MPRINT(EM_DIAGRAM):   *---------------------------------------------------------
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
 MPRINT(EM_DIAGRAM):   * Clus2: DMDBVar Macro ;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-MPRINT(EM_DIAGRAM):   options SOURCE;
+MPRINT(EM_DIAGRAM):   options NOSOURCE;
 MPRINT(EM_DIAGRAM):   * End DMDB macros generation;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * Clus2: Create DMDB;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22129      * End DMDB macros generation;
-22130      *------------------------------------------------------------*;
-22131      *------------------------------------------------------------*;
-22132      * Clus2: Create DMDB;
-22133      *------------------------------------------------------------*;
-22134      proc dmdb batch data=EMWS3.Ids2_DATA
-22135      dmdbcat=WORK.Clus2_DMDB
-22136      maxlevel = 513
-22137      out=WORK.Clus2_DMDB
-22138      ;
 MPRINT(EM_DIAGRAM):   proc dmdb batch data=EMWS3.Ids2_DATA dmdbcat=WORK.Clus2_DMDB maxlevel = 513 out=WORK.Clus2_DMDB ;
 MPRINT(EM_DIAGRAM):   var
-22139      var %DMDBVar;
 MPRINT(DMDBVAR):   ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE COLOR 
 COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL ENGIN ERROR EVENT EXPERI FACT FAX FEEL 
 FILE FIND FOLLOWUP FONT FOOD FRI FRIEND FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND GROUP HAPPEN HEAR HIGH HOME IDEA IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD KEYWORD 
@@ -234,72 +178,19 @@ POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR RA
 STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA VOLTAG WATER WED WIDGET WINDOW WIRE WONDER WORK 
 WORLD XLIB XTERM YEAR YOU
 MPRINT(EM_DIAGRAM):  ;
-22140      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: Records processed = 3000   Memory used = 511K.
-NOTE: Vista EMWS3.IDS2_DATA.VIEW ha utilizado (Tiempo de proceso total):
-      real time           0.03 seconds
-      cpu time            0.03 seconds
-      
-NOTE: There were 3000 observations read from the data set AMUL.TERMINOS_DOCUMENTOS_99.
-NOTE: There were 3000 observations read from the data set EMWS3.IDS2_DATA.
-NOTE: The data set WORK.CLUS2_DMDB has 3000 observations and 241 variables.
-NOTE: PROCEDURE DMDB ha utilizado (Tiempo de proceso total):
-      real time           0.04 seconds
-      cpu time            0.06 seconds
-      
-
 MPRINT(EM_DIAGRAM):   quit;
 MPRINT(EM_DIAGRAM):   *--- end code ---*;
-22141      quit;
-22142      *--- end code ---*;
-
-22143      *------------------------------------------------------------* ;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------* ;
-22144      * Clus2: Inputs intervalo Macro ;
 MPRINT(EM_DIAGRAM):   * Clus2: Inputs intervalo Macro ;
-22145      *------------------------------------------------------------* ;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
-22146      %macro DMVQINTERVAL;
-22147          ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC
-22148         ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD
-22149         BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE
-22150         COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT
-22151         CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI
-22152         DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL
-22153         ENGIN ERROR EVENT EXPERI FACT FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND
-22154         FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND
-22155         GROUP HAPPEN HEAR HIGH HOME IDEA IMAG INCLUD INFO INFORM INPUT INSTITUT
-22156         INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD KEYWORD KILL KIND LEVEL
-22157         LIST LIVE LONG MACHIN MAIL MANAG MARK MED MEDIC MEDICIN MEMORI MICHAEL MIKE MON
-22158         MOTIF MOTOROLA NATION NETWORK NEW NEWS NEWSREAD NOIS NUMBER OPER OPINION ORIGIN
-22159         OUTPUT PAIN PALESTINIAN PART PATIENT PERSON PHONE PITT PITTSBURGH PLACE POINT
-22160         POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RADAR
-22161         RADIO READ REASON RECEIV REMEMB REPLI REPORT REQUIR RESEARCH RESPONS ROBERT RUN
-22162         SAT SCHOOL SCI SCIENC SCREEN SELL SEND SERDAR SERVER SERVIC SHOW SIDE SIGNAL
-22163         SOFTWAR SOUND SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN
-22164         SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE
-22165         TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA
-22166         VOLTAG WATER WED WIDGET WINDOW WIRE WONDER WORK WORLD XLIB XTERM YEAR YOU
-22167      %mend DMVQINTERVAL;
-22168      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22169      * Clus2: ejecutar procedimiento DMVQ;
 MPRINT(EM_DIAGRAM):   * Clus2: ejecutar procedimiento DMVQ;
-22170      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22171      title;
 MPRINT(EM_DIAGRAM):   title;
-22172      options nodate;
 MPRINT(EM_DIAGRAM):   options nodate;
-22173      proc dmvq data=WORK.Clus2_DMDB dmdbcat=WORK.Clus2_DMDB std=RANGE nominal=GLM ordinal=RANK
-22174      ;
 MPRINT(EM_DIAGRAM):   proc dmvq data=WORK.Clus2_DMDB dmdbcat=WORK.Clus2_DMDB std=RANGE nominal=GLM ordinal=RANK ;
-NOTE: The training set WORK.CLUS2_DMDB.DATA has 241 variable(s).
-NOTE: The DMVQ statement has finished with return code=0 and status=begin.
 MPRINT(EM_DIAGRAM):   input
-22175      input %DMVQINTERVAL / level=interval;
 MPRINT(DMVQINTERVAL):   ACCESS ADAM ADDRESS ADVANC AMERICAN ANDI ANSWER APPLIC APPRECI ARAB AREA ARGIC ARMENIA ARMENIAN ATTACK AUDIO BANK BASE BATTERI BILL BOOK BRAIN BRIAN BUILD BUTTON CALIFORNIA CALL CAN CARD CASE CENTER CHANG CHIP CIRCUIT CLIENT CODE 
 COLOR COMMUN COMP COMPANI COMPIL COMPUT CONNECT CONTROL COPI CORRECT CREAT CURRENT DAI DATA DAVID DEPART DEPT DESIGN DETECTOR DEVIC DISEAS DISPLAI DISTRIBUT DOCTOR DOESN DON DRAW DRIVE DRUG EDU EFFECT ELECTR ELECTRON EMAIL ENGIN ERROR EVENT EXPERI FACT 
 FAX FEEL FILE FIND FOLLOWUP FONT FOOD FRI FRIEND FUNCTION GEB GENER GEORGIA GIVE GOOD GORDON GOVERN GRAPHIC GREAT GREEK GROUND GROUP HAPPEN HEAR HIGH HOME IDEA IMAG INCLUD INFO INFORM INPUT INSTITUT INTEREST INTERNET ISRA ISRAEL JEW JEWISH JOHN KEYBOARD 
@@ -308,146 +199,55 @@ POINT POLICI POSIT POST POWER PROBLEM PRODUCT PROGRAM PROJECT PUBLIC QUESTION RA
 SOURC STANDARD START STATE STEVE STUDI SUBSCRIB SUGGEST SUN SUPPORT SWITCH SYSTEM TALK TECHNOLOG TERMIN TEST THAT THU TIME TREATMENT TRUE TUE TURKISH TYPE UNIV UNIVERS UNIX USENET USER UTEXA UUCP VERSION VIRGINIA VOLTAG WATER WED WIDGET WINDOW WIRE WONDER 
 WORK WORLD XLIB XTERM YEAR YOU
 MPRINT(EM_DIAGRAM):   / level=interval;
-NOTE: 241 input variable(s) defined for ID=I1.
-NOTE: The INPUT statement has finished with return code=0 and status=variables.
-22176      VQ maxc = 10 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
 MPRINT(EM_DIAGRAM):   VQ maxc = 10 clusname=_SEGMENT_ CLUSLABEL="Id de segmento" DISTLABEL="Distancia";
-NOTE: A maximum of 10 clusters have been requested.
-NOTE: The VQ statement has finished with return code=0 and status=architecture.
-22177      MAKE outvar=EMWS3.Clus2_OUTVAR;
 MPRINT(EM_DIAGRAM):   MAKE outvar=EMWS3.Clus2_OUTVAR;
 
-NOTE: 241 input variable(s).
-NOTE: Number of cases=3000
-NOTE: Sum of frequencies=3000
-NOTE: Sum of weights=3000
-NOTE: VARDEF=DF      
-NOTE: Maximum number of categories=0
-NOTE: The total number of variables is 241 with dimensionality 241.
-NOTE: 241 variables will be used for clustering.
-NOTE: Open output data set EMWS3.CLUS2_OUTVAR.DATA with 242 variables.
-NOTE: The data set EMWS3.CLUS2_OUTVAR has 4 observations and 242 variables.
-NOTE: The MAKE statement has finished with return code=0 and status=made.
-22178      INITIAL radius=0
-22179      ;
 MPRINT(EM_DIAGRAM):   INITIAL radius=0 ;
-NOTE: 10 semillas seleccionadas del conjunto de datos WORK.CLUS2_DMDB.DATA usando el algoritmo SEPARATE.
-NOTE: The INITIAL statement has finished with return code=0 and status=initialized.
-22180      TRAIN tech=FORGY
-22181      ;
 MPRINT(EM_DIAGRAM):   TRAIN tech=FORGY ;
-NOTE: F-Convergence criterion is satisfied.
-NOTE: The TRAIN statement has finished with return code=0 and status=trained.
-22182      SAVE outstat=EMWS3.Clus2_OUTSTAT outmean=EMWS3.Clus2_OUTMEAN;
 MPRINT(EM_DIAGRAM):   SAVE outstat=EMWS3.Clus2_OUTSTAT outmean=EMWS3.Clus2_OUTMEAN;
-NOTE: The data set EMWS3.CLUS2_OUTSTAT has 76 observations and 244 variables.
-NOTE: The data set EMWS3.CLUS2_OUTMEAN has 10 observations and 250 variables.
-NOTE: The SAVE statement has finished with return code=0 and status=statistics.
-22183      code file="C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\DMVQSCORECODE.sas"
-22184      group=Clus2
-22185      ;
 MPRINT(EM_DIAGRAM):   code file="C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\DMVQSCORECODE.sas" group=Clus2 ;
-NOTE: External file C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS3\Clus2\DMVQSCORECODE.sas opened.
-NOTE: The CODE statement has finished with return code=0 and status=statistics.
-22186      run;
 MPRINT(EM_DIAGRAM):   run;
-
-22187      quit;
 MPRINT(EM_DIAGRAM):   quit;
-
-NOTE: There were 3000 observations read from the data set WORK.CLUS2_DMDB.
-NOTE: PROCEDURE DMVQ ha utilizado (Tiempo de proceso total):
-      real time           0.19 seconds
-      cpu time            0.20 seconds
-      
-
-22188      libname _spdslib;
 MPRINT(EM_DIAGRAM):    libname _spdslib;
 WARNING: Libref _SPDSLIB is not assigned.
-22189      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-22190      * Clus2: Cluster Label;
 MPRINT(EM_DIAGRAM):   * Clus2: Cluster Label;
-22191      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22192      data EMWS3.Clus2_LABEL;
 MPRINT(EM_DIAGRAM):   data EMWS3.Clus2_LABEL;
-22193      length _SEGMENT_ 8 Label $80;
 MPRINT(EM_DIAGRAM):   length _SEGMENT_ 8 Label $80;
-22194      format _SEGMENT_ 4.;
 MPRINT(EM_DIAGRAM):   format _SEGMENT_ 4.;
-22195      label _SEGMENT_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_segmentName_vlabel,  NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label _SEGMENT_ = "Nombre del segmento";
-22196      label Label = "%sysfunc(sasmsg(sashelp.dmine, rpt_segmentLabel_vlabel,  NOQUOTE))";
 MPRINT(EM_DIAGRAM):   label Label = "Etiqueta del segmento";
-22197      _SEGMENT_= 1;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 1;
-22198      Label='Cluster1';
 MPRINT(EM_DIAGRAM):   Label='Cluster1';
-22199      output;
 MPRINT(EM_DIAGRAM):   output;
-22200      _SEGMENT_= 2;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 2;
-22201      Label='Cluster2';
 MPRINT(EM_DIAGRAM):   Label='Cluster2';
-22202      output;
 MPRINT(EM_DIAGRAM):   output;
-22203      _SEGMENT_= 3;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 3;
-22204      Label='Cluster3';
 MPRINT(EM_DIAGRAM):   Label='Cluster3';
-22205      output;
 MPRINT(EM_DIAGRAM):   output;
-22206      _SEGMENT_= 4;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 4;
-22207      Label='Cluster4';
 MPRINT(EM_DIAGRAM):   Label='Cluster4';
-22208      output;
 MPRINT(EM_DIAGRAM):   output;
-22209      _SEGMENT_= 5;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 5;
-22210      Label='Cluster5';
 MPRINT(EM_DIAGRAM):   Label='Cluster5';
-22211      output;
 MPRINT(EM_DIAGRAM):   output;
-22212      _SEGMENT_= 6;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 6;
-22213      Label='Cluster6';
 MPRINT(EM_DIAGRAM):   Label='Cluster6';
-22214      output;
 MPRINT(EM_DIAGRAM):   output;
-22215      _SEGMENT_= 7;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 7;
-22216      Label='Cluster7';
 MPRINT(EM_DIAGRAM):   Label='Cluster7';
-22217      output;
 MPRINT(EM_DIAGRAM):   output;
-22218      _SEGMENT_= 8;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 8;
-22219      Label='Cluster8';
 MPRINT(EM_DIAGRAM):   Label='Cluster8';
-22220      output;
 MPRINT(EM_DIAGRAM):   output;
-22221      _SEGMENT_= 9;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 9;
-22222      Label='Cluster9';
 MPRINT(EM_DIAGRAM):   Label='Cluster9';
-22223      output;
 MPRINT(EM_DIAGRAM):   output;
-22224      _SEGMENT_= 10;
 MPRINT(EM_DIAGRAM):   _SEGMENT_= 10;
-22225      Label='Cluster10';
 MPRINT(EM_DIAGRAM):   Label='Cluster10';
-22226      output;
 MPRINT(EM_DIAGRAM):   output;
-22227      run;
 MPRINT(EM_DIAGRAM):   run;
-
-NOTE: The data set EMWS3.CLUS2_LABEL has 10 observations and 2 variables.
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
-      
-
 MPRINT(EM_DIAGRAM):    proc printto;
 MPRINT(EM_DIAGRAM):   run;
