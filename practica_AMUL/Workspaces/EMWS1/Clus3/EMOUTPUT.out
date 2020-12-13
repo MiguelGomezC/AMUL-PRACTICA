@@ -1,0 +1,139 @@
+*------------------------------------------------------------*
+Usuario:                Admin
+Fecha:                13/12/20
+Hora:                14H29
+*------------------------------------------------------------*
+* Salida de entrenamiento
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Resumen de variables
+ 
+         Nivel de     Número de
+Rol       medida     ocurrencias
+ 
+ID       NOMINAL           1
+INPUT    INTERVAL         10
+ 
+ 
+ 
+Procedimiento CLUSTER
+Ward's Minimum Variance Cluster Analysis
+ 
+           Autovalores de la matriz de covarianza
+ 
+         Autovalor    Diferencia    Proporción    Acumulado
+ 
+   1    0.00296167    0.00078225        0.1959       0.1959
+   2    0.00217941    0.00025764        0.1441       0.3400
+   3    0.00192178    0.00001822        0.1271       0.4671
+   4    0.00190355    0.00018469        0.1259       0.5930
+   5    0.00171886    0.00049773        0.1137       0.7066
+   6    0.00122113    0.00009454        0.0808       0.7874
+   7    0.00112659    0.00012710        0.0745       0.8619
+   8    0.00099949    0.00008661        0.0661       0.9280
+   9    0.00091288    0.00073682        0.0604       0.9884
+  10    0.00017607                      0.0116       1.0000
+ 
+Desviación estándar de la raíz cuadrática media del total de la muestra    0.041927
+ 
+Distancia del cuadrado de la raíz media entre observaciones    0.187501
+ 
+ 
+                                               Historial de clúster
+                                                                                                              E
+                                                                                                              n
+                                                                                                              l
+                                                                                                              a
+                                                          R-cuadrado                                          c
+     NCL    ------Clústeres unidos------         Frec    semiparcial         Rsq         Ps F         PsT2    e
+ 
+      49    OB5             OB39                    4         0.0003        .860          378          2.4
+      48    OB1             OB11                   12         0.0003        .860          385          1.3
+      47    OB29            OB47                    9         0.0003        .859          392          2.5
+      46    OB45            OB46                   10         0.0004        .859          400          4.4
+      45    OB9             OB25                   20         0.0004        .858          407          3.8
+      44    OB18            OB37                    6         0.0004        .858          416          1.8
+      43    OB33            OB36                    3         0.0006        .857          424          3.9
+      42    OB28            OB32                   38         0.0006        .857          432          7.0
+      41    CL47            OB30                   10         0.0007        .856          440          4.3
+      40    OB21            OB48                    4         0.0007        .855          449         12.2
+      39    OB12            OB50                  214         0.0007        .855          458         12.2
+      38    OB6             OB27                   22         0.0008        .854          468          7.0
+      37    OB24            OB44                   91         0.0009        .853          478         15.1
+      36    OB41            OB49                    9         0.0009        .852          488          5.1
+      35    OB8             OB17                    5         0.0011        .851          498          6.9
+      34    OB15            OB40                   22         0.0014        .850          508         11.2
+      33    OB19            OB26                   63         0.0016        .848          518         13.3
+      32    CL44            CL41                   16         0.0022        .846          526          9.2
+      31    OB3             CL45                   41         0.0023        .844          534         15.4
+      30    CL35            OB42                   45         0.0025        .841          542         16.6
+      29    CL39            OB20                  255         0.0025        .839          551         36.9
+      28    CL31            OB34                  164         0.0026        .836          561         26.8
+      27    CL38            OB38                   93         0.0027        .833          571         37.9
+      26    CL34            OB35                   78         0.0028        .830          582         28.6
+      25    CL37            OB43                  243         0.0033        .827          593         72.8
+      24    CL43            CL46                   13         0.0036        .823          604         20.9
+      23    CL49            OB23                   10         0.0040        .819          614         27.9
+      22    CL29            OB31                  496         0.0054        .814          621         85.2
+      21    OB2             CL42                   72         0.0056        .808          629         58.7
+      20    OB7             OB22                 1137         0.0056        .803          639          243
+      19    CL27            OB13                  167         0.0057        .797          651         74.8
+      18    CL28            OB14                  567         0.0059        .791          665         98.8
+      17    CL20            OB10                 1197         0.0064        .785          680          212
+      16    OB4             CL40                    5         0.0066        .778          698         24.8
+      15    CL22            CL26                  574         0.0108        .767          703          131
+      14    OB16            CL36                   16         0.0109        .756          713         49.1
+      13    CL32            CL33                   79         0.0131        .743          721         69.7
+      12    CL30            CL15                  619         0.0149        .728          729          137
+      11    CL48            CL18                  579         0.0162        .712          740          222
+      10    CL11            CL17                 1776         0.0226        .690          738          397
+       9    CL12            CL24                  632         0.0318        .658          719          229
+       8    CL10            CL19                 1943         0.0429        .615          682          585
+       7    CL9             CL13                  711         0.0457        .569          659          221
+       6    CL8             CL25                 2186         0.0499        .519          647          547
+       5    CL6             CL7                  2897         0.0816        .438          583          534
+       4    CL5             CL23                 2907         0.0869        .351          540          477
+       3    CL21            CL14                   88         0.0962        .255          512          315
+       2    CL4             CL3                  2995         0.1071        .148          519          434
+       1    CL2             CL16                 3000         0.1475        .000           .           519
+ 
+ 
+ 
+Candidatos para número de clústeres óptimos
+ 
+                     Criterio
+       Número de     cúbico de
+Obs    clústeres    clustering
+ 
+ 1         26         247.764
+ 2         31         247.502
+
+
+*------------------------------------------------------------*
+* Salida de puntuación
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Salida del informe
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Importancia de la variable
+ 
+ Nombre                                Número de     Número de
+  de la                                reglas de      reglas
+variable            Etiqueta            división    sustitutas    Importancia
+ 
+  PC_5       Componente principal 5        3             1          1.00000
+  PC_4       Componente principal 4        0             3          0.94903
+  PC_3       Componente principal 3        1             1          0.85742
+  PC_2       Componente principal 2        1             1          0.85704
+  PC_9       Componente principal 9        1             0          0.65320
+  PC_6       Componente principal 6        0             2          0.41623
+  PC_1       Componente principal 1        0             1          0.22945

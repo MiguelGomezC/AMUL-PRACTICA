@@ -1,0 +1,428 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "13/12/20" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "14H29" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log de puntuación";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log de puntuación
+Fecha:                13/12/20
+Hora:                14H29
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O2EKPFDI "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP3\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O2EKPFDI new;
+MPRINT(EM_DIAGRAM):   run;
+18197      %em_getActionStatus(emlib=EMWS1, nodeid=PRINCOMP3);
+MPRINT(EM_DIAGRAM):   
+MPRINT(EM_GETACTIONSTATUS):   proc display c=sashelp.emutil.getactionstatus.scl;
+MPRINT(EM_GETACTIONSTATUS):   run;
+
+18198      %let em_Train = N;
+18199      %let em_Score = Y;
+18200      %let em_Report = N;
+18201      %let em_Run = Y;
+NOTE: PROCEDURE DISPLAY ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(EM_GETACTIONSTATUS):   
+MPRINT(EM_DIAGRAM):  ;
+
+18202      data WORK.M0BWPGJ7;
+MPRINT(EM_DIAGRAM):    data WORK.M0BWPGJ7;
+18203      set WORK.M0BWPGJ7;
+MPRINT(EM_DIAGRAM):   set WORK.M0BWPGJ7;
+18204      if role = 'INPUT' and use in ('Y','D') then do;
+MPRINT(EM_DIAGRAM):   if role = 'INPUT' and use in ('Y','D') then do;
+18205      role = 'INPUT';
+MPRINT(EM_DIAGRAM):   role = 'INPUT';
+18206      output;
+MPRINT(EM_DIAGRAM):   output;
+18207      end;
+MPRINT(EM_DIAGRAM):   end;
+18208      if role = 'REJECTED' and use = 'Y' then do;
+MPRINT(EM_DIAGRAM):   if role = 'REJECTED' and use = 'Y' then do;
+18209      role = 'INPUT';
+MPRINT(EM_DIAGRAM):   role = 'INPUT';
+18210      output;
+MPRINT(EM_DIAGRAM):   output;
+18211      end;
+MPRINT(EM_DIAGRAM):   end;
+18212      if role = 'FREQ' then do;
+MPRINT(EM_DIAGRAM):   if role = 'FREQ' then do;
+18213      role = 'FREQ';
+MPRINT(EM_DIAGRAM):   role = 'FREQ';
+18214      output;
+MPRINT(EM_DIAGRAM):   output;
+18215      end;
+MPRINT(EM_DIAGRAM):   end;
+18216      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set WORK.M0BWPGJ7.
+NOTE: The data set WORK.M0BWPGJ7 has 241 observations and 21 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18217      data EMWS1.PRINCOMP3_STDMEAN;
+MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP3_STDMEAN;
+18218      set EMWS1.PRINCOMP3_OUTSTAT;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_OUTSTAT;
+18219      if _TYPE_='_STDEV_' or _TYPE_='_MEAN_' then output;
+MPRINT(EM_DIAGRAM):   if _TYPE_='_STDEV_' or _TYPE_='_MEAN_' then output;
+18220      DROP _EIGVAL_;
+MPRINT(EM_DIAGRAM):   DROP _EIGVAL_;
+18221      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 247 observations read from the data set EMWS1.PRINCOMP3_OUTSTAT.
+NOTE: The data set EMWS1.PRINCOMP3_STDMEAN has 2 observations and 242 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18222      /*----create a data set of eigenvalue-eigenvector pairs---*/
+18223      data EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP3_EIGENVECTOR;
+18224      set EMWS1.PRINCOMP3_OUTSTAT;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_OUTSTAT;
+18225      if upcase(_TYPE_)='_V_MAP_' or upcase(_TYPE_)='_C_MAP_' or upcase(_TYPE_)='_MEAN_' or upcase(_TYPE_)='_STDEV_' or upcase(_TYPE_)='_EIGVAL_' or _EIGVAL_=0 then delete;
+MPRINT(EM_DIAGRAM):   if upcase(_TYPE_)='_V_MAP_' or upcase(_TYPE_)='_C_MAP_' or upcase(_TYPE_)='_MEAN_' or upcase(_TYPE_)='_STDEV_' or upcase(_TYPE_)='_EIGVAL_' or _EIGVAL_=0 then delete;
+18226      drop _TYPE_;
+MPRINT(EM_DIAGRAM):   drop _TYPE_;
+18227      rename _EIGVAL_=Eigenvalue;
+MPRINT(EM_DIAGRAM):   rename _EIGVAL_=Eigenvalue;
+18228      /*--------- eigenvalue data set------------ */
+
+NOTE: There were 247 observations read from the data set EMWS1.PRINCOMP3_OUTSTAT.
+NOTE: The data set EMWS1.PRINCOMP3_EIGENVECTOR has 241 observations and 242 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18229      data EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   data EMWS1.PRINCOMP3_EIGEN;
+18230      set EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGENVECTOR;
+18231      Keep EigenValue;
+MPRINT(EM_DIAGRAM):   Keep EigenValue;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGENVECTOR.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 1 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18232      proc transpose data=EMWS1.PRINCOMP3_EIGEN out=EMWS1.PRINCOMP3_EIGEN prefix=PC_;
+MPRINT(EM_DIAGRAM):   proc transpose data=EMWS1.PRINCOMP3_EIGEN out=EMWS1.PRINCOMP3_EIGEN prefix=PC_;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 1 observations and 242 variables.
+NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18233      proc transpose data=EMWS1.PRINCOMP3_EIGEN out=EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   proc transpose data=EMWS1.PRINCOMP3_EIGEN out=EMWS1.PRINCOMP3_EIGEN;
+18234      /*----------Eigenvector data set ------------*/
+
+NOTE: There were 1 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 2 variables.
+NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18235      data EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   data EMWS1.PRINCOMP3_EIGENVECTOR;
+18236      merge EMWS1.PRINCOMP3_EIGEN EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   merge EMWS1.PRINCOMP3_EIGEN EMWS1.PRINCOMP3_EIGENVECTOR;
+18237      DROP EigenValue;
+MPRINT(EM_DIAGRAM):   DROP EigenValue;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGENVECTOR.
+NOTE: The data set EMWS1.PRINCOMP3_EIGENVECTOR has 241 observations and 242 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18238      proc sort data=EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS1.PRINCOMP3_EIGEN;
+18239      by EigenValue;
+MPRINT(EM_DIAGRAM):   by EigenValue;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 2 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18240      data EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   data EMWS1.PRINCOMP3_EIGEN;
+18241      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18242      Difference=Eigenvalue-lag(Eigenvalue);
+MPRINT(EM_DIAGRAM):   Difference=Eigenvalue-lag(Eigenvalue);
+18243      ProportionalEigenvalue=EigenValue/0.07263703844986;
+MPRINT(EM_DIAGRAM):   ProportionalEigenvalue=EigenValue/0.07263703844986;
+18244      LagProportionalEigenvalue=lag(ProportionalEigenvalue);
+MPRINT(EM_DIAGRAM):   LagProportionalEigenvalue=lag(ProportionalEigenvalue);
+18245      label EigenValue = "Autovalor";
+MPRINT(EM_DIAGRAM):   label EigenValue = "Autovalor";
+18246      label Difference = "Diferencia";
+MPRINT(EM_DIAGRAM):   label Difference = "Diferencia";
+
+NOTE: Missing values were generated as a result of performing an operation on missing values.
+      Each place is given by: (Number of times) at (Line):(Column).
+      1 en 18242:22   
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 5 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18247      proc sort data=EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS1.PRINCOMP3_EIGEN;
+18248      by DESCENDING EigenValue;
+MPRINT(EM_DIAGRAM):   by DESCENDING EigenValue;
+18249      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 5 variables.
+NOTE: PROCEDURE SORT ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18250      data EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP3_EIGEN;
+18251      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18252      CumProportionalEigenvalue+ProportionalEigenvalue;
+MPRINT(EM_DIAGRAM):   CumProportionalEigenvalue+ProportionalEigenvalue;
+18253      /* to avoid  CumProportionalEigenvalue > 1 because of the precision */
+18254      if CumProportionalEigenvalue > 1.0 then CumProportionalEigenvalue=1.0;
+MPRINT(EM_DIAGRAM):   if CumProportionalEigenvalue > 1.0 then CumProportionalEigenvalue=1.0;
+18255      LogEigenvalue=Log(Eigenvalue);
+MPRINT(EM_DIAGRAM):   LogEigenvalue=Log(Eigenvalue);
+18256      length Exported $8;
+MPRINT(EM_DIAGRAM):   length Exported $8;
+18257      Exported = 'NO';
+MPRINT(EM_DIAGRAM):   Exported = 'NO';
+18258      label LogEigenvalue = "Logaritmo del autovalor";
+MPRINT(EM_DIAGRAM):   label LogEigenvalue = "Logaritmo del autovalor";
+18259      label Exported = "Exportado";
+MPRINT(EM_DIAGRAM):   label Exported = "Exportado";
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18260      data WORK._DSEIGENCHART;
+MPRINT(EM_DIAGRAM):   data WORK._DSEIGENCHART;
+18261      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18262      PC_=_N_;
+MPRINT(EM_DIAGRAM):   PC_=_N_;
+18263      DROP _NAME_;
+MPRINT(EM_DIAGRAM):   DROP _NAME_;
+18264      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set WORK._DSEIGENCHART has 241 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18265      data WORK._EMPRINDSSUBEIGEN;
+MPRINT(EM_DIAGRAM):    data WORK._EMPRINDSSUBEIGEN;
+18266      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18267      if ( CumProportionalEigenvalue GE 0.8 ) or (LagProportionalEigenvalue LT 0.1 and CumProportionalEigenvalue GE 0.9 )
+18268      or ( _N_ > 10-1)
+18269      then delete;
+MPRINT(EM_DIAGRAM):   if ( CumProportionalEigenvalue GE 0.8 ) or (LagProportionalEigenvalue LT 0.1 and CumProportionalEigenvalue GE 0.9 ) or ( _N_ > 10-1) then delete;
+18270      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set WORK._EMPRINDSSUBEIGEN has 9 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18271      data EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP3_EIGEN;
+18272      length PC 8.;
+MPRINT(EM_DIAGRAM):   length PC 8.;
+18273      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18274      if _N_ < 10+1 then Exported = 'YES';
+MPRINT(EM_DIAGRAM):   if _N_ < 10+1 then Exported = 'YES';
+18275      Drop LagProportionalEigenvalue;
+MPRINT(EM_DIAGRAM):   Drop LagProportionalEigenvalue;
+18276      PC = _N_;
+MPRINT(EM_DIAGRAM):   PC = _N_;
+18277      format PC 8.;
+MPRINT(EM_DIAGRAM):   format PC 8.;
+18278      rename _NAME_ = Component;
+MPRINT(EM_DIAGRAM):   rename _NAME_ = Component;
+18279      label _NAME_ = "Componentes principales";
+MPRINT(EM_DIAGRAM):   label _NAME_ = "Componentes principales";
+18280      rename ProportionalEigenvalue = Proportion;
+MPRINT(EM_DIAGRAM):   rename ProportionalEigenvalue = Proportion;
+18281      label ProportionalEigenvalue = "Autovalor proporcional";
+MPRINT(EM_DIAGRAM):   label ProportionalEigenvalue = "Autovalor proporcional";
+18282      rename CumProportionalEigenvalue = Cumulative;
+MPRINT(EM_DIAGRAM):   rename CumProportionalEigenvalue = Cumulative;
+18283      label CumProportionalEigenvalue ="Autovalor proporcional acumulado";
+MPRINT(EM_DIAGRAM):   label CumProportionalEigenvalue = "Autovalor proporcional acumulado";
+18284      label PC = "ID PC";
+MPRINT(EM_DIAGRAM):   label PC = "ID PC";
+18285      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set EMWS1.PRINCOMP3_EIGEN has 241 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18286      data EMWS1.PRINCOMP3_SUBEIGENVECTOR;
+MPRINT(EM_DIAGRAM):    data EMWS1.PRINCOMP3_SUBEIGENVECTOR;
+18287      set EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGENVECTOR;
+18288      if _N_ > 10 then delete;
+MPRINT(EM_DIAGRAM):   if _N_ > 10 then delete;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGENVECTOR.
+NOTE: The data set EMWS1.PRINCOMP3_SUBEIGENVECTOR has 10 observations and 242 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+18289      data WORK._EMPRINDSSUBEIGEN;
+MPRINT(EM_DIAGRAM):   data WORK._EMPRINDSSUBEIGEN;
+18290      set EMWS1.PRINCOMP3_EIGEN;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGEN;
+18291      if _N_ > 10 then delete;
+MPRINT(EM_DIAGRAM):   if _N_ > 10 then delete;
+18292      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGEN.
+NOTE: The data set WORK._EMPRINDSSUBEIGEN has 10 observations and 8 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+18293      proc transpose data=EMWS1.PRINCOMP3_EIGENVECTOR name=Variable label=Label out=EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):    proc transpose data=EMWS1.PRINCOMP3_EIGENVECTOR name=Variable label=Label out=EMWS1.PRINCOMP3_EIGENVECTOR;
+18294      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGENVECTOR.
+NOTE: The data set EMWS1.PRINCOMP3_EIGENVECTOR has 241 observations and 242 variables.
+NOTE: PROCEDURE TRANSPOSE ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+18295      data EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   data EMWS1.PRINCOMP3_EIGENVECTOR;
+18296      set EMWS1.PRINCOMP3_EIGENVECTOR;
+MPRINT(EM_DIAGRAM):   set EMWS1.PRINCOMP3_EIGENVECTOR;
+18297      label Label = "Etiqueta";
+MPRINT(EM_DIAGRAM):   label Label = "Etiqueta";
+18298      label Variable = "Variable";
+MPRINT(EM_DIAGRAM):   label Variable = "Variable";
+18299      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Variable Label is uninitialized.
+NOTE: There were 241 observations read from the data set EMWS1.PRINCOMP3_EIGENVECTOR.
+NOTE: The data set EMWS1.PRINCOMP3_EIGENVECTOR has 241 observations and 242 variables.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+18300      filename newout "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP3\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    filename newout "C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\practica_AMUL\Workspaces\EMWS1\PRINCOMP3\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   ;
+18301      ;
+18302      proc printto print=newout;
+MPRINT(EM_DIAGRAM):   proc printto print=newout;
+18303      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: PROCEDURE PRINTTO ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18304      data _null_;
+MPRINT(EM_DIAGRAM):    data _null_;
+18305      file print;
+MPRINT(EM_DIAGRAM):   file print;
+18306      put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+18307      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_rescore_title , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   put "Resumen de componentes principales exportados - Vueltos a puntuar";
+18308      put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+18309      put ' ';
+MPRINT(EM_DIAGRAM):   put ' ';
+18310      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_ninput , NOQUOTE, 241))";
+MPRINT(EM_DIAGRAM):   put "Número total de variables input: 241";
+18311      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_maxpc , NOQUOTE, 10))";
+MPRINT(EM_DIAGRAM):   put "Corte de número máximo de los componentes principales: 10";
+18312      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_cumcut , NOQUOTE, 0.8))";
+MPRINT(EM_DIAGRAM):   put "Corte de autovalor proporcional acumulado: 0.8";
+18313      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_increcut , NOQUOTE, 0.1))";
+MPRINT(EM_DIAGRAM):   put "Corte de incremento de autovalor proporcional: 0.1";
+18314      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_nselpc , NOQUOTE, 10))";
+MPRINT(EM_DIAGRAM):   put "Número de los componentes principales seleccionados: 10";
+18315      put "%sysfunc(sasmsg(sashelp.dmine, rpt_princomp_sum_totvar , NOQUOTE, 0.260327238))";
+MPRINT(EM_DIAGRAM):   put "Variación total explicada por los componentes principales seleccionados: 0.260327238";
+
+NOTE: 9 lines were written to file PRINT.
+NOTE: The DATA step printed page 1.
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+18316      proc printto;
+MPRINT(EM_DIAGRAM):   proc printto;
+18317      run;
+MPRINT(EM_DIAGRAM):   run;
+

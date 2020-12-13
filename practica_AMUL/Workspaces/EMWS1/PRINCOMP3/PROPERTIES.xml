@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  MaxPrincomp="10" CumEigenCutoff="0.8" EigenIncreCutoff="0.1" EigenSource="UNCORRECTED"
+ ApplyMaxPrincomp="Y" RejectOriginalInputVariables="Y" PrintEigenSourceMatrix="N"
+ PrincompPrefix="PC" HideOriginalInputVariables="Y" NUserSelectedPrincomp="10" ForceRun="N"
+ RunAction="Train" Component="PrinComp" PrincompLabel="PRINCOMPLABEL" RawCreateTime="1923488251.5"
+ CreateTime="13DEC2020:14:17:31" RunId="dd26fbd6-cdec-4d07-9087-92daa74146bc">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

@@ -8,14 +8,14 @@ Trasversal: trasversal invocado. El mandato MPCONNECT es sas.
 Trasversal: iniciando trasversal del flujo 
 *------------------------------------------------------------* 
 * 
-* Ids : Beginning Update 
-* datetime : 23NOV2020:15:49:14 
+* Ids2 : Beginning Update 
+* datetime : 13DEC2020:14:28:42 
 * 
 *------------------------------------------------------------* 
-8665       %let _HPDMGRIDHOST=;
-8666       %let _HPDMGRIDINSTALLLOC=;
-8667       %let _HPDMGRIDDATASERVER=;
-8668       %hpdm_gridSetOPtions;
+11828      %let _HPDMGRIDHOST=;
+11829      %let _HPDMGRIDINSTALLLOC=;
+11830      %let _HPDMGRIDDATASERVER=;
+11831      %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -25,21 +25,46 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 
 *------------------------------------------------------------* 
 * 
-* Ids : End Update 
-* datetime : 23NOV2020:15:49:14 
+* Ids2 : End Update 
+* datetime : 13DEC2020:14:28:42 
+* 
+*------------------------------------------------------------* 
+Trasversal: WaitingNode "CLUS3" 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* PRINCOMP3 : Beginning Update 
+* datetime : 13DEC2020:14:28:43 
+* 
+*------------------------------------------------------------* 
+11851      %let _HPDMGRIDHOST=;
+11852      %let _HPDMGRIDINSTALLLOC=;
+11853      %let _HPDMGRIDDATASERVER=;
+11854      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement ha utilizado (Tiempo de proceso total):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* PRINCOMP3 : End Update 
+* datetime : 13DEC2020:14:28:43 
 * 
 *------------------------------------------------------------* 
 traverser_readyNode_note 
 *------------------------------------------------------------* 
 * 
-* PRINCOMP2 : Beginning Update 
-* datetime : 23NOV2020:15:49:14 
+* Clus3 : Beginning Update 
+* datetime : 13DEC2020:14:28:43 
 * 
 *------------------------------------------------------------* 
-8688       %let _HPDMGRIDHOST=;
-8689       %let _HPDMGRIDINSTALLLOC=;
-8690       %let _HPDMGRIDDATASERVER=;
-8691       %hpdm_gridSetOPtions;
+11874      %let _HPDMGRIDHOST=;
+11875      %let _HPDMGRIDINSTALLLOC=;
+11876      %let _HPDMGRIDDATASERVER=;
+11877      %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -49,11 +74,11 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 
 *------------------------------------------------------------* 
 * 
-* PRINCOMP2 : End Update 
-* datetime : 23NOV2020:15:49:14 
+* Clus3 : End Update 
+* datetime : 13DEC2020:14:28:43 
 * 
 *------------------------------------------------------------* 
 Trasversal: ejecución completa 
-8692       proc printto;
-8693       run;
+11878      proc printto;
+11879      run;
 
