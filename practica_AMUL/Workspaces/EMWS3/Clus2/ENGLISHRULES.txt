@@ -1,0 +1,231 @@
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if PITT < 0.0558
+AND GORDON >= 0.07405
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 5
+ Predicted: _SEGMENT_=8  = 0.40
+ Predicted: _SEGMENT_=3  = 0.20
+ Predicted: _SEGMENT_=9  = 0.20
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.20
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if PITT >= 0.0558 or MISSING
+AND GORDON >= 0.07405
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 68
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 1.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if UNIVERS >= 0.01574
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN >= 0.03282
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 5
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.60
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.40
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if POLICI >= 0.03597
+AND MED < 0.01105 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 62
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.10
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.90
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if UNIX < 0.07394 or MISSING
+AND MED >= 0.01105
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 533
+ Predicted: _SEGMENT_=8  = 0.09
+ Predicted: _SEGMENT_=3  = 0.01
+ Predicted: _SEGMENT_=9  = 0.89
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 15
+*------------------------------------------------------------*
+if UNIX >= 0.07394
+AND MED >= 0.01105
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+then 
+ Tree Node Identifier   = 15
+ Number of Observations = 5
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if UNIVERS < 0.01574 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND FRIEND < 0.00395 or MISSING
+AND ARMENIAN >= 0.03282
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 119
+ Predicted: _SEGMENT_=8  = 0.03
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.97
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 17
+*------------------------------------------------------------*
+if UNIVERS < 0.01574 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND FRIEND >= 0.00395
+AND ARMENIAN >= 0.03282
+then 
+ Tree Node Identifier   = 17
+ Number of Observations = 7
+ Predicted: _SEGMENT_=8  = 0.57
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.43
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 19
+*------------------------------------------------------------*
+if POLICI < 0.03597 or MISSING
+AND NUMBER >= 0.10956
+AND MED < 0.01105 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+then 
+ Tree Node Identifier   = 19
+ Number of Observations = 22
+ Predicted: _SEGMENT_=8  = 0.09
+ Predicted: _SEGMENT_=3  = 0.05
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.05
+ Predicted: _SEGMENT_=4  = 0.05
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.77
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 24
+*------------------------------------------------------------*
+if POLICI < 0.03597 or MISSING
+AND NUMBER < 0.10956 or MISSING
+AND MED < 0.01105 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+AND ACCESS < 0.06358 or MISSING
+then 
+ Tree Node Identifier   = 24
+ Number of Observations = 2143
+ Predicted: _SEGMENT_=8  = 0.55
+ Predicted: _SEGMENT_=3  = 0.19
+ Predicted: _SEGMENT_=9  = 0.02
+ Predicted: _SEGMENT_=5  = 0.15
+ Predicted: _SEGMENT_=4  = 0.07
+ Predicted: _SEGMENT_=10  = 0.01
+ Predicted: _SEGMENT_=2  = 0.01
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 25
+*------------------------------------------------------------*
+if POLICI < 0.03597 or MISSING
+AND NUMBER < 0.10956 or MISSING
+AND MED < 0.01105 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN < 0.03282 or MISSING
+AND ACCESS >= 0.06358
+then 
+ Tree Node Identifier   = 25
+ Number of Observations = 31
+ Predicted: _SEGMENT_=8  = 0.03
+ Predicted: _SEGMENT_=3  = 0.03
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=4  = 0.06
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=1  = 0.87
+ 

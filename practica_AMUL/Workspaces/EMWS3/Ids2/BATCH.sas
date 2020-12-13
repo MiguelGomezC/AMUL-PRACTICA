@@ -1,5 +1,5 @@
 *------------------------------------------------------------*;
-* Filter: Creating EM5BATCH data sets;
+* Ids2: Creating EM5BATCH data sets;
 *------------------------------------------------------------*;
 %let EM_ACTION = run;
 %let EM_DEBUG =;
@@ -44,7 +44,7 @@ run;
 %if %index(&actionstring, RUN) or %index(&actionstring, REPORT) %then %do;
 data actions;
 length id $12 action $40;
-id="Filter";
+id="Ids2";
 %if %index(&actionstring, RUN) %then %do;
 action='run';
 output;

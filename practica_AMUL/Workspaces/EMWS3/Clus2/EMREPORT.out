@@ -1,0 +1,54 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Importancia de la variable
+
+Nombre de                 Número de     Número de
+la                        reglas de      reglas
+variable      Etiqueta     división    sustitutas    Importancia
+
+MED                           1             1          1.00000  
+PITT                          1             2          0.99924  
+DOCTOR                        0             1          0.90729  
+MEDIC                         0             1          0.90553  
+DISEAS                        0             1          0.90143  
+TREATMENT                     0             1          0.90085  
+CENTER                        0             2          0.66947  
+ARMENIAN                      1             0          0.55559  
+ARMENIA                       0             1          0.55121  
+TURKISH                       0             1          0.55025  
+SERDAR                        0             1          0.54804  
+ARGIC                         0             1          0.54794  
+BANK                          0             3          0.44555  
+GEB                           0             2          0.43570  
+GORDON                        1             0          0.42060  
+PITTSBURGH                    0             1          0.41651  
+UNIV                          0             1          0.41594  
+POLICI                        1             0          0.39684  
+TRUE                          0             1          0.39153  
+KILL                          0             1          0.39144  
+QUESTION                      0             1          0.39144  
+TALK                          0             1          0.39144  
+ACCESS                        1             3          0.32674  
+CODE                          0             1          0.27163  
+PUBLIC                        0             1          0.27163  
+WORLD                         0             1          0.27163  
+NUMBER                        1             0          0.20374  
+ORIGIN                        0             1          0.20276  
+FIND                          0             1          0.20276  
+PHONE                         0             1          0.20276  
+DON                           0             1          0.20276  
+MARK                          0             1          0.20276  
+UNIX                          1             1          0.15301  
+DEPT                          0             1          0.14222  
+EDU                           0             1          0.11605  
+COMPUT                        0             1          0.11525  
+FRIEND                        1             0          0.09506  
+WONDER                        0             1          0.09315  
+BOOK                          0             1          0.09277  
+COLOR                         0             1          0.09277  
+UNIVERS                       1             0          0.05571  
+COMMUN                        0             1          0.05485  
+CALIFORNIA                    0             1          0.05485  
+CONTROL                       0             1          0.05485  

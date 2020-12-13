@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="terminosdocumentos" Scope="LOCAL" Role="RAW" Library="AMUL" Table="TERMINOS_DOCUMENTOS_99"
+ NCols="242" NObs="3000" NBytes="5915648" Segment="" DataSourceRole="RAW" OutputType="VIEW"
+ ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC"
+ ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y"
+ MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y"
+ VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="terminosdocumentos"
+ DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="Admin" DsCreateDate="1923488172.2"
+ DsModifiedBy="Admin" DsModifyDate="1923488172.2" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
+ SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train"
+ Component="DataSource" RawCreateTime="1923493110.4" CreateTime="13DEC2020:15:38:30"
+ Description="" Data="AMUL.TERMINOS_DOCUMENTOS_99" CMeta="WORK.M3E2XQTG" RunId="d0746fb2-2baa-4a0d-b64a-70e5ea1acb96"
+ RawLastTimeRun="1923493177.5" RawRunTime="1.2960000038" LastTimeRun="13DEC2020:15:39:38"
+ RunTime="0 Hr. 0 Min. 1.30 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>
