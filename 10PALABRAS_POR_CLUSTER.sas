@@ -40,3 +40,16 @@ PROC SORT DATA = WORK.PALABRASPORCLUSTER OUT = AMUL.PALABRAS_TECNOLOGIA(KEEP=_NA
   BY DESCENDING TECNOLOGIA;
 RUN;
 QUIT;
+
+proc sql;
+        delete from AMUL.PALABRAS_ARMENIA
+           where _NAME_ EQ "_FREQ_";
+proc sql;
+        delete from AMUL.PALABRAS_ISRAELPALESTINA
+           where _NAME_ EQ "_FREQ_";
+proc sql;
+        delete from AMUL.PALABRAS_MEDICINA
+           where _NAME_ EQ "_FREQ_";
+proc sql;
+        delete from AMUL.PALABRAS_TECNOLOGIA
+           where _NAME_ EQ "_FREQ_";
