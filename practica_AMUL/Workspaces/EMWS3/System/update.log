@@ -8,14 +8,14 @@ Trasversal: trasversal invocado. El mandato MPCONNECT es sas.
 Trasversal: iniciando trasversal del flujo 
 *------------------------------------------------------------* 
 * 
-* Ids : Beginning Update 
-* datetime : 11DEC2020:22:58:21 
+* Ids2 : Beginning Update 
+* datetime : 13DEC2020:17:13:09 
 * 
 *------------------------------------------------------------* 
-16063      %let _HPDMGRIDHOST=;
-16064      %let _HPDMGRIDINSTALLLOC=;
-16065      %let _HPDMGRIDDATASERVER=;
-16066      %hpdm_gridSetOPtions;
+20971      %let _HPDMGRIDHOST=;
+20972      %let _HPDMGRIDINSTALLLOC=;
+20973      %let _HPDMGRIDDATASERVER=;
+20974      %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -25,22 +25,21 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 
 *------------------------------------------------------------* 
 * 
-* Ids : End Update 
-* datetime : 11DEC2020:22:58:21 
+* Ids2 : End Update 
+* datetime : 13DEC2020:17:13:09 
 * 
 *------------------------------------------------------------* 
-Trasversal: WaitingNode "EMCODE" 
 traverser_readyNode_note 
 *------------------------------------------------------------* 
 * 
-* Clus : Beginning Update 
-* datetime : 11DEC2020:22:58:21 
+* Clus2 : Beginning Update 
+* datetime : 13DEC2020:17:13:09 
 * 
 *------------------------------------------------------------* 
-16086      %let _HPDMGRIDHOST=;
-16087      %let _HPDMGRIDINSTALLLOC=;
-16088      %let _HPDMGRIDDATASERVER=;
-16089      %hpdm_gridSetOPtions;
+20994      %let _HPDMGRIDHOST=;
+20995      %let _HPDMGRIDINSTALLLOC=;
+20996      %let _HPDMGRIDDATASERVER=;
+20997      %hpdm_gridSetOPtions;
 
 NOTE: DATA statement ha utilizado (Tiempo de proceso total):
       real time           0.00 seconds
@@ -50,35 +49,11 @@ NOTE: DATA statement ha utilizado (Tiempo de proceso total):
 
 *------------------------------------------------------------* 
 * 
-* Clus : End Update 
-* datetime : 11DEC2020:22:58:22 
-* 
-*------------------------------------------------------------* 
-traverser_readyNode_note 
-*------------------------------------------------------------* 
-* 
-* EMCODE : Beginning Update 
-* datetime : 11DEC2020:22:58:22 
-* 
-*------------------------------------------------------------* 
-16121      %let _HPDMGRIDHOST=;
-16122      %let _HPDMGRIDINSTALLLOC=;
-16123      %let _HPDMGRIDDATASERVER=;
-16124      %hpdm_gridSetOPtions;
-
-NOTE: DATA statement ha utilizado (Tiempo de proceso total):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
-      
-
-
-*------------------------------------------------------------* 
-* 
-* EMCODE : End Update 
-* datetime : 11DEC2020:22:58:22 
+* Clus2 : End Update 
+* datetime : 13DEC2020:17:13:10 
 * 
 *------------------------------------------------------------* 
 Trasversal: ejecución completa 
-16125      proc printto;
-16126      run;
+20998      proc printto;
+20999      run;
 

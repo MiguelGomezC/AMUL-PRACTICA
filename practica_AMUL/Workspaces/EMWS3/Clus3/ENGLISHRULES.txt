@@ -1,0 +1,216 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if GORDON >= 0.07405
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 73
+ Predicted: _SEGMENT_=1  = 0.01
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=20  = 0.00
+ Predicted: _SEGMENT_=8  = 0.01
+ Predicted: _SEGMENT_=12  = 0.01
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=13  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.95
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.01
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if UTEXA >= 0.39029
+AND GORDON < 0.07405 or MISSING
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 10
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=20  = 0.00
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=12  = 0.00
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.10
+ Predicted: _SEGMENT_=13  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.00
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.90
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if UTEXA < 0.39029 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ARMENIAN >= 0.05208
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 118
+ Predicted: _SEGMENT_=1  = 0.01
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=20  = 0.00
+ Predicted: _SEGMENT_=8  = 0.03
+ Predicted: _SEGMENT_=12  = 0.00
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=13  = 0.00
+ Predicted: _SEGMENT_=4  = 0.94
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.02
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.01
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if UTEXA < 0.39029 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND ENGIN >= 0.05521
+AND ARMENIAN < 0.05208 or MISSING
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 59
+ Predicted: _SEGMENT_=1  = 0.03
+ Predicted: _SEGMENT_=10  = 0.03
+ Predicted: _SEGMENT_=17  = 0.90
+ Predicted: _SEGMENT_=2  = 0.02
+ Predicted: _SEGMENT_=20  = 0.00
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=12  = 0.02
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=13  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.00
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 15
+*------------------------------------------------------------*
+if UTEXA < 0.39029 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND GEORGIA >= 0.0491
+AND ENGIN < 0.05521 or MISSING
+AND ARMENIAN < 0.05208 or MISSING
+then 
+ Tree Node Identifier   = 15
+ Number of Observations = 26
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=10  = 0.00
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=20  = 0.00
+ Predicted: _SEGMENT_=8  = 0.04
+ Predicted: _SEGMENT_=12  = 0.00
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=13  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.96
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 18
+*------------------------------------------------------------*
+if UTEXA < 0.39029 or MISSING
+AND NUMBER < 0.10956 or MISSING
+AND GORDON < 0.07405 or MISSING
+AND GEORGIA < 0.0491 or MISSING
+AND ENGIN < 0.05521 or MISSING
+AND ARMENIAN < 0.05208 or MISSING
+then 
+ Tree Node Identifier   = 18
+ Number of Observations = 2692
+ Predicted: _SEGMENT_=1  = 0.04
+ Predicted: _SEGMENT_=10  = 0.13
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.09
+ Predicted: _SEGMENT_=20  = 0.11
+ Predicted: _SEGMENT_=8  = 0.31
+ Predicted: _SEGMENT_=12  = 0.05
+ Predicted: _SEGMENT_=15  = 0.07
+ Predicted: _SEGMENT_=7  = 0.03
+ Predicted: _SEGMENT_=13  = 0.06
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.06
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=6  = 0.02
+ Predicted: _SEGMENT_=18  = 0.00
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.01
+ Predicted: _SEGMENT_=19  = 0.01
+ Predicted: _SEGMENT_=14  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 19
+*------------------------------------------------------------*
+if UTEXA < 0.39029 or MISSING
+AND NUMBER >= 0.10956
+AND GORDON < 0.07405 or MISSING
+AND GEORGIA < 0.0491 or MISSING
+AND ENGIN < 0.05521 or MISSING
+AND ARMENIAN < 0.05208 or MISSING
+then 
+ Tree Node Identifier   = 19
+ Number of Observations = 22
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=10  = 0.09
+ Predicted: _SEGMENT_=17  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=20  = 0.05
+ Predicted: _SEGMENT_=8  = 0.00
+ Predicted: _SEGMENT_=12  = 0.05
+ Predicted: _SEGMENT_=15  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=13  = 0.05
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=16  = 0.00
+ Predicted: _SEGMENT_=9  = 0.00
+ Predicted: _SEGMENT_=3  = 0.77
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=18  = 0.00
+ Predicted: _SEGMENT_=11  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=19  = 0.00
+ Predicted: _SEGMENT_=14  = 0.00
+ 

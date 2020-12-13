@@ -1,0 +1,23 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+            Nivel de     Número de
+Rol          medida     ocurrencias
+
+ID          NOMINAL           1    
+INPUT       INTERVAL        241    
+REJECTED    INTERVAL          1    
+REJECTED    NOMINAL           1    
+SEGMENT     NOMINAL           1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+Propiedades de datos guardadas
+
+Librería                                                                                 Observaciones    Observaciones    Número de
+de datos                             Ubicación de la salida                                 totales         guardadas      variables
+
+  AMUL      C:\Users\Admin\Documents\GitHub\AMUL-PRACTICA\DATA\em_save_TRAIN.sas7bdat        3000              MAX            243   

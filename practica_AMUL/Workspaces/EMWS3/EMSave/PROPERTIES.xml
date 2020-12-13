@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  Location="CATALOG" Catalog="Sashelp.Emutil.Savext.Source" Type="SAS7BDAT" Lib="AMUL"
+ Name="" Replace="Y" AllObs="Y" OutObs="1000" AllRoles="Y" Train="Y" Validate="Y"
+ Test="Y" Score="Y" Transaction="Y" ForceRun="N" RunAction="Train" Component="EMSave"
+ DirectorySelector="" RawCreateTime="1923498896.3" CreateTime="13DEC2020:17:14:56"
+ RunId="f21d168b-590a-4467-ad16-e5f758a78ade">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+USERTRAINCODE
+USERSCORECODE
+USERREPORTCODE
+]]>
+</FILEPROPERTIES></_ROOT_>

@@ -1,0 +1,301 @@
+﻿<SASReport version="1.0">
+      <Data>
+            <IQData type="2DEmbedded" name="TreeData">
+                  <EmbeddedData>
+                        <Variables>
+                              <Variable name="Var1" varName="Var1" type="String" />
+                              <Variable name="Var2" varName="Var2" type="String" />
+                              <Variable name="Var3" varName="Var3" type="Numeric" />
+                              <Variable name="Var4" varName="Var4" type="Numeric" />
+                              <Variable name="Var5" varName="Var5" type="Numeric" />
+                              <Variable name="Var6" varName="Var6" type="Numeric" />
+                              <Variable name="Var7" varName="Var7" type="String"  />
+                              <Variable name="Var8" varName="Var8" type="String" />
+                              <Variable name="Var9" varName="Var9" type="Numeric" />
+                        </Variables>
+                        <ValuesList>
+    <Values>
+      <Value>Valores no ausentes</Value>
+      <Value>GORDON</Value>
+      <Value>10</Value>
+      <Value>27.83</Value>
+      <Value>1</Value>
+      <Value>0</Value>
+      <Value>          8:        27.8%
+ Número:         3000</Value>
+      <Value>Id de nodo:            1&#10;&#10;1:         3.8%&#10;10:        11.5%&#10;17:         1.9%&#10;2:         8.0%&#10;20:        10.1%&#10;8:        27.8%&#10;12:         4.5%&#10;15:
+   6.4%&#10;7:         3.1%&#10;13:         5.7%&#10;4:         4.0%&#10;16:         5.8%&#10;9:         2.3%&#10;3:         0.6%&#10;6:         1.4%&#10;18:         1.1%&#10;11:         0.4%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.3%&#10; Número:         3000</Value>
+      <Value>3000</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.0741 Falta Or</Value>
+      <Value>UTEXA</Value>
+      <Value>9.7566666667</Value>
+      <Value>28.49</Value>
+      <Value>2</Value>
+      <Value>1</Value>
+      <Value>          8:        28.5%
+ Número:         2927</Value>
+      <Value>Id de nodo:            2&#10;&#10;1:         3.8%&#10;10:        11.8%&#10;17:         1.9%&#10;2:         8.2%&#10;20:        10.4%&#10;8:        28.5%&#10;12:         4.6%&#10;15:
+   6.6%&#10;7:         3.1%&#10;13:         5.8%&#10;4:         4.1%&#10;16:         5.9%&#10;9:         0.0%&#10;3:         0.6%&#10;6:         1.5%&#10;18:         1.1%&#10;11:         0.4%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.3%&#10; Número:         2927</Value>
+      <Value>2927</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.0741</Value>
+      <Value></Value>
+      <Value>0.2433333333</Value>
+      <Value>94.52</Value>
+      <Value>3</Value>
+      <Value>1</Value>
+      <Value>          9:        94.5%
+ Número:           73</Value>
+      <Value>Id de nodo:            3&#10;&#10;1:         1.4%&#10;10:         0.0%&#10;17:         0.0%&#10;2:         0.0%&#10;20:         0.0%&#10;8:         1.4%&#10;12:         1.4%&#10;15:
+   0.0%&#10;7:         0.0%&#10;13:         0.0%&#10;4:         0.0%&#10;16:         0.0%&#10;9:        94.5%&#10;3:         0.0%&#10;6:         0.0%&#10;18:         1.4%&#10;11:         0.0%&#10;5:
+       0.0%&#10;19:         0.0%&#10;14:         0.0%&#10; Número:           73</Value>
+      <Value>73</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.3903 Falta Or</Value>
+      <Value>ARMENIAN</Value>
+      <Value>9.7233333333</Value>
+      <Value>28.59</Value>
+      <Value>4</Value>
+      <Value>2</Value>
+      <Value>          8:        28.6%
+ Número:         2917</Value>
+      <Value>Id de nodo:            4&#10;&#10;1:         3.8%&#10;10:        11.9%&#10;17:         2.0%&#10;2:         8.3%&#10;20:        10.4%&#10;8:        28.6%&#10;12:         4.6%&#10;15:
+   6.6%&#10;7:         3.1%&#10;13:         5.9%&#10;4:         4.1%&#10;16:         5.9%&#10;9:         0.0%&#10;3:         0.7%&#10;6:         1.5%&#10;18:         1.1%&#10;11:         0.4%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.0%&#10; Número:         2917</Value>
+      <Value>2917</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.3903</Value>
+      <Value></Value>
+      <Value>0.0333333333</Value>
+      <Value>90</Value>
+      <Value>5</Value>
+      <Value>2</Value>
+      <Value>         14:        90.0%
+ Número:           10</Value>
+      <Value>Id de nodo:            5&#10;&#10;1:         0.0%&#10;10:         0.0%&#10;17:         0.0%&#10;2:         0.0%&#10;20:         0.0%&#10;8:         0.0%&#10;12:         0.0%&#10;15:
+   0.0%&#10;7:        10.0%&#10;13:         0.0%&#10;4:         0.0%&#10;16:         0.0%&#10;9:         0.0%&#10;3:         0.0%&#10;6:         0.0%&#10;18:         0.0%&#10;11:         0.0%&#10;5:
+       0.0%&#10;19:         0.0%&#10;14:        90.0%&#10; Número:           10</Value>
+      <Value>10</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.0521 Falta Or</Value>
+      <Value>ENGIN</Value>
+      <Value>9.33</Value>
+      <Value>29.69</Value>
+      <Value>8</Value>
+      <Value>4</Value>
+      <Value>          8:        29.7%
+ Número:         2799</Value>
+      <Value>Id de nodo:            8&#10;&#10;1:         4.0%&#10;10:        12.4%&#10;17:         2.0%&#10;2:         8.6%&#10;20:        10.9%&#10;8:        29.7%&#10;12:         4.8%&#10;15:
+   6.9%&#10;7:         3.3%&#10;13:         6.1%&#10;4:         0.3%&#10;16:         6.2%&#10;9:         0.0%&#10;3:         0.7%&#10;6:         1.5%&#10;18:         1.1%&#10;11:         0.5%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.0%&#10; Número:         2799</Value>
+      <Value>2799</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.0521</Value>
+      <Value></Value>
+      <Value>0.3933333333</Value>
+      <Value>94.07</Value>
+      <Value>9</Value>
+      <Value>4</Value>
+      <Value>          4:        94.1%
+ Número:          118</Value>
+      <Value>Id de nodo:            9&#10;&#10;1:         0.8%&#10;10:         0.0%&#10;17:         0.0%&#10;2:         0.0%&#10;20:         0.0%&#10;8:         2.5%&#10;12:         0.0%&#10;15:
+   0.0%&#10;7:         0.0%&#10;13:         0.0%&#10;4:        94.1%&#10;16:         0.0%&#10;9:         0.0%&#10;3:         0.0%&#10;6:         0.0%&#10;18:         1.7%&#10;11:         0.0%&#10;5:
+       0.8%&#10;19:         0.0%&#10;14:         0.0%&#10; Número:          118</Value>
+      <Value>118</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.0552 Falta Or</Value>
+      <Value>GEORGIA</Value>
+      <Value>9.1333333333</Value>
+      <Value>30.33</Value>
+      <Value>10</Value>
+      <Value>8</Value>
+      <Value>          8:        30.3%
+ Número:         2740</Value>
+      <Value>Id de nodo:           10&#10;&#10;1:         4.0%&#10;10:        12.6%&#10;17:         0.1%&#10;2:         8.8%&#10;20:        11.1%&#10;8:        30.3%&#10;12:         4.9%&#10;15:
+   7.0%&#10;7:         3.3%&#10;13:         6.2%&#10;4:         0.3%&#10;16:         6.3%&#10;9:         0.0%&#10;3:         0.7%&#10;6:         1.6%&#10;18:         1.1%&#10;11:         0.5%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.0%&#10; Número:         2740</Value>
+      <Value>2740</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.0552</Value>
+      <Value></Value>
+      <Value>0.1966666667</Value>
+      <Value>89.83</Value>
+      <Value>11</Value>
+      <Value>8</Value>
+      <Value>         17:        89.8%
+ Número:           59</Value>
+      <Value>Id de nodo:           11&#10;&#10;1:         3.4%&#10;10:         3.4%&#10;17:        89.8%&#10;2:         1.7%&#10;20:         0.0%&#10;8:         0.0%&#10;12:         1.7%&#10;15:
+   0.0%&#10;7:         0.0%&#10;13:         0.0%&#10;4:         0.0%&#10;16:         0.0%&#10;9:         0.0%&#10;3:         0.0%&#10;6:         0.0%&#10;18:         0.0%&#10;11:         0.0%&#10;5:
+       0.0%&#10;19:         0.0%&#10;14:         0.0%&#10; Número:           59</Value>
+      <Value>59</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.0491 Falta Or</Value>
+      <Value>NUMBER</Value>
+      <Value>9.0466666667</Value>
+      <Value>30.58</Value>
+      <Value>14</Value>
+      <Value>10</Value>
+      <Value>          8:        30.6%
+ Número:         2714</Value>
+      <Value>Id de nodo:           14&#10;&#10;1:         4.0%&#10;10:        12.7%&#10;17:         0.1%&#10;2:         8.8%&#10;20:        11.2%&#10;8:        30.6%&#10;12:         4.9%&#10;15:
+   7.1%&#10;7:         3.4%&#10;13:         6.3%&#10;4:         0.3%&#10;16:         6.4%&#10;9:         0.0%&#10;3:         0.7%&#10;6:         1.6%&#10;18:         0.2%&#10;11:         0.5%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.0%&#10; Número:         2714</Value>
+      <Value>2714</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.0491</Value>
+      <Value></Value>
+      <Value>0.0866666667</Value>
+      <Value>96.15</Value>
+      <Value>15</Value>
+      <Value>10</Value>
+      <Value>         18:        96.2%
+ Número:           26</Value>
+      <Value>Id de nodo:           15&#10;&#10;1:         0.0%&#10;10:         0.0%&#10;17:         0.0%&#10;2:         0.0%&#10;20:         0.0%&#10;8:         3.8%&#10;12:         0.0%&#10;15:
+   0.0%&#10;7:         0.0%&#10;13:         0.0%&#10;4:         0.0%&#10;16:         0.0%&#10;9:         0.0%&#10;3:         0.0%&#10;6:         0.0%&#10;18:        96.2%&#10;11:         0.0%&#10;5:
+       0.0%&#10;19:         0.0%&#10;14:         0.0%&#10; Número:           26</Value>
+      <Value>26</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 0.1096 Falta Or</Value>
+      <Value></Value>
+      <Value>8.9733333333</Value>
+      <Value>30.83</Value>
+      <Value>18</Value>
+      <Value>14</Value>
+      <Value>          8:        30.8%
+ Número:         2692</Value>
+      <Value>Id de nodo:           18&#10;&#10;1:         4.0%&#10;10:        12.7%&#10;17:         0.1%&#10;2:         8.9%&#10;20:        11.3%&#10;8:        30.8%&#10;12:         4.9%&#10;15:
+   7.1%&#10;7:         3.4%&#10;13:         6.3%&#10;4:         0.3%&#10;16:         6.4%&#10;9:         0.0%&#10;3:         0.1%&#10;6:         1.6%&#10;18:         0.2%&#10;11:         0.5%&#10;5:
+       0.7%&#10;19:         0.5%&#10;14:         0.0%&#10; Número:         2692</Value>
+      <Value>2692</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 0.1096</Value>
+      <Value></Value>
+      <Value>0.0733333333</Value>
+      <Value>77.27</Value>
+      <Value>19</Value>
+      <Value>14</Value>
+      <Value>          3:        77.3%
+ Número:           22</Value>
+      <Value>Id de nodo:           19&#10;&#10;1:         0.0%&#10;10:         9.1%&#10;17:         0.0%&#10;2:         0.0%&#10;20:         4.5%&#10;8:         0.0%&#10;12:         4.5%&#10;15:
+   0.0%&#10;7:         0.0%&#10;13:         4.5%&#10;4:         0.0%&#10;16:         0.0%&#10;9:         0.0%&#10;3:        77.3%&#10;6:         0.0%&#10;18:         0.0%&#10;11:         0.0%&#10;5:
+       0.0%&#10;19:         0.0%&#10;14:         0.0%&#10; Número:           22</Value>
+      <Value>22</Value>
+    </Values>
+                        </ValuesList>
+                  </EmbeddedData>
+            </IQData>
+      </Data>
+
+      <View>
+            <Section>
+                  <Body>
+                        <Graph name="DecisionTree" >
+                              <ChartDataList>
+                                    <ChartData name="DTreeData" data="TreeData" >
+                                          <Roles>
+                                                <Role type="AboveText"   variable="Var1" > </Role>
+                                                <Role type="BelowText"   variable="Var2" > </Role>
+                                                <Role type="LinkWidth"   variable="Var3" > </Role>
+                                                <Role type="NodeColor"   variable="Var4" > </Role>
+                                                <Role type="ID"      variable="Var5" > </Role>
+                                                <Role type="Parent"    variable="Var6" > </Role>
+                                                <Role type="NodeText"    variable="Var7" > </Role>
+                                                <Role type="ToolTipText" variable="Var8" > </Role>
+                                                <Role type="NodeSize"    variable="Var9" > </Role>
+                                          </Roles>
+                                    </ChartData>
+                              </ChartDataList>
+                              <ColorMappers>
+                                    <ColorRamp  name="NodeColorRamp"
+                                                      underFlowColor="Red"
+                                                      overflowColor="Green"
+                                                      low="0"
+                                                      high="1000"
+                                                      beginColor="CX0000FF"
+                                                      endColor="CXFFFFFF" >
+                                    </ColorRamp>
+                                    <ColorRamp  name="LinkColorRamp"
+                                                      low="1"
+                                                      high="10"
+                                                      beginColor="CX000000"
+                                                      endColor="CX000000" >
+                                    </ColorRamp>
+                              </ColorMappers>
+                              <ChartAreas>
+                                    <ChartArea>
+                                          <Charts>
+                                          <DecisionTree name="DTree"
+                                                  chartData="DTreeData"
+                                                  selectionColor="CX00FF00"
+                                                  orientation="Vertical"
+                                                  emptyNodes="False"
+                                                  legendVisible="False"
+                                                  titleAnchor="Root"
+                                                  footnoteAnchor="Chart"
+                                                  displayDepth="4" >
+
+                                    <SplitVarList>
+                                          <SplitVar name="SPLIT VAR A" type="DISCRETE" missingBranch="3" values="1,A:1,B:2,C:3,D"/>
+                                          <SplitVar name="SPLIT VAR B" type="CONTINUOUS" breaks="10:50:100" />
+                                    </SplitVarList>
+
+                                    <IciclePlot isVisible="True"></IciclePlot>
+
+                                    <NodeStyle colorMapper="NodeColorRamp"
+                                                   outlineColor="Black"
+                                                   outlineWidth="1">
+                                          <NodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Bold" />
+                                    </NodeStyle>
+                                    <FlaggedNodeStyle color="CXFF8844"
+                                                              outlineColor="Black"
+                                                              outlineWidth="3" >
+                                          <FlaggedNodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Italic" />
+                                    </FlaggedNodeStyle>
+                                    <LinkStyle textVisible="True"
+                                                   colorMapper="LinkColorRamp"
+                                                   linkStyle="Manhattan"
+                                                   staticWidth="3" >
+                                          <LinkText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="10 pt"
+                                                        textFlags="Bold" />
+                                    </LinkStyle>
+                                    <GraphStyle numBars="3"
+                                                      numStacks="3"
+                                                      axisMin="0"
+                                                      axisMax="20"
+                                                      orientation="Vertical"
+                                                      visible="True" >
+                                    </GraphStyle>
+                              </DecisionTree>
+                              </Charts>
+                        </ChartArea>
+                  </ChartAreas>
+            </Graph>
+      </Body>
+      </Section>
+      </View>
+
+  </SASReport>
+
